@@ -45,6 +45,7 @@
     .dropdown-menu a:last-child { border-bottom: none; }
     .dropdown-menu a:hover { color: var(--gold); background: rgba(255,255,255,0.06); }
     .nav-dropdown:hover .dropdown-menu { display: block; }
+    .nav-dropdown::after { content: ''; position: absolute; top: 100%; left: 0; right: 0; height: 12px; }
 
     .page-header { max-width: var(--max); margin: 0 auto; padding: clamp(2.5rem,6vw,5rem) clamp(1.5rem,5vw,4rem) clamp(1.5rem,4vw,3rem); border-bottom: 1px solid var(--rule); animation: fadeUp 0.7s ease both; }
     .breadcrumb { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-light); margin-bottom: 1.2rem; display: flex; align-items: center; gap: 0.5rem; }
@@ -169,15 +170,16 @@
         <a href="working-papers.html">Working Papers</a>
       </div>
     </li>
-    <li class="nav-dropdown"><a href="resources.html" class="active">Resources</a>
+    <li class="nav-dropdown"><a href="resources.html">Resources</a>
       <div class="dropdown-menu">
         <a href="resources.html">For Researchers</a>
         <a href="data.html">Key Datasets</a>
         <a href="experiments.html" style="color:var(--gold);">Experiments in Finance</a>
       </div>
     </li>
+    <li><a href="media.html">Media</a></li>
     <li><a href="about.html">About</a></li>
-    <li><a href="/cdn-cgi/l/email-protection#a0d2c1d7ccc5d98ec8c5c9cdc5d2e0c1d3d58ec5c4d5">Contact</a></li>
+    <li><a href="contact.html">Contact</a></li>
   </ul>
 </nav>
 

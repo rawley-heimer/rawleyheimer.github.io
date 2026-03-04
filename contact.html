@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Rawley Z. Heimer</title>
+  <meta name="description" content="Contact Rawley Z. Heimer — Associate Professor of Finance at W.P. Carey School of Business, Arizona State University." />
+  <meta name="author" content="Rawley Z. Heimer" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.rawleyheimer.com/contact.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.rawleyheimer.com/contact.html" />
+  <meta property="og:title" content="Contact — Rawley Z. Heimer" />
+  <meta property="og:site_name" content="Rawley Z. Heimer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,500;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --cream: #faf9f7; --cream-dark: #f0ece6;
+      --ink: #1a0a0f; --ink-mid: #3a1520; --ink-light: #7a5060;
+      --maroon: #8C1D40; --gold: #FFC627; --rule: #ddd0d5; --max: 1080px;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--cream); color: var(--ink); font-family: 'Source Serif 4', Georgia, serif; font-size: 17px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    body::before { content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 999; opacity: 0.035; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E"); background-size: 200px 200px; }
+
+    nav { position: sticky; top: 0; z-index: 100; background: var(--maroon); border-bottom: 3px solid var(--gold); padding: 0 clamp(1.5rem,5vw,4rem); display: flex; align-items: center; justify-content: space-between; height: 56px; }
+    .nav-name { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 600; color: #fff; text-decoration: none; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { font-size: 0.82rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.75); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--gold); }
+    .nav-dropdown { position: relative; }
+    .nav-dropdown > a { display: inline-flex; align-items: center; gap: 0.3rem; vertical-align: middle; }
+    .nav-dropdown > a::after { content: '▾'; font-size: 0.6rem; opacity: 0.7; }
+    .nav-dropdown::after { content: ''; position: absolute; top: 100%; left: 0; right: 0; height: 12px; }
+    .dropdown-menu { display: none; position: absolute; top: calc(100% + 3px); left: 50%; transform: translateX(-50%); background: var(--maroon); border-top: 2px solid var(--gold); min-width: 200px; z-index: 200; box-shadow: 0 4px 16px rgba(0,0,0,0.25); }
+    .dropdown-menu a { display: block; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.8); text-decoration: none; padding: 0.65rem 1rem; border-bottom: 1px solid rgba(255,255,255,0.08); transition: color 0.15s, background 0.15s; }
+    .dropdown-menu a:last-child { border-bottom: none; }
+    .dropdown-menu a:hover { color: var(--gold); background: rgba(255,255,255,0.06); }
+    .nav-dropdown:hover .dropdown-menu { display: block; }
+
+    .page-header { max-width: var(--max); margin: 0 auto; padding: clamp(2.5rem,6vw,5rem) clamp(1.5rem,5vw,4rem) clamp(2rem,4vw,3.5rem); border-bottom: 1px solid var(--rule); animation: fadeUp 0.7s ease both; }
+    .breadcrumb { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-light); margin-bottom: 1.2rem; display: flex; align-items: center; gap: 0.5rem; }
+    .breadcrumb a { color: var(--maroon); text-decoration: none; }
+    .breadcrumb a:hover { opacity: 0.7; }
+    .breadcrumb-sep { color: var(--rule); }
+    .page-eyebrow { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--maroon); font-weight: 500; margin-bottom: 0.8rem; }
+    .page-title { font-family: 'Playfair Display', serif; font-size: clamp(2rem,4vw,3.2rem); font-weight: 700; line-height: 1.1; color: var(--ink); margin-bottom: 1.2rem; letter-spacing: -0.01em; }
+
+    .wrapper { max-width: var(--max); margin: 0 auto; padding: clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,4rem) clamp(3rem,6vw,6rem); display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+    .contact-block { margin-bottom: 2.5rem; }
+    .contact-label { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--maroon); font-weight: 500; margin-bottom: 0.8rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--gold); display: inline-block; }
+    .contact-item { font-size: 1rem; color: var(--ink-mid); margin-bottom: 0.4rem; line-height: 1.6; }
+    .contact-item a { color: var(--maroon); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s; }
+    .contact-item a:hover { border-color: var(--maroon); }
+    .contact-item strong { color: var(--ink); }
+    .press-box { background: #fff; border: 1px solid var(--rule); border-left: 3px solid var(--gold); padding: 1.4rem 1.5rem; margin-top: 1rem; }
+    .press-box p { font-size: 0.88rem; color: var(--ink-mid); line-height: 1.7; margin-bottom: 0.6rem; }
+    .press-box p:last-child { margin-bottom: 0; }
+    .topic-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.8rem; }
+    .topic-tag { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; background: var(--cream-dark); color: var(--ink-light); padding: 0.2rem 0.6rem; border: 1px solid var(--rule); }
+    .map-placeholder { background: var(--cream-dark); border: 1px solid var(--rule); height: 220px; display: flex; align-items: center; justify-content: center; font-size: 0.85rem; color: var(--ink-light); margin-top: 1rem; }
+    .address-block { font-size: 0.92rem; color: var(--ink-mid); line-height: 1.9; }
+    footer { border-top: 3px solid var(--maroon); background: var(--cream-dark); text-align: center; padding: 2rem; font-size: 0.78rem; color: var(--ink-light); letter-spacing: 0.05em; }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+    @media (max-width: 720px) { .wrapper { grid-template-columns: 1fr; gap: 2rem; } }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-name">Rawley Z. Heimer</a>
+  <ul class="nav-links">
+    <li class="nav-dropdown"><a href="research.html">Research</a>
+      <div class="dropdown-menu">
+        <a href="research.html">Research Areas</a>
+        <a href="publications.html">Publications</a>
+        <a href="working-papers.html">Working Papers</a>
+      </div>
+    </li>
+    <li class="nav-dropdown"><a href="resources.html">Resources</a>
+      <div class="dropdown-menu">
+        <a href="resources.html">For Researchers</a>
+        <a href="data.html">Key Datasets</a>
+        <a href="experiments.html">Experiments in Finance</a>
+      </div>
+    </li>
+    <li><a href="media.html">Media</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-header">
+  <div class="breadcrumb">
+    <a href="index.html">Home</a><span class="breadcrumb-sep">›</span>
+    <span>Contact</span>
+  </div>
+  <div class="page-eyebrow">Get in Touch</div>
+  <h1 class="page-title">Contact</h1>
+</div>
+
+<div class="wrapper">
+  <div>
+    <div class="contact-block">
+      <div class="contact-label">Email</div>
+      <div class="contact-item"><a href="mailto:rawley.heimer@asu.edu">rawley.heimer@asu.edu</a></div>
+    </div>
+
+    <div class="contact-block">
+      <div class="contact-label">Office</div>
+      <div class="address-block">
+        W.P. Carey School of Business<br>
+        Arizona State University<br>
+        400 E. Lemon Street<br>
+        Tempe, AZ 85287
+      </div>
+    </div>
+
+    <div class="contact-block">
+      <div class="contact-label">Online</div>
+      <div class="contact-item"><a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=1805935" target="_blank">SSRN Profile</a></div>
+      <div class="contact-item"><a href="https://scholar.google.com/citations?user=4D_V_kkAAAAJ&hl=en&oi=sra" target="_blank">Google Scholar</a></div>
+    </div>
+  </div>
+
+  <div>
+    <div class="contact-block">
+      <div class="contact-label">Press &amp; Media Inquiries</div>
+      <div class="press-box">
+        <p>I welcome media inquiries on topics related to my research. I typically respond within 24 hours.</p>
+        <p>Topics I can speak to:</p>
+        <div class="topic-tags">
+          <span class="topic-tag">Household Finance</span>
+          <span class="topic-tag">Consumer Debt</span>
+          <span class="topic-tag">Behavioral Finance</span>
+          <span class="topic-tag">Retail Investing</span>
+          <span class="topic-tag">Mortgage Lending</span>
+          <span class="topic-tag">Financial Regulation</span>
+          <span class="topic-tag">AI &amp; Finance</span>
+          <span class="topic-tag">Retirement Savings</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  &copy; 2025 Rawley Z. Heimer &nbsp;·&nbsp; W.P. Carey School of Business, Arizona State University &nbsp;·&nbsp; <a href="mailto:rawley.heimer@asu.edu" style="color:var(--ink-light);">rawley.heimer@asu.edu</a>
+</footer>
+
+</body>
+</html>

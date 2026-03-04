@@ -100,6 +100,7 @@
     .dropdown-menu a:last-child { border-bottom: none; }
     .dropdown-menu a:hover { color: var(--gold); background: rgba(255,255,255,0.06); }
     .nav-dropdown:hover .dropdown-menu { display: block; }
+    .nav-dropdown::after { content: ''; position: absolute; top: 100%; left: 0; right: 0; height: 12px; }
   </style>
 </head>
 <body>
@@ -121,8 +122,9 @@
         <a href="experiments.html">Experiments in Finance</a>
       </div>
     </li>
-    <li><a href="about.html">About</a></li>
     <li><a href="media.html" class="active">Media</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
   </ul>
 </nav>
 

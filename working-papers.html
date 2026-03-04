@@ -104,6 +104,7 @@
     .dropdown-menu a:last-child { border-bottom: none; }
     .dropdown-menu a:hover { color: var(--gold); background: rgba(255,255,255,0.06); }
     .nav-dropdown:hover .dropdown-menu { display: block; }
+    .nav-dropdown::after { content: ''; position: absolute; top: 100%; left: 0; right: 0; height: 12px; }
   </style>
 </head>
 <body>
@@ -111,11 +112,11 @@
 <nav>
   <a href="index.html" class="nav-name">Rawley Z. Heimer</a>
   <ul class="nav-links">
-    <li class="nav-dropdown"><a href="research.html">Research</a>
+    <li class="nav-dropdown"><a href="research.html" class="active">Research</a>
       <div class="dropdown-menu">
         <a href="research.html">Research Areas</a>
         <a href="publications.html">Publications</a>
-        <a href="working-papers.html" style="color(--gold);">Working Papers</a>
+        <a href="working-papers.html" style="color:var(--gold);">Working Papers</a>
       </div>
     </li>
     <li class="nav-dropdown"><a href="resources.html">Resources</a>
@@ -127,7 +128,7 @@
     </li>
     <li><a href="media.html">Media</a></li>
     <li><a href="about.html">About</a></li>
-    <li><a href="/cdn-cgi/l/email-protection#413320362d24382924282c243301262c20282d6f222e2c">Contact</a></li>
+    <li><a href="contact.html">Contact</a></li>
   </ul>
 </nav>
 
