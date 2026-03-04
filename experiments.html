@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experiments in Finance | Rawley Z. Heimer</title>
+  <meta name="description" content="A growing database of experimental papers published in the JF, JFE, and RFS, plus resources for researchers running experiments in finance." />
+  <meta name="keywords" content="experiments in finance, experimental finance, survey experiments, field experiments, JF JFE RFS experimental methods, finance research methods" />
+  <meta name="author" content="Rawley Z. Heimer" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.rawleyheimer.com/experiments.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.rawleyheimer.com/experiments.html" />
+  <meta property="og:title" content="Experiments in Finance — Rawley Z. Heimer" />
+  <meta property="og:description" content="A growing database of experimental papers in top finance journals, plus methods resources for researchers." />
+  <meta property="og:site_name" content="Rawley Z. Heimer" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Experiments in Finance — Rawley Z. Heimer" />
+  <meta name="twitter:description" content="Database of experimental papers in JF, JFE, and RFS, plus platforms and survey resources." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,500;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --cream: #faf9f7; --cream-dark: #f0ece6;
+      --ink: #1a0a0f; --ink-mid: #3a1520; --ink-light: #7a5060;
+      --maroon: #8C1D40; --gold: #FFC627; --rule: #ddd0d5; --max: 1100px;
+      --jf: #1a5fb4; --jfe: #c01c28; --rfs: #2d7d2d;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--cream); color: var(--ink); font-family: 'Source Serif 4', Georgia, serif; font-size: 17px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    body::before { content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 999; opacity: 0.035; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E"); background-size: 200px 200px; }
+
+    nav { position: sticky; top: 0; z-index: 100; background: var(--maroon); border-bottom: 3px solid var(--gold); padding: 0 clamp(1.5rem,5vw,4rem); display: flex; align-items: center; justify-content: space-between; height: 56px; }
+    .nav-name { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 600; color: #fff; text-decoration: none; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { font-size: 0.82rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.75); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--gold); }
+    .nav-dropdown { position: relative; }
+    .nav-dropdown > a { display: inline-flex; align-items: center; gap: 0.3rem; vertical-align: middle; }
+    .nav-dropdown > a::after { content: '▾'; font-size: 0.6rem; opacity: 0.7; }
+    .dropdown-menu { display: none; position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: var(--maroon); border-top: 2px solid var(--gold); min-width: 200px; z-index: 200; box-shadow: 0 4px 16px rgba(0,0,0,0.25); }
+    .dropdown-menu a { display: block; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.8); text-decoration: none; padding: 0.65rem 1rem; border-bottom: 1px solid rgba(255,255,255,0.08); transition: color 0.15s, background 0.15s; }
+    .dropdown-menu a:last-child { border-bottom: none; }
+    .dropdown-menu a:hover { color: var(--gold); background: rgba(255,255,255,0.06); }
+    .nav-dropdown:hover .dropdown-menu { display: block; }
+
+    .page-header { max-width: var(--max); margin: 0 auto; padding: clamp(2.5rem,6vw,5rem) clamp(1.5rem,5vw,4rem) clamp(1.5rem,4vw,3rem); border-bottom: 1px solid var(--rule); animation: fadeUp 0.7s ease both; }
+    .breadcrumb { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-light); margin-bottom: 1.2rem; display: flex; align-items: center; gap: 0.5rem; }
+    .breadcrumb a { color: var(--maroon); text-decoration: none; }
+    .breadcrumb a:hover { opacity: 0.7; }
+    .breadcrumb-sep { color: var(--rule); }
+    .page-eyebrow { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--maroon); font-weight: 500; margin-bottom: 0.8rem; }
+    .page-title { font-family: 'Playfair Display', serif; font-size: clamp(2rem,4vw,3.2rem); font-weight: 700; line-height: 1.1; color: var(--ink); margin-bottom: 1.2rem; letter-spacing: -0.01em; }
+    .page-intro { max-width: 700px; font-size: 1rem; color: var(--ink-mid); line-height: 1.78; }
+    .page-intro a { color: var(--maroon); text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color 0.2s; }
+    .page-intro a:hover { text-decoration-color: var(--maroon); }
+
+    /* ── JUMP NAV ── */
+    .jump-nav { max-width: var(--max); margin: 0 auto; padding: 1.4rem clamp(1.5rem,5vw,4rem); border-bottom: 1px solid var(--rule); display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .jump-link { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--maroon); text-decoration: none; padding: 0.3rem 0.8rem; border: 1px solid var(--rule); background: #fff; transition: background 0.15s, border-color 0.15s; }
+    .jump-link:hover { background: var(--cream-dark); border-color: var(--maroon); }
+
+    /* ── LAYOUT ── */
+    .page { max-width: var(--max); margin: 0 auto; padding: 0 clamp(1.5rem,5vw,4rem); display: grid; grid-template-columns: 1fr 260px; gap: 4rem; align-items: start; }
+    .main-col { padding: clamp(2rem,4vw,3.5rem) 0 clamp(3rem,6vw,6rem); }
+    .side-col { padding: clamp(2rem,4vw,3.5rem) 0; border-left: 1px solid var(--rule); padding-left: 2.5rem; position: sticky; top: 70px; }
+
+    /* ── SECTION LABELS ── */
+    .section-label { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--maroon); font-weight: 500; margin: 3rem 0 1.4rem; display: flex; align-items: center; gap: 0.8rem; scroll-margin-top: 80px; }
+    .section-label:first-child { margin-top: 0; }
+    .section-label::after { content: ''; flex: 1; height: 1px; background: var(--maroon); opacity: 0.2; }
+
+    /* ── CHART ── */
+    .chart-wrap { background: #fff; border: 1px solid var(--rule); padding: 1.5rem 1.5rem 1rem; margin-bottom: 1.5rem; }
+    .chart-title { font-family: 'Source Serif 4', serif; font-size: 0.9rem; color: var(--ink-mid); margin-bottom: 1rem; }
+    .chart-legend { display: flex; gap: 1.5rem; margin-bottom: 0.8rem; }
+    .legend-item { display: flex; align-items: center; gap: 0.4rem; font-size: 0.78rem; color: var(--ink-light); }
+    .legend-dot { width: 24px; height: 3px; border-radius: 2px; }
+    svg.chart { width: 100%; height: auto; display: block; }
+
+    /* ── SUBMIT NOTICE ── */
+    .submit-notice { background: rgba(255,198,39,0.12); border: 1px solid rgba(255,198,39,0.5); border-left: 3px solid var(--gold); padding: 0.8rem 1rem; font-size: 0.83rem; color: var(--ink-mid); margin-bottom: 1.5rem; line-height: 1.55; }
+    .submit-notice a { color: var(--maroon); }
+
+    /* ── FILTER BAR ── */
+    .filter-bar { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem; align-items: center; }
+    .filter-label { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-light); margin-right: 0.3rem; }
+    .filter-btn { font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.28rem 0.75rem; border: 1px solid var(--rule); background: #fff; color: var(--ink-light); cursor: pointer; transition: all 0.15s; font-family: 'Source Serif 4', serif; }
+    .filter-btn:hover, .filter-btn.active { background: var(--maroon); color: #fff; border-color: var(--maroon); }
+    .filter-btn.jf.active { background: var(--jf); border-color: var(--jf); }
+    .filter-btn.jfe.active { background: var(--jfe); border-color: var(--jfe); }
+    .filter-btn.rfs.active { background: var(--rfs); border-color: var(--rfs); }
+
+    .search-wrap { margin-bottom: 1rem; }
+    .search-input { width: 100%; border: 1px solid var(--rule); background: #fff; padding: 0.5rem 0.8rem; font-family: 'Source Serif 4', serif; font-size: 0.85rem; color: var(--ink); outline: none; transition: border-color 0.2s; }
+    .search-input:focus { border-color: var(--maroon); }
+
+    /* ── PAPER TABLE ── */
+    .paper-table { width: 100%; border-collapse: collapse; font-size: 0.83rem; }
+    .paper-table th { font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-light); padding: 0.5rem 0.75rem; border-bottom: 2px solid var(--rule); text-align: left; background: var(--cream-dark); font-weight: 500; white-space: nowrap; }
+    .paper-table td { padding: 0.65rem 0.75rem; border-bottom: 1px dotted var(--rule); vertical-align: top; line-height: 1.45; }
+    .paper-table tr:hover td { background: rgba(140,29,64,0.03); }
+    .paper-table tr.hidden { display: none; }
+    .badge { display: inline-block; font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.15rem 0.5rem; font-weight: 600; }
+    .badge-jf { background: rgba(26,95,180,0.1); color: var(--jf); }
+    .badge-jfe { background: rgba(192,28,40,0.1); color: var(--jfe); }
+    .badge-rfs { background: rgba(45,125,45,0.1); color: var(--rfs); }
+    .paper-title { font-style: italic; color: var(--ink); }
+    .paper-authors { color: var(--ink-light); font-size: 0.78rem; margin-top: 0.1rem; }
+    .exp-tag { display: inline-block; font-size: 0.6rem; letter-spacing: 0.08em; text-transform: uppercase; background: var(--cream-dark); color: var(--ink-light); padding: 0.1rem 0.4rem; margin: 0.1rem 0.1rem 0 0; border: 1px solid var(--rule); }
+    .paper-count { font-size: 0.78rem; color: var(--ink-light); margin-bottom: 0.5rem; }
+
+    /* ── READING ITEMS ── */
+    .reading-item { padding: 0.85rem 0; border-bottom: 1px dotted var(--rule); }
+    .reading-title { font-size: 0.93rem; font-style: italic; color: var(--ink); margin-bottom: 0.2rem; }
+    .reading-authors { font-size: 0.82rem; color: var(--ink-light); margin-bottom: 0.15rem; }
+    .reading-venue { font-size: 0.82rem; color: var(--ink-mid); font-weight: 500; margin-bottom: 0.25rem; }
+    .reading-why { font-size: 0.82rem; color: var(--ink-mid); line-height: 1.55; }
+
+    /* ── PLATFORM CARDS ── */
+    .platform-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .platform-card { border: 1px solid var(--rule); background: #fff; padding: 1.1rem 1.2rem; transition: border-color 0.2s, box-shadow 0.2s; }
+    .platform-card:hover { border-color: var(--maroon); box-shadow: 0 2px 12px rgba(140,29,64,0.07); }
+    .platform-tag { font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--maroon); margin-bottom: 0.3rem; }
+    .platform-name { font-family: 'Playfair Display', serif; font-size: 0.97rem; font-weight: 600; color: var(--ink); margin-bottom: 0.3rem; }
+    .platform-desc { font-size: 0.81rem; color: var(--ink-mid); line-height: 1.55; margin-bottom: 0.6rem; }
+    .platform-link { font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--maroon); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s; display: inline-flex; align-items: center; gap: 0.3rem; }
+    .platform-link:hover { border-color: var(--maroon); }
+    .platform-link svg { width: 10px; height: 10px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+    /* ── SIDEBAR ── */
+    .side-section { margin-bottom: 2.2rem; }
+    .side-heading { font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--maroon); font-weight: 500; margin-bottom: 0.9rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--gold); }
+    .side-item { font-size: 0.83rem; color: var(--ink-mid); padding: 0.4rem 0; line-height: 1.45; border-bottom: 1px dotted var(--cream-dark); }
+    .side-link { display: block; font-size: 0.83rem; color: var(--maroon); text-decoration: none; padding: 0.45rem 0; border-bottom: 1px dotted var(--cream-dark); transition: opacity 0.2s; }
+    .side-link:hover { opacity: 0.7; }
+    .stat-row { display: flex; justify-content: space-between; align-items: baseline; padding: 0.4rem 0; border-bottom: 1px dotted var(--cream-dark); }
+    .stat-label { font-size: 0.78rem; color: var(--ink-light); }
+    .stat-val { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; }
+    .stat-val.jf { color: var(--jf); }
+    .stat-val.jfe { color: var(--jfe); }
+    .stat-val.rfs { color: var(--rfs); }
+
+    footer { border-top: 3px solid var(--maroon); background: var(--cream-dark); text-align: center; padding: 2rem; font-size: 0.78rem; color: var(--ink-light); letter-spacing: 0.05em; }
+
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+
+    @media (max-width: 860px) {
+      .page { grid-template-columns: 1fr; }
+      .side-col { border-left: none; padding-left: 0; border-top: 1px solid var(--rule); padding-top: 2rem; position: static; }
+      .platform-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .paper-table { font-size: 0.78rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-name">Rawley Z. Heimer</a>
+  <ul class="nav-links">
+    <li class="nav-dropdown"><a href="research.html">Research</a>
+      <div class="dropdown-menu">
+        <a href="research.html">Research Areas</a>
+        <a href="publications.html">Publications</a>
+        <a href="working-papers.html">Working Papers</a>
+      </div>
+    </li>
+    <li class="nav-dropdown"><a href="resources.html" class="active">Resources</a>
+      <div class="dropdown-menu">
+        <a href="resources.html">For Researchers</a>
+        <a href="data.html">Key Datasets</a>
+        <a href="experiments.html" style="color:var(--gold);">Experiments in Finance</a>
+      </div>
+    </li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="/cdn-cgi/l/email-protection#a0d2c1d7ccc5d98ec8c5c9cdc5d2e0c1d3d58ec5c4d5">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-header">
+  <div class="breadcrumb">
+    <a href="index.html">Home</a><span class="breadcrumb-sep">›</span>
+    <a href="resources.html">Resources</a><span class="breadcrumb-sep">›</span>
+    <span>Experiments in Finance</span>
+  </div>
+  <div class="page-eyebrow">For Researchers</div>
+  <h1 class="page-title">Experiments in Finance</h1>
+  <p class="page-intro">Experiments are increasingly becoming a common tool for finance researchers. Below is a database of papers published in the <em>JF</em>, <em>JFE</em>, and <em>RFS</em> that use some form of experimental methods. <a href="/cdn-cgi/l/email-protection#2456455348415d0a4c414d494156644557510a414051">Please let me know</a> if any papers are missing.</p>
+</div>
+
+<div class="jump-nav">
+  <a href="#database" class="jump-link">Paper Database</a>
+  <a href="#survey-articles" class="jump-link">Survey Articles</a>
+  <a href="#platforms" class="jump-link">Platforms &amp; Tools</a>
+</div>
+
+<div class="page">
+  <main class="main-col">
+
+    <!-- ══ CHART ══ -->
+    <div id="database" class="section-label">Paper Database</div>
+
+    <div class="chart-wrap">
+      <img src="data:image/png;base64,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" alt="Publications using experiments (cumulative) — JF, JFE, RFS" style="width:100%;height:auto;display:block;" />
+    </div>
+
+    <!-- SUBMIT NOTICE -->
+    <div class="submit-notice">
+      This database is a work in progress. If you know of a paper that should be included — or if your own work is missing — please <a href="/cdn-cgi/l/email-protection#295b485e454c5007414c40444c5b69485a5c074c4d5c">send it along</a>. I aim to keep this current through the most recent issues.
+    </div>
+
+    <!-- FILTERS -->
+    <div class="filter-bar">
+      <span class="filter-label">Filter:</span>
+      <button class="filter-btn active" data-filter="all" onclick="filterTable(this,'all')">All</button>
+      <button class="filter-btn jf" data-filter="JF" onclick="filterTable(this,'JF')">JF</button>
+      <button class="filter-btn jfe" data-filter="JFE" onclick="filterTable(this,'JFE')">JFE</button>
+      <button class="filter-btn rfs" data-filter="RFS" onclick="filterTable(this,'RFS')">RFS</button>
+    </div>
+    <div class="search-wrap">
+      <input class="search-input" type="text" placeholder="Search by author, title, or keyword…" oninput="searchTable(this.value)" />
+    </div>
+    <div class="paper-count" id="paper-count"></div>
+
+    <table class="paper-table" id="paper-table">
+      <thead>
+        <tr>
+          <th>Year</th>
+          <th>Journal</th>
+          <th>Title &amp; Authors</th>
+          <th>Type</th>
+        </tr>
+      </thead>
+      <tbody id="paper-tbody">
+        <!-- Papers populated by JS below -->
+      </tbody>
+    </table>
+
+    <!-- ══ SURVEY ARTICLES ══ -->
+    <div id="survey-articles" class="section-label">Survey Articles &amp; Methods Guides</div>
+
+    <div class="reading-item">
+      <div class="reading-title">"Field Experiments"</div>
+      <div class="reading-authors">Glenn W. Harrison &amp; John A. List</div>
+      <div class="reading-venue">Journal of Economic Literature, 2004</div>
+      <div class="reading-why">The foundational taxonomy distinguishing conventional lab, artefactual field, framed field, and natural field experiments. Essential reading before designing any experiment.</div>
+    </div>
+
+    <div class="reading-item">
+      <div class="reading-title">"Experimental Methods: Between-Subject and Within-Subject Design"</div>
+      <div class="reading-authors">Gary Charness, Uri Gneezy &amp; Michael A. Kuhn</div>
+      <div class="reading-venue">Journal of Economic Behavior &amp; Organization, 2012</div>
+      <div class="reading-why">Practical guide to choosing between-subject vs. within-subject designs, with guidance on statistical power and demand effects.</div>
+    </div>
+
+    <div class="reading-item">
+      <div class="reading-title">"What Do Laboratory Experiments Measuring Social Preferences Reveal About the Real World?"</div>
+      <div class="reading-authors">Steven D. Levitt &amp; John A. List</div>
+      <div class="reading-venue">Journal of Economic Perspectives, 2007</div>
+      <div class="reading-why">An influential and provocative assessment of external validity concerns — when and why lab findings may not generalize.</div>
+    </div>
+
+    <div class="reading-item">
+      <div class="reading-title">"Doing Survey Research"</div>
+      <div class="reading-authors">Stefano DellaVigna &amp; Devin Pope</div>
+      <div class="reading-venue">NBER Reporter, 2018</div>
+      <div class="reading-why">Accessible overview of survey experiment design for economists, with practical advice on framing, incentives, and validation.</div>
+    </div>
+
+    <div class="reading-item">
+      <div class="reading-title">"Lab Experiments Are a Major Source of Knowledge in the Social Sciences"</div>
+      <div class="reading-authors">Armin Falk &amp; James J. Heckman</div>
+      <div class="reading-venue">Science, 2009</div>
+      <div class="reading-why">A response to external validity critics — argues that controlled lab experiments yield uniquely reliable causal identification that field settings cannot replicate.</div>
+    </div>
+
+    <div class="reading-item">
+      <div class="reading-title">"Using Predictions from a Stochastic Model to Measure Subjective Probabilities"</div>
+      <div class="reading-authors">Charles F. Manski</div>
+      <div class="reading-venue">Review of Economic Studies, 2004</div>
+      <div class="reading-why">Foundational work on eliciting probabilistic expectations in surveys — relevant for finance researchers using subjective belief elicitation.</div>
+    </div>
+
+    <div class="reading-item">
+      <div class="reading-title">"Conduct a Survey Experiment"</div>
+      <div class="reading-authors">Rourke O'Brien &amp; Brandyn F. Churchill</div>
+      <div class="reading-venue">In <em>Handbook of Research Methods in Sociology and Social Policy</em>, 2022</div>
+      <div class="reading-why">A practical how-to covering design, pre-registration, Qualtrics implementation, and analysis of survey experiments.</div>
+    </div>
+
+    <!-- ══ PLATFORMS ══ -->
+    <div id="platforms" class="section-label">Platforms &amp; Tools</div>
+
+    <div class="platform-grid">
+
+      <div class="platform-card">
+        <div class="platform-tag">Recruitment · Academic</div>
+        <div class="platform-name">Prolific</div>
+        <div class="platform-desc">The preferred participant recruitment platform for academic research. Large pool of pre-screened participants with detailed demographic filters. Faster and more representative than MTurk for most research purposes.</div>
+        <a href="https://www.prolific.com" class="platform-link" target="_blank">prolific.com <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+      </div>
+
+      <div class="platform-card">
+        <div class="platform-tag">Survey Software</div>
+        <div class="platform-name">Qualtrics</div>
+        <div class="platform-desc">The industry standard for survey design and administration. Supports complex branching logic, embedded data, randomization, and direct integration with Prolific and MTurk. Most universities provide institutional access.</div>
+        <a href="https://www.qualtrics.com" class="platform-link" target="_blank">qualtrics.com <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+      </div>
+
+      <div class="platform-card">
+        <div class="platform-tag">Lab Experiments · Open Source</div>
+        <div class="platform-name">oTree</div>
+        <div class="platform-desc">Python-based platform for building interactive economic experiments — games, auctions, markets, and incentivized tasks. Runs in the browser, supports multiplayer interactions, and integrates easily with lab infrastructure. Open source.</div>
+        <a href="https://www.otree.org" class="platform-link" target="_blank">otree.org <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+      </div>
+
+      <div class="platform-card">
+        <div class="platform-tag">Lab Experiments</div>
+        <div class="platform-name">z-Tree</div>
+        <div class="platform-desc">The classic lab experiment software (Zurich Toolbox for Readymade Economic Experiments). Widely used in economics labs worldwide. Best for incentivized tasks in a controlled lab setting with networked computers.</div>
+        <a href="https://www.ztree.uzh.ch" class="platform-link" target="_blank">ztree.uzh.ch <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+      </div>
+
+      <div class="platform-card">
+        <div class="platform-tag">Representative Panel · U.S.</div>
+        <div class="platform-name">Understanding America Study</div>
+        <div class="platform-desc">USC's probability-based internet panel of ~9,000 U.S. adults, designed for longitudinal survey research. Allows repeated measurement of the same individuals. Particularly useful for household finance and retirement topics.</div>
+        <a href="https://uasdata.usc.edu" class="platform-link" target="_blank">uasdata.usc.edu <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+      </div>
+
+      <div class="platform-card">
+        <div class="platform-tag">Representative Panel · U.S.</div>
+        <div class="platform-name">RAND American Life Panel</div>
+        <div class="platform-desc">A probability-based online panel of ~6,000 U.S. adults surveyed monthly. Supports researcher-designed surveys with access to a broadly representative sample. Good for belief elicitation, financial literacy, and expectations research.</div>
+        <a href="https://alpdata.rand.org" class="platform-link" target="_blank">alpdata.rand.org <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+      </div>
+
+      <div class="platform-card">
+        <div class="platform-tag">Recruitment · Crowdsourcing</div>
+        <div class="platform-name">Amazon Mechanical Turk</div>
+        <div class="platform-desc">Large crowdsourcing marketplace for recruiting online participants. Low cost and fast, but well-documented concerns about data quality and worker demographics. Better suited for pilot testing and replication than primary data collection.</div>
+        <a href="https://www.mturk.com" class="platform-link" target="_blank">mturk.com <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+      </div>
+
+      <div class="platform-card">
+        <div class="platform-tag">Recruitment · Commercial Panel</div>
+        <div class="platform-name">Lucid (Cint)</div>
+        <div class="platform-desc">Large-scale commercial panel with quota-based sampling, giving researchers access to demographically representative samples in the U.S. and internationally. Widely used in political science and economics for survey experiments requiring national representativeness.</div>
+        <a href="https://luc.id" class="platform-link" target="_blank">luc.id <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+      </div>
+
+    </div>
+
+  </main>
+
+  <aside class="side-col">
+
+    <div class="side-section">
+      <div class="side-heading">Database Stats</div>
+      <div class="stat-row"><span class="stat-label">JF papers</span><span class="stat-val jf" id="stat-jf">—</span></div>
+      <div class="stat-row"><span class="stat-label">JFE papers</span><span class="stat-val jfe" id="stat-jfe">—</span></div>
+      <div class="stat-row"><span class="stat-label">RFS papers</span><span class="stat-val rfs" id="stat-rfs">—</span></div>
+    </div>
+
+    <div class="side-section">
+      <div class="side-heading">On This Page</div>
+      <a href="#database" class="side-link">Paper Database →</a>
+      <a href="#survey-articles" class="side-link">Survey Articles →</a>
+      <a href="#platforms" class="side-link">Platforms &amp; Tools →</a>
+    </div>
+
+    <div class="side-section">
+      <div class="side-heading">Resources</div>
+      <a href="resources.html" class="side-link">← Back to Resources</a>
+      <a href="data.html" class="side-link">Key Datasets →</a>
+    </div>
+
+    <div class="side-section">
+      <div class="side-heading">Missing a Paper?</div>
+      <div class="side-item" style="border:none; padding-top:0;"><span>If a paper is missing from the database, please send the citation.</span></div>
+      <a href="/cdn-cgi/l/email-protection#a5d7c4d2c9c0dc8bcdc0ccc8c0d7e5c4d6d08bc0c1d0" class="side-link">Email me →</a>
+    </div>
+
+  </aside>
+</div>
+
+<footer>
+  &copy; 2025 Rawley Z. Heimer &nbsp;·&nbsp; W.P. Carey School of Business, Arizona State University &nbsp;·&nbsp; <a href="/cdn-cgi/l/email-protection#6e1c0f19020b1740060b07030b1c2e0f1d1b400b0a1b" style="color:var(--ink-light);"><span class="__cf_email__" data-cfemail="9eecffe9f2fbe7b0f6fbf7f3fbecdeffedebb0fbfaeb">[email&#160;protected]</span></a>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+// ── Paper data ──
+const papers = [
+  // RFS
+  { year: 1990, journal: "RFS", title: "Pooling, Separating, and Semiseparating Equilibria in Financial Markets: Some Experimental Evidence", authors: "Cadsby, Frank & Maksimovic", type: ["lab"] },
+  { year: 1996, journal: "RFS", title: "Collusion in Uniform-Price Auctions: Experimental Evidence and Implications for Treasury Auctions", authors: "Goswami, Noe & Rebello", type: ["lab"] },
+  { year: 1997, journal: "RFS", title: "Unconditional and Conditional Takeover Offers: Experimental Evidence", authors: "Kale & Noe", type: ["lab"] },
+  { year: 1999, journal: "RFS", title: "Quote Disclosure and Price Discovery in Multiple-Dealer Financial Markets", authors: "Flood, Huisman, Koedijk & Mahieu", type: ["lab", "market"] },
+  { year: 1999, journal: "RFS", title: "Cheap Talk, Fraud, and Adverse Selection in Financial Markets: Some Experimental Evidence", authors: "Forsythe, Lundholm & Rietz", type: ["lab", "market"] },
+  { year: 2000, journal: "RFS", title: "The Opportunity for Conspiracy in Asset Markets Organized with Dealer Intermediaries", authors: "Cason", type: ["lab", "market"] },
+  { year: 2005, journal: "RFS", title: "Coordination of Expectations in Asset Pricing Experiments", authors: "Hommes, Sonnemans, Tuinstra & Van de Velden", type: ["lab"] },
+  { year: 2006, journal: "RFS", title: "Competition and Cooperation in Divisible Good Auctions: An Experimental Examination", authors: "Sade, Schnitzlein & Zender", type: ["lab"] },
+  { year: 2009, journal: "RFS", title: "Distinguishing the Effect of Overconfidence from Rational Best-Response on Information Aggregation", authors: "Kogan", type: ["lab", "market"] },
+  { year: 2009, journal: "RFS", title: "Margin Trading, Overpricing, and Synchronization Risk", authors: "Bhojraj, Bloomfield & Tayler", type: ["lab", "market"] },
+  { year: 2009, journal: "RFS", title: "How Noise Trading Affects Markets: An Experimental Analysis", authors: "Bloomfield, O\'Hara & Saar", type: ["lab", "market"] },
+  { year: 2010, journal: "RFS", title: "Ambiguity in Asset Markets: Theory and Experiment", authors: "Bossaerts, Ghirardato, Guarnaschelli & Zame", type: ["lab", "market"] },
+  { year: 2010, journal: "RFS", title: "Why Does the Law of One Price Fail? An Experiment on Index Mutual Funds", authors: "Choi, Laibson & Madrian", type: ["lab"] },
+  { year: 2013, journal: "RFS", title: "\u2018O Sole Mio: An Experimental Analysis of Weather and Risk Attitudes in Financial Decisions", authors: "Bassi, Colacito & Fulghieri", type: ["lab"] },
+  { year: 2016, journal: "RFS", title: "Neural Evidence of Regret and Its Implications for Investor Behavior", authors: "Frydman & Camerer", type: ["lab"] },
+  { year: 2017, journal: "RFS", title: "How Does Risk Management Influence Production Decisions? Evidence from a Field Experiment", authors: "Cole, Gin\u00e9 & Vickery", type: ["field"] },
+  { year: 2017, journal: "RFS", title: "Does Aggregated Returns Disclosure Increase Portfolio Risk Taking?", authors: "Beshears, Choi, Laibson & Madrian", type: ["lab"] },
+  { year: 2017, journal: "RFS", title: "The Causal Effect of Stop-Loss and Take-Gain Orders on the Disposition Effect", authors: "Fischbacher, Hoffmann & Schudy", type: ["lab"] },
+  { year: 2018, journal: "RFS", title: "Rolling Mental Accounts", authors: "Frydman, Hartzmark & Solomon", type: ["lab"] },
+  { year: 2018, journal: "RFS", title: "Can People Learn about Black Swans? Experimental Evidence", authors: "Payzan-LeNestour", type: ["lab"] },
+  { year: 2019, journal: "RFS", title: "Low Interest Rates and Risk-Taking: Evidence from Individual Investment Decisions", authors: "Lian, Ma & Wang", type: ["lab"] },
+  { year: 2019, journal: "RFS", title: "Unleashing Animal Spirits: Self-Control and Overpricing in Experimental Asset Markets", authors: "Kocher, Lucks & Schindler", type: ["lab", "market"] },
+  { year: 2020, journal: "RFS", title: "Financial Illiteracy and Pension Contributions: A Field Experiment on Compound Interest in China", authors: "Song", type: ["field"] },
+  { year: 2020, journal: "RFS", title: "Bubbles and Financial Professionals", authors: "Weitzel, Huber, Huber, Kirchler, Lindner & Rose", type: ["lab", "market"] },
+  { year: 2020, journal: "RFS", title: "Overcoming Discount Window Stigma: An Experimental Investigation", authors: "Armantier & Holt", type: ["lab"] },
+  { year: 2021, journal: "RFS", title: "Side Effects of Nudging: Evidence from a Randomized Intervention in the Credit Card Market", authors: "Medina", type: ["field"] },
+  { year: 2021, journal: "RFS", title: "How Much Information Is Incorporated into Financial Asset Prices? Experimental Evidence", authors: "Page & Siemroth", type: ["lab", "market"] },
+  { year: 2021, journal: "RFS", title: "Experience Does Not Eliminate Bubbles: Experimental Evidence", authors: "Kop\u00e1nyi-Peuker & Weber", type: ["lab", "market"] },
+  { year: 2022, journal: "RFS", title: "Efficiency of Dynamic Portfolio Choices: An Experiment", authors: "Magnani, Rabanal, Rud & Wang", type: ["lab"] },
+  { year: 2022, journal: "RFS", title: "Biased by Choice: How Financial Constraints Can Reduce Financial Mistakes", authors: "Heimer & Imas", type: ["lab"] },
+  { year: 2022, journal: "RFS", title: "A Fistful of Dollars: Financial Incentives, Peer Information, and Retirement Savings", authors: "Bauer, Eberhardt & Smeets", type: ["field"] },
+  { year: 2022, journal: "RFS", title: "Decision Weights for Experimental Asset Prices Based on Visual Salience", authors: "Bose, Cordes, Nolte, Schneider & Camerer", type: ["lab"] },
+  // JF
+  { year: 1991, journal: "JF", title: "Partial Revelation of Information in Experimental Asset Markets", authors: "Copeland & Friedman", type: ["lab"] },
+  { year: 1991, journal: "JF", title: "Dynamic Stock Markets with Multiple Assets: An Experimental Analysis", authors: "O\'Brien & Srivastava", type: ["lab", "market"] },
+  { year: 1996, journal: "JF", title: "Call and Continuous Trading Mechanisms Under Asymmetric Information: An Experimental Investigation", authors: "Schnitzlein", type: ["lab"] },
+  { year: 1996, journal: "JF", title: "Quotes, Prices, and Estimates in a Laboratory Market", authors: "Bloomfield", type: ["lab"] },
+  { year: 1997, journal: "JF", title: "When It\'s Not the Only Game in Town: The Effect of Bilateral Search on the Quality of a Dealer Market", authors: "Lamoureux & Schnitzlein", type: ["lab", "market"] },
+  { year: 2005, journal: "JF", title: "Do Professional Traders Exhibit Myopic Loss Aversion? An Experimental Analysis", authors: "Haigh & List", type: ["lab"] },
+  { year: 2006, journal: "JF", title: "The Effect of Short Selling on Bubbles and Crashes in Experimental Spot Asset Markets", authors: "Haruvy & Noussair", type: ["lab"] },
+  { year: 2007, journal: "JF", title: "Information Cascades: Evidence from a Field Experiment with Financial Market Professionals", authors: "Alevy, Haigh & List", type: ["lab"] },
+  { year: 2010, journal: "JF", title: "Exploring the Nature of Trader Intuition", authors: "Bruguier, Quartz & Bossaerts", type: ["lab", "market"] },
+  { year: 2011, journal: "JF", title: "Information Disclosure, Cognitive Biases, and Payday Borrowing", authors: "Bertrand & Morse", type: ["field"] },
+  { year: 2011, journal: "JF", title: "Prices or Knowledge? What Drives Demand for Financial Services in Emerging Markets?", authors: "Cole, Sampson & Zia", type: ["field"] },
+  { year: 2013, journal: "JF", title: "The Effects of Stock Lending on Security Prices: An Experiment", authors: "Kaplan, Moskowitz & Sensoy", type: ["lab", "field"] },
+  { year: 2013, journal: "JF", title: "Trading Complex Assets", authors: "Carlin, Kogan & Lowery", type: ["lab"] },
+  { year: 2014, journal: "JF", title: "Using Neural Data to Test a Theory of Investor Behavior: An Application to Realization Utility", authors: "Frydman, Barberis, Camerer, Bossaerts & Rangel", type: ["lab"] },
+  { year: 2015, journal: "JF", title: "Incentivizing Calculated Risk-Taking: Evidence from an Experiment with Commercial Bank Loan Officers", authors: "Cole, Kanz & Klapper", type: ["lab"] },
+  { year: 2015, journal: "JF", title: "The Effect of Providing Peer Information on Retirement Savings Decisions", authors: "Beshears, Choi, Laibson, Madrian & Milkman", type: ["field"] },
+  { year: 2015, journal: "JF", title: "Asymmetric Learning from Financial Information", authors: "Kuhnen", type: ["lab"] },
+  { year: 2016, journal: "JF", title: "Looking for Someone to Blame: Delegation, Cognitive Dissonance, and the Disposition Effect", authors: "Chang, Solomon & Westerfield", type: ["lab", "field"] },
+  { year: 2016, journal: "JF", title: "Lucas in the Laboratory", authors: "Asparouhova, Bossaerts, Roy & Zame", type: ["lab"] },
+  { year: 2017, journal: "JF", title: "Attracting Early-Stage Investors: Evidence from a Randomized Field Experiment", authors: "Bernstein, Korteweg & Laws", type: ["field"] },
+  { year: 2017, journal: "JF", title: "Why Do Investors Hold Socially Responsible Mutual Funds?", authors: "Riedl & Smeets", type: ["lab", "field"] },
+  { year: 2018, journal: "JF", title: "What Makes a Good Trader? On the Role of Intuition and Reflection on Trader Performance", authors: "Corgnet, Desantis & Porter", type: ["lab", "market"] },
+  { year: 2018, journal: "JF", title: "An Experimental Study of Bond Market Pricing", authors: "Weber, Duffy & Schram", type: ["lab", "market"] },
+  { year: 2018, journal: "JF", title: "Rankings and Risk-Taking in the Finance Industry", authors: "Kirchler, Lindner & Weitzel", type: ["lab", "field"] },
+  { year: 2018, journal: "JF", title: "Collateral Constraints and the Law of One Price: An Experiment", authors: "Cipriani, Fostel & Houser", type: ["lab", "market"] },
+  { year: 2019, journal: "JF", title: "A Test of the Modigliani-Miller Invariance Theorem and Arbitrage in Experimental Asset Markets", authors: "Charness & Neugebauer", type: ["lab", "market"] },
+  { year: 2019, journal: "JF", title: "Costly Information Acquisition, Social Networks, and Asset Prices: Experimental Evidence", authors: "Halim, Riyanto & Roy", type: ["lab", "market"] },
+  { year: 2019, journal: "JF", title: "Thinking about Prices versus Thinking about Returns in Financial Markets", authors: "Glaser, Iliewa & Weber", type: ["lab"] },
+  { year: 2021, journal: "JF", title: "The Perception of Dependence, Investment Decisions, and Stock Prices", authors: "Ungeheuer & Weber", type: ["lab", "field"] },
+  { year: 2022, journal: "JF", title: "Increasing Enrollment in Income-Driven Student Loan Repayment Plans: Evidence from the Navient Field Experiment", authors: "Mueller & Yannelis", type: ["field"] },
+  { year: null, journal: "JF", title: "Insensitive Investors", authors: "Charles, Frydman & Kilic", type: ["lab"], forthcoming: true },
+  // JFE
+  { year: 2002, journal: "JFE", title: "Predicting the Next Step of a Random Walk: Experimental Evidence of Regime-Shifting Beliefs", authors: "Bloomfield & Hales", type: ["lab"] },
+  { year: 2013, journal: "JFE", title: "Managerial Attitudes and Corporate Actions", authors: "Graham, Harvey & Puri", type: ["survey"] },
+  { year: 2017, journal: "JFE", title: "Socioeconomic Status and Learning from Financial Information", authors: "Kuhnen & Miu", type: ["lab"] },
+  { year: 2021, journal: "JFE", title: "Testing the Effectiveness of Consumer Financial Disclosure: Experimental Evidence from Savings Accounts", authors: "Adams, Hunt, Palmer & Zaliauskas", type: ["field"] },
+  { year: 2022, journal: "JFE", title: "Outlier Blindness: A Neurobiological Foundation for Neglect of Financial Risk", authors: "Payzan-LeNestour & Woodford", type: ["lab"] },
+  { year: 2022, journal: "JFE", title: "Stock Return Ignorance", authors: "Merkoulova & Veld", type: ["survey"] },
+  { year: 2022, journal: "JFE", title: "Measuring the Welfare Cost of Asymmetric Information in Consumer Credit Markets", authors: "DeFusco, Tang & Yannelis", type: ["lab"] },
+  { year: 2023, journal: "JFE", title: "When Can the Market Identify Old News?", authors: "Fedyk & Hodson", type: ["lab"] },
+  { year: null, journal: "JFE", title: "Associative Memory, Beliefs and Market Interactions", authors: "Enke, Schwerter & Zimmermann", type: ["lab", "market"], forthcoming: true },
+];
+
+let currentFilter = "all";
+let currentSearch = "";
+
+function renderTable() {
+  const tbody = document.getElementById("paper-tbody");
+  const countEl = document.getElementById("paper-count");
+  if (!currentSearch && currentFilter === "all") {
+    tbody.innerHTML = "";
+    countEl.textContent = `${papers.length} papers in database — use the search box or filter to browse.`;
+    return;
+  }
+  const filtered = papers.filter(p => {
+    const matchFilter = currentFilter === "all" || p.journal === currentFilter;
+    const q = currentSearch.toLowerCase();
+    const matchSearch = !q || p.title.toLowerCase().includes(q) || p.authors.toLowerCase().includes(q) || p.type.some(t => t.includes(q));
+    return matchFilter && matchSearch;
+  });
+  filtered.sort((a, b) => { const ay = a.year || 9999; const by_ = b.year || 9999; return by_ - ay; });
+  tbody.innerHTML = filtered.map(p => {
+    const jClass = p.journal.toLowerCase();
+    const typeTags = p.type.map(t => `<span class="exp-tag">${t}</span>`).join("");
+    return `<tr data-journal="${p.journal}">
+      <td>${p.year || 'FC'}</td>
+      <td><span class="badge badge-${jClass}">${p.journal}</span></td>
+      <td><div class="paper-title">${p.title}</div><div class="paper-authors">${p.authors}</div></td>
+      <td>${typeTags}</td>
+    </tr>`;
+  }).join("");
+  document.getElementById("paper-count").textContent = `Showing ${filtered.length} of ${papers.length} papers`;
+}
+
+function filterTable(btn, filter) {
+  document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+  btn.classList.add("active");
+  currentFilter = filter;
+  renderTable();
+}
+
+function searchTable(val) {
+  currentSarch;
+  renderTable();
+}
+
+// Stats
+function updateStats() {
+  document.getElementById("stat-jf").textContent = papers.filter(p => p.journal === "JF").length;
+  document.getElementById("stat-jfe").textContent = papers.filter(p => p.journal === "JFE").length;
+  document.getElementById("stat-rfs").textContent = papers.filter(p => p.journal === "RFS").length;
+}
+
+renderTable();
+updateStats();
+</script>
+
+</body>
+</html>
