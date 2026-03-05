@@ -109,12 +109,79 @@
     .dropdown-menu a:hover { color: var(--gold); background: rgba(255,255,255,0.06); }
     .nav-dropdown:hover .dropdown-menu { display: block; }
     .nav-dropdown::after { content: ''; position: absolute; top: 100%; left: 0; right: 0; height: 12px; }
+
+    /* ── HAMBURGER / MOBILE NAV ── */
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      width: 36px;
+      height: 36px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+      z-index: 201;
+    }
+    .nav-hamburger span {
+      display: block;
+      height: 2px;
+      background: #fff;
+      border-radius: 2px;
+      transition: transform 0.25s, opacity 0.25s;
+    }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    @media (max-width: 700px) {
+      .nav-hamburger { display: flex; }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 59px;
+        left: 0;
+        right: 0;
+        background: var(--maroon);
+        border-bottom: 3px solid var(--gold);
+        flex-direction: column;
+        gap: 0;
+        z-index: 200;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+      }
+      .nav-links.open { display: flex; }
+      .nav-links > li { border-bottom: 1px solid rgba(255,255,255,0.1); }
+      .nav-links > li > a {
+        display: block;
+        padding: 0.85rem 1.5rem;
+        font-size: 0.82rem;
+      }
+      /* Mobile dropdowns: always show sub-items indented */
+      .nav-dropdown .dropdown-menu {
+        display: block !important;
+        position: static;
+        transform: none;
+        box-shadow: none;
+        border-top: none;
+        border-left: 3px solid var(--gold);
+        margin-left: 1.5rem;
+        margin-bottom: 0.4rem;
+        min-width: unset;
+      }
+      .nav-dropdown .dropdown-menu a {
+        padding: 0.5rem 1rem;
+        font-size: 0.72rem;
+      }
+      .nav-dropdown > a::after { display: none; }
+    }
   </style>
 </head>
 <body>
 
 <nav>
   <a href="index.html" class="nav-name">Rawley Z. Heimer</a>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
   <ul class="nav-links">
     <li class="nav-dropdown"><a href="research.html" class="active">Research</a>
       <div class="dropdown-menu">
@@ -169,7 +236,7 @@
     <div class="paper-card">
       <div class="paper-type">Review of Financial Studies · 2017</div>
       <div class="paper-title">"Law and Finance Matter: Lessons From Externally Imposed Courts"</div>
-      <div class="paper-authors">with Jeffrey R. Brown and J. Anthony Cookson</div>
+      <div class="paper-authors">with James R. Brown and J. Anthony Cookson</div>
       <div class="paper-venue"><em>Review of Financial Studies</em>, 30(3): 1019–1051</div>
       <div class="paper-abstract">This paper provides novel evidence on the real and financial market effects of legal institutions. Our analysis exploits persistent and externally imposed differences in court enforcement that arose when the U.S. Congress assigned state courts to adjudicate contracts on a subset of Native American reservations. Using area-specific data on small business and household credit, reservations assigned to state courts, which enforce contracts more predictably than tribal courts, have stronger credit markets. Moreover, the law-driven component of credit market development is associated with significantly higher per capita income, with stronger effects in sectors that depend more on external financing.</div>
       <div class="paper-footer">
@@ -184,7 +251,7 @@
     <div class="paper-card">
       <div class="paper-type">World Bank Economic Review · 2017</div>
       <div class="paper-title">"Courting Economic Development"</div>
-      <div class="paper-authors">with Jeffrey R. Brown and J. Anthony Cookson</div>
+      <div class="paper-authors">with James R. Brown and J. Anthony Cookson</div>
       <div class="paper-venue"><em>World Bank Economic Review</em>, 30(3): S176–S187</div>
       <div class="paper-abstract">We show that court enforcement uncertainty hinders economic development using sharp variation in judiciaries across Native American reservations in the United States. Congressional legislation passed in 1953 assigned state courts the authority to resolve civil disputes on a subset of reservations, while tribal courts retained authority on unaffected reservations. Although affected and unaffected reservations had similar economic conditions when the law passed, reservations under state courts experienced significantly greater long-run growth. When we examine the distribution of incomes across reservations, the average difference in development is due to the lower incomes of the most impoverished reservations with tribal courts. We show that the relative under-development of reservations with tribal courts is driven by reservations with the most uncertainty in court enforcement.</div>
       <div class="paper-footer">

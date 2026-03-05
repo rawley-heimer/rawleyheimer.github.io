@@ -133,12 +133,79 @@
     .dropdown-menu a:hover { color: var(--gold); background: rgba(255,255,255,0.06); }
     .nav-dropdown:hover .dropdown-menu { display: block; }
     .nav-dropdown::after { content: ''; position: absolute; top: 100%; left: 0; right: 0; height: 12px; }
+
+    /* ── HAMBURGER / MOBILE NAV ── */
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      width: 36px;
+      height: 36px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+      z-index: 201;
+    }
+    .nav-hamburger span {
+      display: block;
+      height: 2px;
+      background: #fff;
+      border-radius: 2px;
+      transition: transform 0.25s, opacity 0.25s;
+    }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    @media (max-width: 700px) {
+      .nav-hamburger { display: flex; }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 59px;
+        left: 0;
+        right: 0;
+        background: var(--maroon);
+        border-bottom: 3px solid var(--gold);
+        flex-direction: column;
+        gap: 0;
+        z-index: 200;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+      }
+      .nav-links.open { display: flex; }
+      .nav-links > li { border-bottom: 1px solid rgba(255,255,255,0.1); }
+      .nav-links > li > a {
+        display: block;
+        padding: 0.85rem 1.5rem;
+        font-size: 0.82rem;
+      }
+      /* Mobile dropdowns: always show sub-items indented */
+      .nav-dropdown .dropdown-menu {
+        display: block !important;
+        position: static;
+        transform: none;
+        box-shadow: none;
+        border-top: none;
+        border-left: 3px solid var(--gold);
+        margin-left: 1.5rem;
+        margin-bottom: 0.4rem;
+        min-width: unset;
+      }
+      .nav-dropdown .dropdown-menu a {
+        padding: 0.5rem 1rem;
+        font-size: 0.72rem;
+      }
+      .nav-dropdown > a::after { display: none; }
+    }
   </style>
 </head>
 <body>
 
 <nav>
   <a href="index.html" class="nav-name">Rawley Z. Heimer</a>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
   <ul class="nav-links">
     <li class="nav-dropdown"><a href="research.html">Research</a>
       <div class="dropdown-menu">
@@ -187,7 +254,7 @@
       <div class="reading-title">"Financial Decision Making in the Age of AI"</div>
       <div class="reading-authors">Rawley Z. Heimer</div>
       <div class="reading-venue">SSRN · February 2026</div>
-      <div class="reading-why" style="margin-top:0.5rem;">A survey of the academic literature on personal financial decision making across three core domains — savings vs. consumption, investment, and debt. In each domain, people systematically deviate from the normative prescriptions of financial economics. The article examines the main drivers of these deviations and concludes with a forward-looking perspective on how generative AI may reshape individual financial decisions.</div>
+      <div class="reading-why" style="margin-top:0.5rem;">This article gives perspective on the academic literature on personal financial decision making. I explore three main domains of financial choices: savings versus consumption, investment decision making, and choices around debt. In each domain, people behave in ways that deviate from normative prescriptions of financial economics. I explore the main drivers of financial decisions that result in these deviations. The article concludes with a forward-looking perspective of how generative artificial intelligence (GenAI) might reshape the landscape of individual's financial decisions.</div>
       <div style="margin-top:0.6rem;"><a href="https://ssrn.com/abstract=" class="reading-link" target="_blank">Download on SSRN →</a></div>
     </div>
 
@@ -195,7 +262,7 @@
       <div class="reading-title">"Subjective Beliefs, Saving, and Spending for Retirement"</div>
       <div class="reading-authors">Rawley Z. Heimer</div>
       <div class="reading-venue">Wharton Pension Research Council Working Paper No. 2024-13 · October 2024</div>
-      <div class="reading-why" style="margin-top:0.5rem;">A survey examining how subjective beliefs — about longevity, investment returns, Social Security, and health costs — shape retirement saving and spending decisions. Draws on a growing literature showing that heterogeneous beliefs, not just preferences or constraints, are a first-order determinant of retirement preparedness.</div>
+      <div class="reading-why" style="margin-top:0.5rem;">Beliefs about future events are crucial to the decisions that people make when developing financial plans over the life cycle. Yet peoples' subjective beliefs can often differ from the objective probabilities that economists and financial planners use in their models. This chapter discusses findings on subjective beliefs, how people might form their beliefs, and how these beliefs affect conclusions drawn from a classical economic life cycle model. I highlight a specific divergence between subjective beliefs and objective probabilities: subjective beliefs about peoples' mortality.</div>
       <div style="margin-top:0.6rem;"><a href="https://ssrn.com/abstract=4976823" class="reading-link" target="_blank">Download on SSRN →</a></div>
     </div>
 
@@ -329,7 +396,7 @@
       <div class="side-item">
         <span>Suggestions for this page, data questions, or research inquiries:</span>
       </div>
-      <a href="/cdn-cgi/l/email-protection#2a584b5d464f53424f43474f586a4d474b434604494547" class="side-link"><span class="__cf_email__" data-cfemail="087a697f646d71606d61656d7a486f65696164266b6765">[email&#160;protected]</span> →</a>
+      <a href="mailto:rawley.heimer@asu.edu" class="side-link">rawley.heimer@asu.edu →</a>
     </div>
 
   </aside

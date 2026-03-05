@@ -66,12 +66,79 @@
     footer { border-top: 3px solid var(--maroon); background: var(--cream-dark); text-align: center; padding: 2rem; font-size: 0.78rem; color: var(--ink-light); letter-spacing: 0.05em; }
     @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
     @media (max-width: 720px) { .wrapper { grid-template-columns: 1fr; gap: 2rem; } }
+
+    /* ── HAMBURGER / MOBILE NAV ── */
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      width: 36px;
+      height: 36px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+      z-index: 201;
+    }
+    .nav-hamburger span {
+      display: block;
+      height: 2px;
+      background: #fff;
+      border-radius: 2px;
+      transition: transform 0.25s, opacity 0.25s;
+    }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    @media (max-width: 700px) {
+      .nav-hamburger { display: flex; }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 59px;
+        left: 0;
+        right: 0;
+        background: var(--maroon);
+        border-bottom: 3px solid var(--gold);
+        flex-direction: column;
+        gap: 0;
+        z-index: 200;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+      }
+      .nav-links.open { display: flex; }
+      .nav-links > li { border-bottom: 1px solid rgba(255,255,255,0.1); }
+      .nav-links > li > a {
+        display: block;
+        padding: 0.85rem 1.5rem;
+        font-size: 0.82rem;
+      }
+      /* Mobile dropdowns: always show sub-items indented */
+      .nav-dropdown .dropdown-menu {
+        display: block !important;
+        position: static;
+        transform: none;
+        box-shadow: none;
+        border-top: none;
+        border-left: 3px solid var(--gold);
+        margin-left: 1.5rem;
+        margin-bottom: 0.4rem;
+        min-width: unset;
+      }
+      .nav-dropdown .dropdown-menu a {
+        padding: 0.5rem 1rem;
+        font-size: 0.72rem;
+      }
+      .nav-dropdown > a::after { display: none; }
+    }
   </style>
 </head>
 <body>
 
 <nav>
   <a href="index.html" class="nav-name">Rawley Z. Heimer</a>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
   <ul class="nav-links">
     <li class="nav-dropdown"><a href="research.html">Research</a>
       <div class="dropdown-menu">
@@ -121,6 +188,7 @@
 
     <div class="contact-block">
       <div class="contact-label">Online</div>
+      <div class="contact-item"><a href="https://search.asu.edu/profile/4304866" target="_blank">ASU Faculty Profile</a></div>
       <div class="contact-item"><a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=1805935" target="_blank">SSRN Profile</a></div>
       <div class="contact-item"><a href="https://scholar.google.com/citations?user=4D_V_kkAAAAJ&hl=en&oi=sra" target="_blank">Google Scholar</a></div>
     </div>
@@ -148,8 +216,4 @@
 </div>
 
 <footer>
-  &copy; 2025 Rawley Z. Heimer &nbsp;·&nbsp; W.P. Carey School of Business, Arizona State University &nbsp;·&nbsp; <a href="mailto:rawley.heimer@asu.edu" style="color:var(--ink-light);">rawley.heimer@asu.edu</a>
-</footer>
-
-</body>
-</html>
+  &copy; 2025 Rawley Z. Heimer &nbsp;·&nbsp; W.P. Carey School of Business, Arizona State University

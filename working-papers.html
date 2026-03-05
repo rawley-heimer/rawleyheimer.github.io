@@ -105,12 +105,79 @@
     .dropdown-menu a:hover { color: var(--gold); background: rgba(255,255,255,0.06); }
     .nav-dropdown:hover .dropdown-menu { display: block; }
     .nav-dropdown::after { content: ''; position: absolute; top: 100%; left: 0; right: 0; height: 12px; }
+
+    /* ── HAMBURGER / MOBILE NAV ── */
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      width: 36px;
+      height: 36px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+      z-index: 201;
+    }
+    .nav-hamburger span {
+      display: block;
+      height: 2px;
+      background: #fff;
+      border-radius: 2px;
+      transition: transform 0.25s, opacity 0.25s;
+    }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    @media (max-width: 700px) {
+      .nav-hamburger { display: flex; }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 59px;
+        left: 0;
+        right: 0;
+        background: var(--maroon);
+        border-bottom: 3px solid var(--gold);
+        flex-direction: column;
+        gap: 0;
+        z-index: 200;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+      }
+      .nav-links.open { display: flex; }
+      .nav-links > li { border-bottom: 1px solid rgba(255,255,255,0.1); }
+      .nav-links > li > a {
+        display: block;
+        padding: 0.85rem 1.5rem;
+        font-size: 0.82rem;
+      }
+      /* Mobile dropdowns: always show sub-items indented */
+      .nav-dropdown .dropdown-menu {
+        display: block !important;
+        position: static;
+        transform: none;
+        box-shadow: none;
+        border-top: none;
+        border-left: 3px solid var(--gold);
+        margin-left: 1.5rem;
+        margin-bottom: 0.4rem;
+        min-width: unset;
+      }
+      .nav-dropdown .dropdown-menu a {
+        padding: 0.5rem 1rem;
+        font-size: 0.72rem;
+      }
+      .nav-dropdown > a::after { display: none; }
+    }
   </style>
 </head>
 <body>
 
 <nav>
   <a href="index.html" class="nav-name">Rawley Z. Heimer</a>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
   <ul class="nav-links">
     <li class="nav-dropdown"><a href="research.html" class="active">Research</a>
       <div class="dropdown-menu">
@@ -151,7 +218,7 @@
     <div class="paper-card">
       <div class="paper-type">Working Paper</div>
       <div class="paper-title">"Temporal Focal Points and Economic Outcomes: Evidence from U.S. Mortgage Lending"</div>
-      <div class="paper-authors">with Marco Giacoletti and Elvis Yu</div>
+      <div class="paper-authors">with Marco Giacoletti and Edison Yu</div>
       <div class="paper-abstract">We develop modified benchmarking tests for disparate treatment that we apply to 25 years of mortgage lending. Our tests limit the scope for omitted variables by linking high-frequency mortgage decisions to an economic mechanism — loan officers have volume quotas that cause increased approval rates at month-end. We estimate that these quotas at least halve the unexplained 7 ppt Black approval gap. Loan officers more likely to miss their quotas have larger increases in Black approvals. Suggesting supply-side mechanisms, applications arrive at a constant rate within-month, and neither differences in credit risk nor applicant preferences explain the month-end decline in racial differences.</div>
       <div class="paper-footer">
         <span class="paper-award">Best Paper, MFA 2021</span>
@@ -211,7 +278,7 @@
     <div class="paper-card">
       <div class="paper-type">Working Paper</div>
       <div class="paper-title">"Single Family REITs and Local Housing Markets"</div>
-      <div class="paper-authors">with Marco Giacoletti, Xiang Li, and Elvis Yu</div>
+      <div class="paper-authors">with Marco Giacoletti, Wenli Li, and Edison Yu</div>
       <div class="paper-abstract">Institutional investors in single-family housing markets are often represented as worsening household well-being. We document the growth of single-family REITs (SFRs) and their (non-)effects on housing markets by constructing a novel dataset of SFRs' underlying properties. SFRs purchase properties in neighborhoods encircling city centers, where housing supply is more elastic, and with populations facing homeownership barriers. Using a spatial differences empirical strategy, SFR growth relates to increased housing supply, lower mortgage approval rates, and modest price increases. These findings likely capture SFRs' selection of neighborhoods rather than causal effects. SFR asset returns mirror representative housing portfolios despite their concentrated holdings.</div>
       <div class="paper-footer">
         <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4895275" class="paper-link" target="_blank">SSRN <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>

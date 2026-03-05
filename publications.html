@@ -182,12 +182,79 @@
     .bib-toast.show { opacity: 1; }
     footer { border-top: 3px solid var(--maroon); background: var(--cream-dark); text-align: center; padding: 2rem; font-size: 0.78rem; color: var(--ink-light); letter-spacing: 0.05em; }
     @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* ── HAMBURGER / MOBILE NAV ── */
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      width: 36px;
+      height: 36px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+      z-index: 201;
+    }
+    .nav-hamburger span {
+      display: block;
+      height: 2px;
+      background: #fff;
+      border-radius: 2px;
+      transition: transform 0.25s, opacity 0.25s;
+    }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    @media (max-width: 700px) {
+      .nav-hamburger { display: flex; }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 59px;
+        left: 0;
+        right: 0;
+        background: var(--maroon);
+        border-bottom: 3px solid var(--gold);
+        flex-direction: column;
+        gap: 0;
+        z-index: 200;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+      }
+      .nav-links.open { display: flex; }
+      .nav-links > li { border-bottom: 1px solid rgba(255,255,255,0.1); }
+      .nav-links > li > a {
+        display: block;
+        padding: 0.85rem 1.5rem;
+        font-size: 0.82rem;
+      }
+      /* Mobile dropdowns: always show sub-items indented */
+      .nav-dropdown .dropdown-menu {
+        display: block !important;
+        position: static;
+        transform: none;
+        box-shadow: none;
+        border-top: none;
+        border-left: 3px solid var(--gold);
+        margin-left: 1.5rem;
+        margin-bottom: 0.4rem;
+        min-width: unset;
+      }
+      .nav-dropdown .dropdown-menu a {
+        padding: 0.5rem 1rem;
+        font-size: 0.72rem;
+      }
+      .nav-dropdown > a::after { display: none; }
+    }
   </style>
 </head>
 <body>
 
 <nav>
   <a href="index.html" class="nav-name">Rawley Z. Heimer</a>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
   <ul class="nav-links">
     <li class="nav-dropdown"><a href="research.html" class="active">Research</a>
       <div class="dropdown-menu">
@@ -318,7 +385,7 @@
         <span class="pub-num">8</span>
         <div>
           <div class="pub-title">"Growing Up Without Finance"</div>
-          <div class="pub-authors">with Jeffrey R. Brown and J. Anthony Cookson</div>
+          <div class="pub-authors">with James R. Brown and J. Anthony Cookson</div>
           <div class="pub-venue">Journal of Financial Economics, 134(3): 591–616</div>
           <div class="pub-abstract">Early-life exposure to local financial institutions increases household financial inclusion and leads to long-term improvements in consumer credit outcomes. We identify the effect of local financial markets using Congressional legislation that led to unintended differences in financial market development across Native American reservations. Individuals from financially underdeveloped reservations enter consumer credit markets later, and upon reaching adulthood, have 10 point lower credit scores and 4 percentage point more delinquent accounts. These effects are long-lived and depreciate slowly after individuals move to more developed areas. Formative exposures to local banking improve consumer credit behavior by increasing financial literacy and financial trust.</div>
           <span class="pub-award">TIAA Paul A. Samuelson Award Finalist</span>
@@ -331,7 +398,7 @@
         <span class="pub-num">9</span>
         <div>
           <div class="pub-title">"Law and Finance Matter: Lessons from Externally Imposed Courts"</div>
-          <div class="pub-authors">with Jeffrey R. Brown and J. Anthony Cookson</div>
+          <div class="pub-authors">with James R. Brown and J. Anthony Cookson</div>
           <div class="pub-venue">Review of Financial Studies, 30(3): 1019–1051</div>
           <div class="pub-abstract">This paper provides novel evidence on the real and financial market effects of legal institutions. Our analysis exploits persistent and externally imposed differences in court enforcement that arose when the U.S. Congress assigned state courts to adjudicate contracts on a subset of Native American reservations. Using area-specific data on small business and household credit, reservations assigned to state courts, which enforce contracts more predictably than tribal courts, have stronger credit markets. Moreover, the law-driven component of credit market development is associated with significantly higher per capita income, with stronger effects in sectors that depend more on external financing.</div>
           <span class="pub-award">Best Paper in Financial Markets &amp; Institutions, FMA Annual Meetings</span>
@@ -353,7 +420,7 @@
         <span class="pub-num">11</span>
         <div>
           <div class="pub-title">"Courting Economic Development"</div>
-          <div class="pub-authors">with Jeffrey R. Brown and J. Anthony Cookson</div>
+          <div class="pub-authors">with James R. Brown and J. Anthony Cookson</div>
           <div class="pub-venue">World Bank Economic Review, 30(3): S176–S187</div>
           <div class="pub-abstract">We show that court enforcement uncertainty hinders economic development using sharp variation in judiciaries across Native American reservations in the United States. Congressional legislation passed in 1953 assigned state courts the authority to resolve civil disputes on a subset of reservations, while tribal courts retained authority on unaffected reservations. Although affected and unaffected reservations had similar economic conditions when the law passed, reservations under state courts experienced significantly greater long-run growth. When we examine the distribution of incomes across reservations, the average difference in development is due to the lower incomes of the most impoverished reservations with tribal courts. We show that the relative under-development of reservations with tribal courts is driven by reservations with the most uncertainty in court enforcement.</div>
           <div class="pub-links"><a href="https://academic.oup.com/wber/article/30/Supplement_1/S176/2897440" class="pub-link" target="_blank">Journal</a><button class="bib-btn" onclick="copyBib('p11')">BibTeX</button></div>
@@ -373,20 +440,11 @@
       <div class="pub-row">
         <span class="pub-num">13</span>
         <div>
-          <div class="pub-title">"Subjective Beliefs, Saving, and Spending for Retirement"</div>
-          <div class="pub-venue">Forthcoming, Pension Research Council, University of Pennsylvania Press</div>
-          <div class="pub-links"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4976823" class="pub-link" target="_blank">SSRN</a><button class="bib-btn" onclick="copyBib('p13')">BibTeX</button></div>
-        </div>
-      </div>
-
-      <div class="pub-row">
-        <span class="pub-num">14</span>
-        <div>
           <div class="pub-title">"Facebook Finance: How Social Interaction Propagates Active Investing"</div>
           <div class="pub-authors">with D. Simon</div>
           <div class="pub-venue">Federal Reserve Bank of Cleveland Working Paper Series, No. 1522 (2015)</div>
           <div class="pub-abstract">This paper shows how active investing strategies propagate through social connections in a network of retail traders, using a new database of social activity linked to individual-level trading records. A trader's good short-term performance causes them to contact others. A trader's activity increases when peers perform well and increase communication. We use the staggered entry of brokerages into partnerships with the social networking platform, which is a necessary precursor for traders to access the network, to argue these effects are causal. This pattern of communication supports active trading, even though the network reveals the low success rate of retail traders.</div>
-          <div class="pub-links"><a href="https://www.clevelandfed.org/publications/working-paper/2015/wp-1522-facebook-finance-social-interaction-investing" class="pub-link" target="_blank">FRB Cleveland</a><button class="bib-btn" onclick="copyBib('p14')">BibTeX</button></div>
+          <div class="pub-links"><a href="https://www.clevelandfed.org/publications/working-paper/2015/wp-1522-facebook-finance-social-interaction-investing" class="pub-link" target="_blank">FRB Cleveland</a><button class="bib-btn" onclick="copyBib('p13')">BibTeX</button></div>
         </div>
       </div>
 
@@ -399,12 +457,14 @@
       <div class="wp-row">
         <div class="wp-title">"Financial Decision Making in the Age of AI"</div>
         <div class="wp-meta">SSRN (February 2026)</div>
+        <div class="wp-abstract">This article gives perspective on the academic literature on personal financial decision making. I explore three main domains of financial choices: savings versus consumption, investment decision making, and choices around debt. In each domain, people behave in ways that deviate from normative prescriptions of financial economics. I explore the main drivers of financial decisions that result in these deviations. The article concludes with a forward-looking perspective of how generative artificial intelligence (GenAI) might reshape the landscape of individual's financial decisions.</div>
         <div class="pub-links" style="margin-top:0.35rem;"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6249619" class="pub-link" target="_blank">SSRN</a><button class="bib-btn" onclick="copyBib('s1')">BibTeX</button></div>
       </div>
 
       <div class="wp-row">
         <div class="wp-title">"Subjective Beliefs, Saving, and Spending for Retirement"</div>
         <div class="wp-meta">Wharton Pension Research Council Working Paper No. 2024-13 (October 2024)</div>
+        <div class="wp-abstract">Beliefs about future events are crucial to the decisions that people make when developing financial plans over the life cycle. Yet peoples' subjective beliefs can often differ from the objective probabilities that economists and financial planners use in their models. This chapter discusses findings on subjective beliefs, how people might form their beliefs, and how these beliefs affect conclusions drawn from a classical economic life cycle model. I highlight a specific divergence between subjective beliefs and objective probabilities: subjective beliefs about peoples' mortality.</div>
         <div class="pub-links" style="margin-top:0.35rem;"><a href="https://ssrn.com/abstract=4976823" class="pub-link" target="_blank">SSRN</a><button class="bib-btn" onclick="copyBib('s2')">BibTeX</button></div>
       </div>
 
@@ -447,13 +507,63 @@
 </div>
 
 <footer>
-  &copy; 2025 Rawley Z. Heimer &nbsp;·&nbsp; W.P. Carey School of Business, Arizona State University &nbsp;·&nbsp; <a href="/cdn-cgi/l/email-protection#4f3d2e38232a3661272a26222a3d0f2e3c3a612a2b3a" style="color:var(--ink-light);"><span class="__cf_email__" data-cfemail="98eaf9eff4fde1b6f0fdf1f5fdead8f9ebedb6fdfced">[email&#160;protected]</span></a>
+  &copy; 2025 Rawley Z. Heimer &nbsp;·&nbsp; W.P. Carey School of Business, Arizona State University &nbsp;·&nbsp; <a href="mailto:rawley.heimer@asu.edu" style="color:var(--ink-light);">rawley.heimer@asu.edu</a>
 </footer>
 
 
 <div class="bib-toast" id="bib-toast">BibTeX copied to clipboard</div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+
+<!-- BibTeX popup CSS -->
+<style>
+.bib-popup {
+  display: none;
+  position: relative;
+  margin-top: 0.6rem;
+}
+.bib-popup.open { display: block; }
+.bib-box {
+  background: #f7f4ef;
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--gold);
+  padding: 0.8rem 1rem;
+  font-family: 'Courier New', monospace;
+  font-size: 0.72rem;
+  line-height: 1.6;
+  white-space: pre;
+  overflow-x: auto;
+  color: var(--ink);
+}
+.bib-copy-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.45rem;
+}
+.bib-copy-btn {
+  font-size: 0.72rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--maroon);
+  border: none;
+  padding: 0.3rem 0.75rem;
+  cursor: pointer;
+  font-family: 'Source Serif 4', serif;
+  transition: background 0.2s;
+}
+.bib-copy-btn:hover { background: #6b1010; }
+.bib-copied {
+  font-size: 0.72rem;
+  color: #2a7a2a;
+  letter-spacing: 0.05em;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.bib-copied.show { opacity: 1; }
+</style>
+
+<script>
 const bibtex = {
   p1: `@article{heimer2025dynamic,
   title={Dynamic Inconsistency in Risky Choice: Evidence from the Lab and Field},
@@ -520,7 +630,7 @@ const bibtex = {
 }`,
   p8: `@article{heimer2019growing,
   title={Growing Up Without Finance},
-  author={Heimer, Rawley Z and Brown, Jeffrey R and Cookson, J Anthony},
+  author={Heimer, Rawley Z and Brown, James R and Cookson, J Anthony},
   journal={Journal of Financial Economics},
   volume={134},
   number={3},
@@ -529,7 +639,7 @@ const bibtex = {
 }`,
   p9: `@article{heimer2017law,
   title={Law and Finance Matter: Lessons from Externally Imposed Courts},
-  author={Heimer, Rawley Z and Brown, Jeffrey R and Cookson, J Anthony},
+  author={Heimer, Rawley Z and Brown, James R and Cookson, J Anthony},
   journal={Review of Financial Studies},
   volume={30},
   number={3},
@@ -547,7 +657,7 @@ const bibtex = {
 }`,
   p11: `@article{heimer2015courting,
   title={Courting Economic Development},
-  author={Heimer, Rawley Z and Brown, Jeffrey R and Cookson, J Anthony},
+  author={Heimer, Rawley Z and Brown, James R and Cookson, J Anthony},
   journal={World Bank Economic Review},
   volume={30},
   number={3},
@@ -562,14 +672,7 @@ const bibtex = {
   pages={527--540},
   year={2014}
 }`,
-  p13: `@incollection{heimer2024subjective,
-  title={Subjective Beliefs, Saving, and Spending for Retirement},
-  author={Heimer, Rawley Z},
-  booktitle={Pension Research Council},
-  publisher={University of Pennsylvania Press},
-  year={forthcoming}
-}`,
-  p14: `@techreport{heimer2015facebook,
+  p13: `@techreport{heimer2015facebook,
   title={Facebook Finance: How Social Interaction Propagates Active Investing},
   author={Heimer, Rawley Z and Simon, David},
   institution={Federal Reserve Bank of Cleveland},
@@ -618,4 +721,60 @@ const bibtex = {
 }`,
 };
 
-function copyBi
+function copyBib(id) {
+  // Toggle popup open/closed
+  var existingPopup = document.getElementById('bib-popup-' + id);
+  if (existingPopup) {
+    existingPopup.classList.toggle('open');
+    return;
+  }
+
+  // First time: build and insert the popup after the button's parent .pub-links
+  var btn = document.querySelector('[onclick="copyBib(\'' + id + '\')"]');
+  var container = btn.closest('.pub-links');
+
+  var popup = document.createElement('div');
+  popup.className = 'bib-popup open';
+  popup.id = 'bib-popup-' + id;
+
+  var box = document.createElement('pre');
+  box.className = 'bib-box';
+  box.textContent = bibtex[id];
+
+  var row = document.createElement('div');
+  row.className = 'bib-copy-row';
+
+  var copyBtn = document.createElement('button');
+  copyBtn.className = 'bib-copy-btn';
+  copyBtn.textContent = 'Copy to Clipboard';
+
+  var msg = document.createElement('span');
+  msg.className = 'bib-copied';
+  msg.textContent = '✓ Copied!';
+
+  copyBtn.addEventListener('click', function() {
+    navigator.clipboard.writeText(bibtex[id]).then(function() {
+      msg.classList.add('show');
+      setTimeout(function() { msg.classList.remove('show'); }, 2000);
+    }).catch(function() {
+      // Fallback for older browsers
+      var ta = document.createElement('textarea');
+      ta.value = bibtex[id];
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+      msg.classList.add('show');
+      setTimeout(function() { msg.classList.remove('show'); }, 2000);
+    });
+  });
+
+  row.appendChild(copyBtn);
+  row.appendChild(msg);
+  popup.appendChild(box);
+  popup.appendChild(row);
+  container.insertAdjacentElement('afterend', popup);
+}
+</script>
+</body>
+</html>

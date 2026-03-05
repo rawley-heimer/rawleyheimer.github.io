@@ -120,12 +120,79 @@
     .dropdown-menu a:hover { color: var(--gold); background: rgba(255,255,255,0.06); }
     .nav-dropdown:hover .dropdown-menu { display: block; }
     .nav-dropdown::after { content: ''; position: absolute; top: 100%; left: 0; right: 0; height: 12px; }
+
+    /* ── HAMBURGER / MOBILE NAV ── */
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      width: 36px;
+      height: 36px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+      z-index: 201;
+    }
+    .nav-hamburger span {
+      display: block;
+      height: 2px;
+      background: #fff;
+      border-radius: 2px;
+      transition: transform 0.25s, opacity 0.25s;
+    }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    @media (max-width: 700px) {
+      .nav-hamburger { display: flex; }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 59px;
+        left: 0;
+        right: 0;
+        background: var(--maroon);
+        border-bottom: 3px solid var(--gold);
+        flex-direction: column;
+        gap: 0;
+        z-index: 200;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+      }
+      .nav-links.open { display: flex; }
+      .nav-links > li { border-bottom: 1px solid rgba(255,255,255,0.1); }
+      .nav-links > li > a {
+        display: block;
+        padding: 0.85rem 1.5rem;
+        font-size: 0.82rem;
+      }
+      /* Mobile dropdowns: always show sub-items indented */
+      .nav-dropdown .dropdown-menu {
+        display: block !important;
+        position: static;
+        transform: none;
+        box-shadow: none;
+        border-top: none;
+        border-left: 3px solid var(--gold);
+        margin-left: 1.5rem;
+        margin-bottom: 0.4rem;
+        min-width: unset;
+      }
+      .nav-dropdown .dropdown-menu a {
+        padding: 0.5rem 1rem;
+        font-size: 0.72rem;
+      }
+      .nav-dropdown > a::after { display: none; }
+    }
   </style>
 </head>
 <body>
 
 <nav>
   <a href="index.html" class="nav-name">Rawley Z. Heimer</a>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
   <ul class="nav-links">
     <li class="nav-dropdown"><a href="research.html">Research</a>
       <div class="dropdown-menu">
@@ -208,12 +275,19 @@
       <div class="cv-note">2022–2025</div>
     </div>
 
-    <div class="section-label">Visiting Affiliations</div>
+    <div class="section-label">Other Affiliations</div>
 
     <div class="cv-row">
       <div>
+        <div class="cv-title">Affiliate</div>
+        <div class="cv-org"><a href="https://thebureau.org/" target="_blank" style="color:inherit;text-decoration:none;">The Bureau Consulting Group</a></div>
+      </div>
+      <div class="cv-note">2025–</div>
+    </div>
+    <div class="cv-row">
+      <div>
         <div class="cv-title">Visiting Scholar</div>
-        <div class="cv-org">Becker Friedman Institute, University of Chicago</div>
+        <div class="cv-org"><a href="https://bfi.uchicago.edu/scholar/rawley-heimer/" target="_blank" style="color:inherit;text-decoration:none;">Becker Friedman Institute, University of Chicago</a></div>
       </div>
       <div class="cv-note">2023</div>
     </div>
@@ -336,7 +410,7 @@
       </div>
     </div>
 
-    <a href="#" class="cv-download">
+    <a href="https://www.dropbox.com/scl/fi/xyxluyk32d2jp4yuue3dz/CV_RHeimer_2024.pdf?rlkey=e71hs5w5qtlvc6kl7zpshtynz&e=1&st=v749bi4w&dl=0" class="cv-download" target="_blank">
       <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
       Download CV
     </a>
@@ -350,7 +424,7 @@
       <div class="side-heading">Contact</div>
       <div class="side-item">
         <strong>Email</strong>
-        <span><a href="/cdn-cgi/l/email-protection#a7d5c6d0cbc2decfc2cecac2d5e7c0cac6cecb89c4c8ca" style="color:var(--maroon);text-decoration:none;"><span class="__cf_email__" data-cfemail="691b081e050c10010c00040c1b290e04080005470a0604">[email&#160;protected]</span></a></span>
+        <span><a href="mailto:rawley.heimer@asu.edu" style="color:var(--maroon);text-decoration:none;">rawley.heimer@asu.edu</a></span>
       </div>
       <div class="side-item">
         <strong>Web</strong>
@@ -403,7 +477,7 @@
       <div class="side-heading">Quick Links</div>
       <div class="side-item"><a href="research.html" style="color:var(--maroon);text-decoration:none;">Research overview →</a></div>
       <div class="side-item"><a href="index.html#media" style="color:var(--maroon);text-decoration:none;">Media coverage →</a></div>
-      <div class="side-item"><a href="#" style="color:var(--maroon);text-decoration:none;">Download CV →</a></div>
+      <div class="side-item"><a href="https://www.dropbox.com/scl/fi/xyxluyk32d2jp4yuue3dz/CV_RHeimer_2024.pdf?rlkey=e71hs5w5qtlvc6kl7zpshtynz&e=1&st=v749bi4w&dl=0" style="color:var(--maroon);text-decoration:none;" target="_blank">Download CV →</a></div>
     </div>
 
   </aside
