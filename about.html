@@ -477,7 +477,30 @@
       <div class="side-heading">Quick Links</div>
       <div class="side-item"><a href="research.html" style="color:var(--maroon);text-decoration:none;">Research overview →</a></div>
       <div class="side-item"><a href="index.html#media" style="color:var(--maroon);text-decoration:none;">Media coverage →</a></div>
-      <div class="side-item"><a href="https://www.dropbox.com/scl/fi/xyxluyk32d2jp4yuue3dz/CV_RHeimer_2024.pdf?rlkey=e71hs5w5qtlvc6kl7zpshtynz&e=1&st=v749bi4w&dl=0" style="color:var(--maroon);text-decoration:none;" target="_blank">Download CV →</a></div>
-    </div>
-
-  </aside
+      <div class="side-item"><a href="https://www.dropbox.com/scl/fi/xyxluyk32d2jp4yuue3dz/CV_RHeimer_2024.pdf?rlkey=e71hs5w5qtlvc6kl7zpsht
+<script>
+(function(){
+  var btn = document.getElementById('nav-hamburger');
+  var menu = document.querySelector('.nav-links');
+  if (!btn || !menu) return;
+  btn.addEventListener('click', function(e){
+    e.stopPropagation();
+    btn.classList.toggle('open');
+    menu.classList.toggle('open');
+  });
+  menu.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      btn.classList.remove('open');
+      menu.classList.remove('open');
+    });
+  });
+  document.addEventListener('click', function(e){
+    if (!btn.contains(e.target) && !menu.contains(e.target)){
+      btn.classList.remove('open');
+      menu.classList.remove('open');
+    }
+  });
+})();
+</script>
+</body>
+</html>

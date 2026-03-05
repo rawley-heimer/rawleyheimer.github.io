@@ -562,219 +562,29 @@
 }
 .bib-copied.show { opacity: 1; }
 </style>
-
 <script>
-const bibtex = {
-  p1: `@article{heimer2025dynamic,
-  title={Dynamic Inconsistency in Risky Choice: Evidence from the Lab and Field},
-  author={Heimer, Rawley Z and Iliewa, Zwetelina and Imas, Alex and Weber, Martin},
-  journal={American Economic Review},
-  volume={115},
-  number={1},
-  pages={330--363},
-  year={2025}
-}`,
-  p2: `@article{heimer2022shale,
-  title={Shale Shocked: Cash Windfalls and Household Debt Repayment},
-  author={Heimer, Rawley Z and Cookson, J Anthony and Gilje, Erik},
-  journal={Journal of Financial Economics},
-  volume={146},
-  number={3},
-  pages={905--931},
-  year={2022}
-}`,
-  p3: `@article{heimer2022biased,
-  title={Biased by Choice: How Financial Constraints Can Reduce Financial Mistakes},
-  author={Heimer, Rawley Z and Imas, Alex},
-  journal={Review of Financial Studies},
-  volume={35},
-  number={4},
-  pages={1643--1681},
-  year={2022}
-}`,
-  p4: `@article{heimer2021personal,
-  title={Personal Wealth, Self-Employment, and Business Ownership},
-  author={Heimer, Rawley Z and Bellon, Aymeric and Cookson, J Anthony and Gilje, Erik},
-  journal={Review of Financial Studies},
-  volume={34},
-  number={8},
-  pages={3935--3975},
-  year={2021}
-}`,
-  p5: `@article{heimer2021politicizing,
-  title={Politicizing Consumer Credit},
-  author={Heimer, Rawley Z and Akey, Pat and Lewellen, Stefan},
-  journal={Journal of Financial Economics},
-  volume={139},
-  number={2},
-  pages={627--655},
-  year={2021}
-}`,
-  p6: `@article{heimer2019yolo,
-  title={{YOLO}: Mortality Beliefs and Household Finance Puzzles},
-  author={Heimer, Rawley Z and Myrseth, Kristian Ove R and Schoenle, Raphael S},
-  journal={Journal of Finance},
-  volume={74},
-  number={6},
-  pages={2957--2996},
-  year={2019}
-}`,
-  p7: `@article{heimer2019leverage,
-  title={Should Retail Investors' Leverage Be Limited?},
-  author={Heimer, Rawley Z and Simsek, Alp},
-  journal={Journal of Financial Economics},
-  volume={132},
-  number={3},
-  pages={1--21},
-  year={2019}
-}`,
-  p8: `@article{heimer2019growing,
-  title={Growing Up Without Finance},
-  author={Heimer, Rawley Z and Brown, James R and Cookson, J Anthony},
-  journal={Journal of Financial Economics},
-  volume={134},
-  number={3},
-  pages={591--616},
-  year={2019}
-}`,
-  p9: `@article{heimer2017law,
-  title={Law and Finance Matter: Lessons from Externally Imposed Courts},
-  author={Heimer, Rawley Z and Brown, James R and Cookson, J Anthony},
-  journal={Review of Financial Studies},
-  volume={30},
-  number={3},
-  pages={1019--1051},
-  year={2017}
-}`,
-  p10: `@article{heimer2016peer,
-  title={Peer Pressure: Social Interaction and the Disposition Effect},
-  author={Heimer, Rawley Z},
-  journal={Review of Financial Studies},
-  volume={29},
-  number={11},
-  pages={3177--3209},
-  year={2016}
-}`,
-  p11: `@article{heimer2015courting,
-  title={Courting Economic Development},
-  author={Heimer, Rawley Z and Brown, James R and Cookson, J Anthony},
-  journal={World Bank Economic Review},
-  volume={30},
-  number={3},
-  pages={S176--S187},
-  year={2015}
-}`,
-  p12: `@article{heimer2014friends,
-  title={Friends Do Let Friends Buy Stocks Actively},
-  author={Heimer, Rawley Z},
-  journal={Journal of Economic Behavior and Organization},
-  volume={107},
-  pages={527--540},
-  year={2014}
-}`,
-  p13: `@techreport{heimer2015facebook,
-  title={Facebook Finance: How Social Interaction Propagates Active Investing},
-  author={Heimer, Rawley Z and Simon, David},
-  institution={Federal Reserve Bank of Cleveland},
-  number={1522},
-  year={2015}
-}`,
-  s1: `@techreport{heimer2026ai,
-  title={Financial Decision Making in the Age of {AI}},
-  author={Heimer, Rawley Z},
-  institution={SSRN},
-  year={2026}
-}`,
-  s2: `@techreport{heimer2024beliefs,
-  title={Subjective Beliefs, Saving, and Spending for Retirement},
-  author={Heimer, Rawley Z},
-  institution={Wharton Pension Research Council},
-  number={2024-13},
-  year={2024}
-}`,
-  s3: `@techreport{heimer2024credit,
-  title={Navigating Credit Bureau Data: Field Notes for Researchers},
-  author={Heimer, Rawley Z},
-  institution={SSRN},
-  number={4891923},
-  year={2024}
-}`,
-  b1: `@misc{heimer2020covid,
-  title={Are People Overconfident about Avoiding {COVID}-19?},
-  author={Heimer, Rawley Z and Liu, Haoyang and Zhang, Xiaohan},
-  howpublished={Liberty Street Economics, Federal Reserve Bank of New York},
-  year={2020}
-}`,
-  b2: `@techreport{heimer2020homeownership,
-  title={Intergenerational Homeownership and Mortgage Distress},
-  author={Heimer, Rawley Z and Fritsch, Nicolas},
-  institution={Federal Reserve Bank of Cleveland},
-  type={Economic Commentary},
-  year={2020}
-}`,
-  b3: `@techreport{heimer2015housing,
-  title={Geographic Mobility and Consumer Financial Health: Evidence from Oil Production Boom Towns},
-  author={Heimer, Rawley Z and Kolliner, Daniel and Stehulak, Todd},
-  institution={Federal Reserve Bank of Cleveland},
-  type={Economic Trends},
-  year={2015}
-}`,
-};
-
-function copyBib(id) {
-  // Toggle popup open/closed
-  var existingPopup = document.getElementById('bib-popup-' + id);
-  if (existingPopup) {
-    existingPopup.classList.toggle('open');
-    return;
-  }
-
-  // First time: build and insert the popup after the button's parent .pub-links
-  var btn = document.querySelector('[onclick="copyBib(\'' + id + '\')"]');
-  var container = btn.closest('.pub-links');
-
-  var popup = document.createElement('div');
-  popup.className = 'bib-popup open';
-  popup.id = 'bib-popup-' + id;
-
-  var box = document.createElement('pre');
-  box.className = 'bib-box';
-  box.textContent = bibtex[id];
-
-  var row = document.createElement('div');
-  row.className = 'bib-copy-row';
-
-  var copyBtn = document.createElement('button');
-  copyBtn.className = 'bib-copy-btn';
-  copyBtn.textContent = 'Copy to Clipboard';
-
-  var msg = document.createElement('span');
-  msg.className = 'bib-copied';
-  msg.textContent = '✓ Copied!';
-
-  copyBtn.addEventListener('click', function() {
-    navigator.clipboard.writeText(bibtex[id]).then(function() {
-      msg.classList.add('show');
-      setTimeout(function() { msg.classList.remove('show'); }, 2000);
-    }).catch(function() {
-      // Fallback for older browsers
-      var ta = document.createElement('textarea');
-      ta.value = bibtex[id];
-      document.body.appendChild(ta);
-      ta.select();
-      document.execCommand('copy');
-      document.body.removeChild(ta);
-      msg.classList.add('show');
-      setTimeout(function() { msg.classList.remove('show'); }, 2000);
+(function(){
+  var btn = document.getElementById('nav-hamburger');
+  var menu = document.querySelector('.nav-links');
+  if (!btn || !menu) return;
+  btn.addEventListener('click', function(e){
+    e.stopPropagation();
+    btn.classList.toggle('open');
+    menu.classList.toggle('open');
+  });
+  menu.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      btn.classList.remove('open');
+      menu.classList.remove('open');
     });
   });
-
-  row.appendChild(copyBtn);
-  row.appendChild(msg);
-  popup.appendChild(box);
-  popup.appendChild(row);
-  container.insertAdjacentElement('afterend', popup);
-}
+  document.addEventListener('click', function(e){
+    if (!btn.contains(e.target) && !menu.contains(e.target)){
+      btn.classList.remove('open');
+      menu.classList.remove('open');
+    }
+  });
+})();
 </script>
 </body>
 </html>

@@ -211,9 +211,29 @@
           <span class="topic-tag">Retirement Savings</span>
         </div>
       </div>
-    </div>
-  </div>
-</div>
-
-<footer>
-  &copy; 2025 Rawley Z. Heimer &nbsp;·&nbsp; W.P. Carey School of Business, Arizona State University
+<script>
+(function(){
+  var btn = document.getElementById('nav-hamburger');
+  var menu = document.querySelector('.nav-links');
+  if (!btn || !menu) return;
+  btn.addEventListener('click', function(e){
+    e.stopPropagation();
+    btn.classList.toggle('open');
+    menu.classList.toggle('open');
+  });
+  menu.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      btn.classList.remove('open');
+      menu.classList.remove('open');
+    });
+  });
+  document.addEventListener('click', function(e){
+    if (!btn.contains(e.target) && !menu.contains(e.target)){
+      btn.classList.remove('open');
+      menu.classList.remove('open');
+    }
+  });
+})();
+</script>
+</body>
+</html>

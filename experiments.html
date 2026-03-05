@@ -460,156 +460,27 @@
 <footer>
   &copy; 2025 Rawley Z. Heimer &nbsp;·&nbsp; W.P. Carey School of Business, Arizona State University &nbsp;·&nbsp; <a href="mailto:rawley.heimer@asu.edu" style="color:var(--ink-light);">rawley.heimer@asu.edu</a>
 </footer>
-
-<script>
-// ── Paper data ──
-const papers = [
-  // RFS
-  { year: 1990, journal: "RFS", title: "Pooling, Separating, and Semiseparating Equilibria in Financial Markets: Some Experimental Evidence", authors: "Cadsby, Frank & Maksimovic", type: ["lab"] },
-  { year: 1996, journal: "RFS", title: "Collusion in Uniform-Price Auctions: Experimental Evidence and Implications for Treasury Auctions", authors: "Goswami, Noe & Rebello", type: ["lab"] },
-  { year: 1997, journal: "RFS", title: "Unconditional and Conditional Takeover Offers: Experimental Evidence", authors: "Kale & Noe", type: ["lab"] },
-  { year: 1999, journal: "RFS", title: "Quote Disclosure and Price Discovery in Multiple-Dealer Financial Markets", authors: "Flood, Huisman, Koedijk & Mahieu", type: ["lab", "market"] },
-  { year: 1999, journal: "RFS", title: "Cheap Talk, Fraud, and Adverse Selection in Financial Markets: Some Experimental Evidence", authors: "Forsythe, Lundholm & Rietz", type: ["lab", "market"] },
-  { year: 2000, journal: "RFS", title: "The Opportunity for Conspiracy in Asset Markets Organized with Dealer Intermediaries", authors: "Cason", type: ["lab", "market"] },
-  { year: 2005, journal: "RFS", title: "Coordination of Expectations in Asset Pricing Experiments", authors: "Hommes, Sonnemans, Tuinstra & Van de Velden", type: ["lab"] },
-  { year: 2006, journal: "RFS", title: "Competition and Cooperation in Divisible Good Auctions: An Experimental Examination", authors: "Sade, Schnitzlein & Zender", type: ["lab"] },
-  { year: 2009, journal: "RFS", title: "Distinguishing the Effect of Overconfidence from Rational Best-Response on Information Aggregation", authors: "Kogan", type: ["lab", "market"] },
-  { year: 2009, journal: "RFS", title: "Margin Trading, Overpricing, and Synchronization Risk", authors: "Bhojraj, Bloomfield & Tayler", type: ["lab", "market"] },
-  { year: 2009, journal: "RFS", title: "How Noise Trading Affects Markets: An Experimental Analysis", authors: "Bloomfield, O\'Hara & Saar", type: ["lab", "market"] },
-  { year: 2010, journal: "RFS", title: "Ambiguity in Asset Markets: Theory and Experiment", authors: "Bossaerts, Ghirardato, Guarnaschelli & Zame", type: ["lab", "market"] },
-  { year: 2010, journal: "RFS", title: "Why Does the Law of One Price Fail? An Experiment on Index Mutual Funds", authors: "Choi, Laibson & Madrian", type: ["lab"] },
-  { year: 2013, journal: "RFS", title: "\u2018O Sole Mio: An Experimental Analysis of Weather and Risk Attitudes in Financial Decisions", authors: "Bassi, Colacito & Fulghieri", type: ["lab"] },
-  { year: 2016, journal: "RFS", title: "Neural Evidence of Regret and Its Implications for Investor Behavior", authors: "Frydman & Camerer", type: ["lab"] },
-  { year: 2017, journal: "RFS", title: "How Does Risk Management Influence Production Decisions? Evidence from a Field Experiment", authors: "Cole, Gin\u00e9 & Vickery", type: ["field"] },
-  { year: 2017, journal: "RFS", title: "Does Aggregated Returns Disclosure Increase Portfolio Risk Taking?", authors: "Beshears, Choi, Laibson & Madrian", type: ["lab"] },
-  { year: 2017, journal: "RFS", title: "The Causal Effect of Stop-Loss and Take-Gain Orders on the Disposition Effect", authors: "Fischbacher, Hoffmann & Schudy", type: ["lab"] },
-  { year: 2018, journal: "RFS", title: "Rolling Mental Accounts", authors: "Frydman, Hartzmark & Solomon", type: ["lab"] },
-  { year: 2018, journal: "RFS", title: "Can People Learn about Black Swans? Experimental Evidence", authors: "Payzan-LeNestour", type: ["lab"] },
-  { year: 2019, journal: "RFS", title: "Low Interest Rates and Risk-Taking: Evidence from Individual Investment Decisions", authors: "Lian, Ma & Wang", type: ["lab"] },
-  { year: 2019, journal: "RFS", title: "Unleashing Animal Spirits: Self-Control and Overpricing in Experimental Asset Markets", authors: "Kocher, Lucks & Schindler", type: ["lab", "market"] },
-  { year: 2020, journal: "RFS", title: "Financial Illiteracy and Pension Contributions: A Field Experiment on Compound Interest in China", authors: "Song", type: ["field"] },
-  { year: 2020, journal: "RFS", title: "Bubbles and Financial Professionals", authors: "Weitzel, Huber, Huber, Kirchler, Lindner & Rose", type: ["lab", "market"] },
-  { year: 2020, journal: "RFS", title: "Overcoming Discount Window Stigma: An Experimental Investigation", authors: "Armantier & Holt", type: ["lab"] },
-  { year: 2021, journal: "RFS", title: "Side Effects of Nudging: Evidence from a Randomized Intervention in the Credit Card Market", authors: "Medina", type: ["field"] },
-  { year: 2021, journal: "RFS", title: "How Much Information Is Incorporated into Financial Asset Prices? Experimental Evidence", authors: "Page & Siemroth", type: ["lab", "market"] },
-  { year: 2021, journal: "RFS", title: "Experience Does Not Eliminate Bubbles: Experimental Evidence", authors: "Kop\u00e1nyi-Peuker & Weber", type: ["lab", "market"] },
-  { year: 2022, journal: "RFS", title: "Efficiency of Dynamic Portfolio Choices: An Experiment", authors: "Magnani, Rabanal, Rud & Wang", type: ["lab"] },
-  { year: 2022, journal: "RFS", title: "Biased by Choice: How Financial Constraints Can Reduce Financial Mistakes", authors: "Heimer & Imas", type: ["lab"] },
-  { year: 2022, journal: "RFS", title: "A Fistful of Dollars: Financial Incentives, Peer Information, and Retirement Savings", authors: "Bauer, Eberhardt & Smeets", type: ["field"] },
-  { year: 2022, journal: "RFS", title: "Decision Weights for Experimental Asset Prices Based on Visual Salience", authors: "Bose, Cordes, Nolte, Schneider & Camerer", type: ["lab"] },
-  // JF
-  { year: 1991, journal: "JF", title: "Partial Revelation of Information in Experimental Asset Markets", authors: "Copeland & Friedman", type: ["lab"] },
-  { year: 1991, journal: "JF", title: "Dynamic Stock Markets with Multiple Assets: An Experimental Analysis", authors: "O\'Brien & Srivastava", type: ["lab", "market"] },
-  { year: 1996, journal: "JF", title: "Call and Continuous Trading Mechanisms Under Asymmetric Information: An Experimental Investigation", authors: "Schnitzlein", type: ["lab"] },
-  { year: 1996, journal: "JF", title: "Quotes, Prices, and Estimates in a Laboratory Market", authors: "Bloomfield", type: ["lab"] },
-  { year: 1997, journal: "JF", title: "When It\'s Not the Only Game in Town: The Effect of Bilateral Search on the Quality of a Dealer Market", authors: "Lamoureux & Schnitzlein", type: ["lab", "market"] },
-  { year: 2005, journal: "JF", title: "Do Professional Traders Exhibit Myopic Loss Aversion? An Experimental Analysis", authors: "Haigh & List", type: ["lab"] },
-  { year: 2006, journal: "JF", title: "The Effect of Short Selling on Bubbles and Crashes in Experimental Spot Asset Markets", authors: "Haruvy & Noussair", type: ["lab"] },
-  { year: 2007, journal: "JF", title: "Information Cascades: Evidence from a Field Experiment with Financial Market Professionals", authors: "Alevy, Haigh & List", type: ["lab"] },
-  { year: 2010, journal: "JF", title: "Exploring the Nature of Trader Intuition", authors: "Bruguier, Quartz & Bossaerts", type: ["lab", "market"] },
-  { year: 2011, journal: "JF", title: "Information Disclosure, Cognitive Biases, and Payday Borrowing", authors: "Bertrand & Morse", type: ["field"] },
-  { year: 2011, journal: "JF", title: "Prices or Knowledge? What Drives Demand for Financial Services in Emerging Markets?", authors: "Cole, Sampson & Zia", type: ["field"] },
-  { year: 2013, journal: "JF", title: "The Effects of Stock Lending on Security Prices: An Experiment", authors: "Kaplan, Moskowitz & Sensoy", type: ["lab", "field"] },
-  { year: 2013, journal: "JF", title: "Trading Complex Assets", authors: "Carlin, Kogan & Lowery", type: ["lab"] },
-  { year: 2014, journal: "JF", title: "Using Neural Data to Test a Theory of Investor Behavior: An Application to Realization Utility", authors: "Frydman, Barberis, Camerer, Bossaerts & Rangel", type: ["lab"] },
-  { year: 2015, journal: "JF", title: "Incentivizing Calculated Risk-Taking: Evidence from an Experiment with Commercial Bank Loan Officers", authors: "Cole, Kanz & Klapper", type: ["lab"] },
-  { year: 2015, journal: "JF", title: "The Effect of Providing Peer Information on Retirement Savings Decisions", authors: "Beshears, Choi, Laibson, Madrian & Milkman", type: ["field"] },
-  { year: 2015, journal: "JF", title: "Asymmetric Learning from Financial Information", authors: "Kuhnen", type: ["lab"] },
-  { year: 2016, journal: "JF", title: "Looking for Someone to Blame: Delegation, Cognitive Dissonance, and the Disposition Effect", authors: "Chang, Solomon & Westerfield", type: ["lab", "field"] },
-  { year: 2016, journal: "JF", title: "Lucas in the Laboratory", authors: "Asparouhova, Bossaerts, Roy & Zame", type: ["lab"] },
-  { year: 2017, journal: "JF", title: "Attracting Early-Stage Investors: Evidence from a Randomized Field Experiment", authors: "Bernstein, Korteweg & Laws", type: ["field"] },
-  { year: 2017, journal: "JF", title: "Why Do Investors Hold Socially Responsible Mutual Funds?", authors: "Riedl & Smeets", type: ["lab", "field"] },
-  { year: 2018, journal: "JF", title: "What Makes a Good Trader? On the Role of Intuition and Reflection on Trader Performance", authors: "Corgnet, Desantis & Porter", type: ["lab", "market"] },
-  { year: 2018, journal: "JF", title: "An Experimental Study of Bond Market Pricing", authors: "Weber, Duffy & Schram", type: ["lab", "market"] },
-  { year: 2018, journal: "JF", title: "Rankings and Risk-Taking in the Finance Industry", authors: "Kirchler, Lindner & Weitzel", type: ["lab", "field"] },
-  { year: 2018, journal: "JF", title: "Collateral Constraints and the Law of One Price: An Experiment", authors: "Cipriani, Fostel & Houser", type: ["lab", "market"] },
-  { year: 2019, journal: "JF", title: "A Test of the Modigliani-Miller Invariance Theorem and Arbitrage in Experimental Asset Markets", authors: "Charness & Neugebauer", type: ["lab", "market"] },
-  { year: 2019, journal: "JF", title: "Costly Information Acquisition, Social Networks, and Asset Prices: Experimental Evidence", authors: "Halim, Riyanto & Roy", type: ["lab", "market"] },
-  { year: 2019, journal: "JF", title: "Thinking about Prices versus Thinking about Returns in Financial Markets", authors: "Glaser, Iliewa & Weber", type: ["lab"] },
-  { year: 2021, journal: "JF", title: "The Perception of Dependence, Investment Decisions, and Stock Prices", authors: "Ungeheuer & Weber", type: ["lab", "field"] },
-  { year: 2022, journal: "JF", title: "Increasing Enrollment in Income-Driven Student Loan Repayment Plans: Evidence from the Navient Field Experiment", authors: "Mueller & Yannelis", type: ["field"] },
-  { year: null, journal: "JF", title: "Insensitive Investors", authors: "Charles, Frydman & Kilic", type: ["lab"], forthcoming: true },
-  // JFE
-  { year: 2002, journal: "JFE", title: "Predicting the Next Step of a Random Walk: Experimental Evidence of Regime-Shifting Beliefs", authors: "Bloomfield & Hales", type: ["lab"] },
-  { year: 2013, journal: "JFE", title: "Managerial Attitudes and Corporate Actions", authors: "Graham, Harvey & Puri", type: ["survey"] },
-  { year: 2017, journal: "JFE", title: "Socioeconomic Status and Learning from Financial Information", authors: "Kuhnen & Miu", type: ["lab"] },
-  { year: 2021, journal: "JFE", title: "Testing the Effectiveness of Consumer Financial Disclosure: Experimental Evidence from Savings Accounts", authors: "Adams, Hunt, Palmer & Zaliauskas", type: ["field"] },
-  { year: 2022, journal: "JFE", title: "Outlier Blindness: A Neurobiological Foundation for Neglect of Financial Risk", authors: "Payzan-LeNestour & Woodford", type: ["lab"] },
-  { year: 2022, journal: "JFE", title: "Stock Return Ignorance", authors: "Merkoulova & Veld", type: ["survey"] },
-  { year: 2022, journal: "JFE", title: "Measuring the Welfare Cost of Asymmetric Information in Consumer Credit Markets", authors: "DeFusco, Tang & Yannelis", type: ["lab"] },
-  { year: 2023, journal: "JFE", title: "When Can the Market Identify Old News?", authors: "Fedyk & Hodson", type: ["lab"] },
-  { year: null, journal: "JFE", title: "Associative Memory, Beliefs and Market Interactions", authors: "Enke, Schwerter & Zimmermann", type: ["lab", "market"], forthcoming: true },
-];
-
-let currentFilter = "all";
-let currentSearch = "";
-
-function renderTable() {
-  const tbody = document.getElementById("paper-tbody");
-  const countEl = document.getElementById("paper-count");
-  if (!currentSearch && currentFilter === "all") {
-    tbody.innerHTML = "";
-    countEl.textContent = `${papers.length} papers in database — use the search box or filter to browse.`;
-    return;
-  }
-  const filtered = papers.filter(p => {
-    const matchFilter = currentFilter === "all" || p.journal === currentFilter;
-    const q = currentSearch.toLowerCase();
-    const matchSearch = !q || p.title.toLowerCase().includes(q) || p.authors.toLowerCase().includes(q) || p.type.some(t => t.includes(q));
-    return matchFilter && matchSearch;
-  });
-  filtered.sort((a, b) => { const ay = a.year || 9999; const by_ = b.year || 9999; return by_ - ay; });
-  tbody.innerHTML = filtered.map(p => {
-    const jClass = p.journal.toLowerCase();
-    const typeTags = p.type.map(t => `<span class="exp-tag">${t}</span>`).join("");
-    return `<tr data-journal="${p.journal}">
-      <td>${p.year || 'FC'}</td>
-      <td><span class="badge badge-${jClass}">${p.journal}</span></td>
-      <td><div class="paper-title">${p.title}</div><div class="paper-authors">${p.authors}</div></td>
-      <td>${typeTags}</td>
-    </tr>`;
-  }).join("");
-  document.getElementById("paper-count").textContent = `Showing ${filtered.length} of ${papers.length} papers`;
-}
-
-function filterTable(btn, filter) {
-  document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
-  btn.classList.add("active");
-  currentFilter = filter;
-  renderTable();
-}
-
-function searchTable(val) {
-  currentSarch;
-  renderTable();
-}
-
-// Stats
-function updateStats() {
-  document.getElementById("stat-jf").textContent = papers.filter(p => p.journal === "JF").length;
-  document.getElementById("stat-jfe").textContent = papers.filter(p => p.journal === "JFE").length;
-  document.getElementById("stat-rfs").textContent = papers.filter(p => p.journal === "RFS").length;
-}
-
-renderTable();
-updateStats();
-</script>
-
 <script>
 (function(){
   var btn = document.getElementById('nav-hamburger');
   var menu = document.querySelector('.nav-links');
   if (!btn || !menu) return;
-  btn.addEventListener('click', function(){
+  btn.addEventListener('click', function(e){
+    e.stopPropagation();
     btn.classList.toggle('open');
     menu.classList.toggle('open');
   });
-  // Close on link click
   menu.querySelectorAll('a').forEach(function(a){
     a.addEventListener('click', function(){
       btn.classList.remove('open');
       menu.classList.remove('open');
     });
+  });
+  document.addEventListener('click', function(e){
+    if (!btn.contains(e.target) && !menu.contains(e.target)){
+      btn.classList.remove('open');
+      menu.classList.remove('open');
+    }
   });
 })();
 </script>
