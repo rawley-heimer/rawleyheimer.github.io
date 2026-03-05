@@ -364,9 +364,116 @@
 </div>
 
 <footer>
-  &copy; 2025 Rawley Z. Heimer &nbsp;·&nbsp; W.P. Carey School of Business, Arizona State University &nbsp;·&nbsp; <a hr
-  <a href="mailto:rawley.heimer@asu.edu" style="color:var(--ink-light);">rawley.heimer@asu.edu</a>
+  &copy; 2025 Rawley Z. Heimer &nbsp;·&nbsp; W.P. Carey School of Business, Arizona State University &nbsp;·&nbsp; <a hr <a href="mailto:rawley.heimer@asu.edu" style="color:var(--ink-light);">rawley.heimer@asu.edu</a>
 </footer>
+<script>
+(function(){
+  var btn = document.getElementById('nav-hamburger');
+  var menu = document.querySelector('.nav-links');
+  if (!btn || !menu) return;
+  btn.addEventListener('click', function(e){
+    e.stopPropagation();
+    btn.classList.toggle('open');
+    menu.classList.toggle('open');
+  });
+  menu.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      btn.classList.remove('open');
+      menu.classList.remove('open')
+
+<style>
+.bib-popup { display: none; margin-top: 0.6rem; }
+.bib-popup.open { display: block; }
+.bib-box {
+  background: #f7f4ef;
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--gold);
+  padding: 0.8rem 1rem;
+  font-family: 'Courier New', monospace;
+  font-size: 0.72rem;
+  line-height: 1.6;
+  white-space: pre;
+  overflow-x: auto;
+  color: var(--ink);
+}
+.bib-copy-row { display: flex; align-items: center; gap: 0.75rem; margin-top: 0.45rem; }
+.bib-copy-btn {
+  font-size: 0.72rem; letter-spacing: 0.07em; text-transform: uppercase;
+  color: #fff; background: var(--maroon); border: none; padding: 0.3rem 0.75rem;
+  cursor: pointer; font-family: 'Source Serif 4', serif; transition: background 0.2s;
+}
+.bib-copy-btn:hover { background: #6b1010; }
+.bib-copied { font-size: 0.72rem; color: #2a7a2a; letter-spacing: 0.05em; opacity: 0; transition: opacity 0.3s; }
+.bib-copied.show { opacity: 1; }
+</style>
+<script>
+function _bibCopy(id, store) {
+  var existingPopup = document.getElementById('bibpop-' + id);
+  if (existingPopup) { existingPopup.classList.toggle('open'); return; }
+  var btn = document.querySelector('[data-bib="' + id + '"]');
+  if (!btn) return;
+  var popup = document.createElement('div');
+  popup.className = 'bib-popup open';
+  popup.id = 'bibpop-' + id;
+  var box = document.createElement('pre');
+  box.className = 'bib-box';
+  box.textContent = store[id];
+  var row = document.createElement('div');
+  row.className = 'bib-copy-row';
+  var copyBtn = document.createElement('button');
+  copyBtn.className = 'bib-copy-btn';
+  copyBtn.textContent = 'Copy to Clipboard';
+  var msg = document.createElement('span');
+  msg.className = 'bib-copied';
+  msg.textContent = '✓ Copied!';
+  copyBtn.addEventListener('click', function(){
+    navigator.clipboard.writeText(store[id]).then(function(){
+      msg.classList.add('show');
+      setTimeout(function(){ msg.classList.remove('show'); }, 2000);
+    }).catch(function(){
+      var ta = document.createElement('textarea');
+      ta.value = store[id]; document.body.appendChild(ta); ta.select();
+      document.execCommand('copy'); document.body.removeChild(ta);
+      msg.classList.add('show');
+      setTimeout(function(){ msg.classList.remove('show'); }, 2000);
+    });
+  });
+  row.appendChild(copyBtn); row.appendChild(msg);
+  popup.appendChild(box); popup.appendChild(row);
+  btn.closest('.pub-links, .paper-footer').insertAdjacentElement('afterend', popup);
+}
+</script>
+<script>
+var bibtexRA = {
+  "p1": '@article{heimer2025dynamic,\n  title={Dynamic Inconsistency in Risky Choice: Evidence from the Lab and Field},\n  author={Heimer, Rawley Z and Iliewa, Zwetelina and Imas, Alex and Weber, Martin},\n  journal={American Economic Review},\n  volume={115},\n  number={1},\n  pages={330--363},\n  year={2025}\n}',
+  "p2": '@article{heimer2022shale,\n  title={Shale Shocked: Cash Windfalls and Household Debt Repayment},\n  author={Heimer, Rawley Z and Cookson, J Anthony and Gilje, Erik},\n  journal={Journal of Financial Economics},\n  volume={146},\n  number={3},\n  pages={905--931},\n  year={2022}\n}',
+  "p3": '@article{heimer2022biased,\n  title={Biased by Choice: How Financial Constraints Can Reduce Financial Mistakes},\n  author={Heimer, Rawley Z and Imas, Alex},\n  journal={Review of Financial Studies},\n  volume={35},\n  number={4},\n  pages={1643--1681},\n  year={2022}\n}',
+  "p4": '@article{heimer2021personal,\n  title={Personal Wealth, Self-Employment, and Business Ownership},\n  author={Heimer, Rawley Z and Bellon, Aymeric and Cookson, J Anthony and Gilje, Erik},\n  journal={Review of Financial Studies},\n  volume={34},\n  number={8},\n  pages={3935--3975},\n  year={2021}\n}',
+  "p5": '@article{heimer2021politicizing,\n  title={Politicizing Consumer Credit},\n  author={Heimer, Rawley Z and Akey, Pat and Lewellen, Stefan},\n  journal={Journal of Financial Economics},\n  volume={139},\n  number={2},\n  pages={627--655},\n  year={2021}\n}',
+  "p6": '@article{heimer2019yolo,\n  title={{YOLO}: Mortality Beliefs and Household Finance Puzzles},\n  author={Heimer, Rawley Z and Myrseth, Kristian Ove R and Schoenle, Raphael S},\n  journal={Journal of Finance},\n  volume={74},\n  number={6},\n  pages={2957--2996},\n  year={2019}\n}',
+  "p7": "@article{heimer2019leverage,\n  title={Should Retail Investors' Leverage Be Limited?},\n  author={Heimer, Rawley Z and Simsek, Alp},\n  journal={Journal of Financial Economics},\n  volume={132},\n  number={3},\n  pages={1--21},\n  year={2019}\n}",
+  "p8": '@article{heimer2019growing,\n  title={Growing Up Without Finance},\n  author={Heimer, Rawley Z and Brown, James R and Cookson, J Anthony},\n  journal={Journal of Financial Economics},\n  volume={134},\n  number={3},\n  pages={591--616},\n  year={2019}\n}',
+  "p9": '@article{heimer2017law,\n  title={Law and Finance Matter: Lessons from Externally Imposed Courts},\n  author={Heimer, Rawley Z and Brown, James R and Cookson, J Anthony},\n  journal={Review of Financial Studies},\n  volume={30},\n  number={3},\n  pages={1019--1051},\n  year={2017}\n}',
+  "p10": '@article{heimer2016peer,\n  title={Peer Pressure: Social Interaction and the Disposition Effect},\n  author={Heimer, Rawley Z},\n  journal={Review of Financial Studies},\n  volume={29},\n  number={11},\n  pages={3177--3209},\n  year={2016}\n}',
+  "p11": '@article{heimer2015courting,\n  title={Courting Economic Development},\n  author={Heimer, Rawley Z and Brown, James R and Cookson, J Anthony},\n  journal={World Bank Economic Review},\n  volume={30},\n  number={3},\n  pages={S176--S187},\n  year={2015}\n}',
+  "p12": '@article{heimer2014friends,\n  title={Friends Do Let Friends Buy Stocks Actively},\n  author={Heimer, Rawley Z},\n  journal={Journal of Economic Behavior and Organization},\n  volume={107},\n  pages={527--540},\n  year={2014}\n}',
+  "p13": '@techreport{heimer2015facebook,\n  title={Facebook Finance: How Social Interaction Propagates Active Investing},\n  author={Heimer, Rawley Z and Simon, David},\n  institution={Federal Reserve Bank of Cleveland},\n  number={1522},\n  year={2015}\n}',
+  "s1": '@techreport{heimer2026ai,\n  title={Financial Decision Making in the Age of {AI}},\n  author={Heimer, Rawley Z},\n  institution={SSRN},\n  year={2026}\n}',
+  "s2": '@techreport{heimer2024beliefs,\n  title={Subjective Beliefs, Saving, and Spending for Retirement},\n  author={Heimer, Rawley Z},\n  institution={Wharton Pension Research Council},\n  number={2024-13},\n  year={2024}\n}',
+  "s3": '@techreport{heimer2024credit,\n  title={Navigating Credit Bureau Data: Field Notes for Researchers},\n  author={Heimer, Rawley Z},\n  institution={SSRN},\n  number={4891923},\n  year={2024}\n}',
+  "b1": '@misc{heimer2020covid,\n  title={Are People Overconfident about Avoiding {COVID}-19?},\n  author={Heimer, Rawley Z and Liu, Haoyang and Zhang, Xiaohan},\n  howpublished={Liberty Street Economics, Federal Reserve Bank of New York},\n  year={2020}\n}',
+  "b2": '@techreport{heimer2020homeownership,\n  title={Intergenerational Homeownership and Mortgage Distress},\n  author={Heimer, Rawley Z and Fritsch, Nicolas},\n  institution={Federal Reserve Bank of Cleveland},\n  type={Economic Commentary},\n  year={2020}\n}',
+  "b3": '@techreport{heimer2015housing,\n  title={Geographic Mobility and Consumer Financial Health: Evidence from Oil Production Boom Towns},\n  author={Heimer, Rawley Z and Kolliner, Daniel and Stehulak, Todd},\n  institution={Federal Reserve Bank of Cleveland},\n  type={Economic Trends},\n  year={2015}\n}',
+  "w1": '@article{heimer2024temporal,\n  title={Temporal Focal Points and Economic Outcomes: Evidence from {U.S.} Mortgage Lending},\n  author={Heimer, Rawley Z and Giacoletti, Marco and Yu, Edison},\n  journal={Working Paper},\n  year={Unpublished}\n}',
+  "w2": '@article{heimer2024pushing,\n  title={Pushing Boundaries: Political Redistricting and Consumer Credit},\n  author={Heimer, Rawley Z and Akey, Pat and Dobridge, Christine and Lewellen, Stefan},\n  journal={Working Paper},\n  year={Unpublished}\n}',
+  "w3": '@article{heimer2024complaints,\n  title={The Hidden Costs of Financial Services: Consumer Complaints and Financial Restitution},\n  author={Heimer, Rawley Z and Haendler, Charlotte},\n  journal={Working Paper},\n  year={Unpublished}\n}',
+  "w4": '@article{heimer2024bequests,\n  title={Five Facts about Bequest Motives},\n  author={Heimer, Rawley Z and Li, Xiang},\n  journal={Working Paper},\n  year={Unpublished}\n}',
+  "w5": '@article{heimer2024foundations,\n  title={The Wealth Draw-down of the Fabulously Rich: Insights from Private Family Foundations},\n  author={Heimer, Rawley Z and Ahn, C},\n  journal={Working Paper},\n  year={Unpublished}\n}',
+  "w6": '@article{heimer2024reits,\n  title={Single Family {REITs} and Local Housing Markets},\n  author={Heimer, Rawley Z and Giacoletti, Marco and Li, Wenli and Yu, Edison},\n  journal={Working Paper},\n  year={Unpublished}\n}',
+  "w7": '@article{heimer2022uncertainty,\n  title={Uncertainty Shocks and Personal Investment: Evidence from a Global Brokerage},\n  author={Heimer, Rawley Z and Kogan, S and Xu, N},\n  journal={Working Paper},\n  year={Unpublished}\n}',
+};
+function copyBibRA(id) { _bibCopy(id, bibtexRA); }
+</script>
 <script>
 (function(){
   var btn = document.getElementById('nav-hamburger');
