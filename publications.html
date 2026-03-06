@@ -507,7 +507,7 @@
 </div>
 
 <footer>
-  &copy; 2025 Rawley Z. Heimer &nbsp;·&nbsp; W.P. Carey School of Business, Arizona State University &nbsp;·&nbsp; <a href="/cdn-cgi/l/email-protection#d9abb8aeb5bca0f7b1bcb0b4bcab99b8aaacf7bcbdac" style="color:var(--ink-light);"><span class="__cf_email__" data-cfemail="502231273c35297e3835393d3522103123257e353425">[email&#160;protected]</span></a>
+  &copy; 2025 Rawley Z. Heimer &nbsp;·&nbsp; W.P. Carey School of Business, Arizona State University &nbsp;·&nbsp; <a href="mailto:rawley.heimer@asu.edu" style="color:var(--ink-light);">rawley.heimer@asu.edu</a>
 </footer>
 
 
@@ -515,7 +515,7 @@
 
 
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 (function(){
   var btn = document.getElementById('nav-hamburger');
   var menu = document.querySelector('.nav-links');
@@ -636,4 +636,16 @@ function copyBib(id) { _bibCopy(id, bibtex); }
   menu.querySelectorAll('a').forEach(function(a){
     a.addEventListener('click', function(){
       btn.classList.remove('open');
-      menu.classList.remove('open
+      menu.classList.remove('open');
+    });
+  });
+  document.addEventListener('click', function(e){
+    if (!btn.contains(e.target) && !menu.contains(e.target)){
+      btn.classList.remove('open');
+      menu.classList.remove('open');
+    }
+  });
+})();
+</script>
+</body>
+</html>

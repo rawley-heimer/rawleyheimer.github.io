@@ -223,7 +223,7 @@
         <span class="press-topic">Financial regulation</span>
         <span class="press-topic">Housing markets</span>
       </div>
-      <a href="/cdn-cgi/l/email-protection#7b091a0c171e0255131e12161e093b1a080e551e1f0e" class="press-email">Contact for Press →</a>
+      <a href="mailto:rawley.heimer@asu.edu" class="press-email">Contact for Press →</a>
     </div>
 
     <!-- COVERAGE -->
@@ -347,10 +347,10 @@
   </main>
 
 <footer>
-  &copy; 2025 Rawley Z. Heimer &nbsp;·&nbsp; W.P. Carey School of Business, Arizona State University &nbsp;·&nbsp; <a href="/cdn-cgi/l/email-protection#99ebf8eef5fce0b7f1fcf0f4fcebd9f8eaecb7fcfdec" style="color:var(--ink-light);"><span class="__cf_email__" data-cfemail="7406150318110d5a1c111d191106341507015a111001">[email&#160;protected]</span></a>
+  &copy; 2025 Rawley Z. Heimer &nbsp;·&nbsp; W.P. Carey School of Business, Arizona State University &nbsp;·&nbsp; <a href="mailto:rawley.heimer@asu.edu" style="color:var(--ink-light);">rawley.heimer@asu.edu</a>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 (function(){
   var btn = document.getElementById('nav-hamburger');
   var menu = document.querySelector('.nav-links');
@@ -362,4 +362,17 @@
   });
   menu.querySelectorAll('a').forEach(function(a){
     a.addEventListener('click', function(){
-      btn.classList.remov
+      btn.classList.remove('open');
+      menu.classList.remove('open');
+    });
+  });
+  document.addEventListener('click', function(e){
+    if (!btn.contains(e.target) && !menu.contains(e.target)){
+      btn.classList.remove('open');
+      menu.classList.remove('open');
+    }
+  });
+})();
+</script>
+</body>
+</html>
