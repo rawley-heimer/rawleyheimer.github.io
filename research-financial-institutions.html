@@ -64,7 +64,9 @@
     .paper-authors { font-size: 0.85rem; color: var(--ink-light); margin-bottom: 0.25rem; }
     .paper-venue { font-size: 0.85rem; font-weight: 500; color: var(--ink-mid); margin-bottom: 1rem; }
     .paper-abstract { font-size: 0.91rem; color: var(--ink-mid); line-height: 1.78; margin-bottom: 1rem; border-left: 3px solid var(--gold); padding-left: 1.1rem; }
-    .paper-footer { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; margin-top: 0.6rem; }
+    .paper-footer { margin-top: 0.7rem; }
+    .paper-awards-row { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.55rem; }
+    .paper-links-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.8rem; }
     .paper-award { display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.67rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--maroon); border: 1px solid var(--gold); padding: 0.18rem 0.55rem; background: rgba(255,198,39,0.12); }
     .paper-award::before { content: '★'; font-size: 0.58rem; color: var(--gold); }
     .paper-link { display: inline-flex; align-items: center; gap: 0.3rem; font-size: 0.74rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--maroon); text-decoration: none; border-bottom: 1px solid transparent; padding-bottom: 1px; transition: border-color 0.2s, opacity 0.2s; }
@@ -229,12 +231,13 @@
       <div class="paper-venue"><em>Journal of Financial Economics</em>, 139(2): 627–655</div>
       <div class="paper-abstract">Powerful politicians can interfere with the enforcement of regulations. As such, expected political interference can affect constituents' behavior. Using rotations of Senate committee chairs to identify variation in political power and expected regulatory relief, we study powerful politicians' effect on consumer lending to communities protected by fair-lending regulations. We find a 7.5% reduction in credit access to minority neighborhoods in states with new committee chairs. Larger reductions occur in Community Reinvestment Act-eligible neighborhoods and when Senators serve on committees that oversee the enforcement of fair-lending laws. Banks headquartered in powerful Senators' states are responsible for the reduction in credit access.</div>
       <div class="paper-footer">
-        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3042896" class="paper-link" target="_blank">SSRN <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-        <span class="paper-link-divider">·</span>
-        <a href="https://www.sciencedirect.com/science/article/pii/S0304405X20302270" class="paper-link" target="_blank">Journal <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-      
-        <span class="paper-link-divider">·</span>
-        <button class="bib-btn" onclick="copyBibRA('p5')">BibTeX</button>
+        <div class="paper-links-row">
+          <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3042896" class="paper-link" target="_blank">SSRN <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+          <span class="paper-link-divider">·</span>
+          <a href="https://www.sciencedirect.com/science/article/pii/S0304405X20302270" class="paper-link" target="_blank">Journal <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+          <span class="paper-link-divider">·</span>
+          <button class="bib-btn" onclick="copyBibRA('p5')">BibTeX</button>
+        </div>
       </div>
     </div>
 
@@ -245,14 +248,16 @@
       <div class="paper-venue"><em>Review of Financial Studies</em>, 30(3): 1019–1051</div>
       <div class="paper-abstract">This paper provides novel evidence on the real and financial market effects of legal institutions. Our analysis exploits persistent and externally imposed differences in court enforcement that arose when the U.S. Congress assigned state courts to adjudicate contracts on a subset of Native American reservations. Using area-specific data on small business and household credit, reservations assigned to state courts, which enforce contracts more predictably than tribal courts, have stronger credit markets. Moreover, the law-driven component of credit market development is associated with significantly higher per capita income, with stronger effects in sectors that depend more on external financing.</div>
       <div class="paper-footer">
-        <span class="paper-award">Best Paper, FMA Annual Meetings</span>
-        <span class="paper-link-divider">·</span>
-        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2448091" class="paper-link" target="_blank">SSRN <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-        <span class="paper-link-divider">·</span>
-        <a href="https://academic.oup.com/rfs/article/30/3/1019/2669944" class="paper-link" target="_blank">Journal <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-      
-        <span class="paper-link-divider">·</span>
-        <button class="bib-btn" onclick="copyBibRA('p9')">BibTeX</button>
+        <div class="paper-awards-row">
+          <span class="paper-award">Best Paper, FMA Annual Meetings</span>
+        </div>
+        <div class="paper-links-row">
+          <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2448091" class="paper-link" target="_blank">SSRN <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+          <span class="paper-link-divider">·</span>
+          <a href="https://academic.oup.com/rfs/article/30/3/1019/2669944" class="paper-link" target="_blank">Journal <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+          <span class="paper-link-divider">·</span>
+          <button class="bib-btn" onclick="copyBibRA('p9')">BibTeX</button>
+        </div>
       </div>
     </div>
 
@@ -263,10 +268,11 @@
       <div class="paper-venue"><em>World Bank Economic Review</em>, 30(3): S176–S187</div>
       <div class="paper-abstract">We show that court enforcement uncertainty hinders economic development using sharp variation in judiciaries across Native American reservations in the United States. Congressional legislation passed in 1953 assigned state courts the authority to resolve civil disputes on a subset of reservations, while tribal courts retained authority on unaffected reservations. Although affected and unaffected reservations had similar economic conditions when the law passed, reservations under state courts experienced significantly greater long-run growth. When we examine the distribution of incomes across reservations, the average difference in development is due to the lower incomes of the most impoverished reservations with tribal courts. We show that the relative under-development of reservations with tribal courts is driven by reservations with the most uncertainty in court enforcement.</div>
       <div class="paper-footer">
-        <a href="https://academic.oup.com/wber/article/30/Supplement_1/S176/2897440" class="paper-link" target="_blank">Journal <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-      
-        <span class="paper-link-divider">·</span>
-        <button class="bib-btn" onclick="copyBibRA('p11')">BibTeX</button>
+        <div class="paper-links-row">
+          <a href="https://academic.oup.com/wber/article/30/Supplement_1/S176/2897440" class="paper-link" target="_blank">Journal <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+          <span class="paper-link-divider">·</span>
+          <button class="bib-btn" onclick="copyBibRA('p11')">BibTeX</button>
+        </div>
       </div>
     </div>
 
@@ -276,12 +282,14 @@
       <div class="paper-authors">with M. Giacoletti and E. Yu</div>
       <div class="paper-abstract">We develop modified benchmarking tests for disparate treatment that we apply to 25 years of mortgage lending. Our tests limit the scope for omitted variables by linking high-frequency mortgage decisions to an economic mechanism — loan officers have volume quotas that cause increased approval rates at month-end. We estimate that these quotas at least halve the unexplained 7 ppt Black approval gap. Loan officers more likely to miss their quotas have larger increases in Black approvals. Suggesting supply-side mechanisms, applications arrive at a constant rate within-month, and neither differences in credit risk nor applicant preferences explain the month-end decline in racial differences.</div>
       <div class="paper-footer">
-        <span class="paper-award">Best Paper, MFA 2021</span>
-        <span class="paper-link-divider">·</span>
-        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3795547" class="paper-link" target="_blank">SSRN <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-      
-        <span class="paper-link-divider">·</span>
-        <button class="bib-btn" onclick="copyBibRA('w1')">BibTeX</button>
+        <div class="paper-awards-row">
+          <span class="paper-award">Best Paper, MFA 2021</span>
+        </div>
+        <div class="paper-links-row">
+          <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3795547" class="paper-link" target="_blank">SSRN <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+          <span class="paper-link-divider">·</span>
+          <button class="bib-btn" onclick="copyBibRA('w1')">BibTeX</button>
+        </div>
       </div>
     </div>
 
@@ -291,10 +299,11 @@
       <div class="paper-authors">with Charlotte Haendler</div>
       <div class="paper-abstract">Financial disputes are a widespread but understudied feature of consumer financial markets. Using confidential data from the Consumer Financial Protection Bureau (CFPB), we analyze nearly two million consumer complaints filed since 2014, which have led to an average payout of $1,470 per successful complaint. The volume of complaints and total restitution have increased substantially over time, suggesting significant scope for additional compensation. When understanding who secures restitution — and why — we find little evidence that differences across firms systematically drive restitution outcomes. Instead, product complexity and consumer engagement play key roles: consumers with higher income and education (high-SES) are more likely to explicitly request refunds, claim fraud, and submit supporting documentation, making firms more responsive. Leveraging previously unexamined CFPB monitoring reviews, where the agency systematically screens company responses and issues confidential reports highlighting deficiencies, we show that regulatory scrutiny increases restitution but disproportionately benefits high-SES consumers, reinforcing individual-specific mechanisms. Our results highlight the complementary nature of regulatory interventions and suggest that financial sophistication and self-advocacy are critical determinants of consumer redress.</div>
       <div class="paper-footer">
-        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5218602" class="paper-link" target="_blank">SSRN <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-      
-        <span class="paper-link-divider">·</span>
-        <button class="bib-btn" onclick="copyBibRA('w3')">BibTeX</button>
+        <div class="paper-links-row">
+          <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5218602" class="paper-link" target="_blank">SSRN <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+          <span class="paper-link-divider">·</span>
+          <button class="bib-btn" onclick="copyBibRA('w3')">BibTeX</button>
+        </div>
       </div>
     </div>
 
@@ -304,10 +313,11 @@
       <div class="paper-authors">with P. Akey, C. Dobridge, and S. Lewellen</div>
       <div class="paper-abstract">Consumers lose access to credit when their congressional district boundaries are irregularly redrawn to benefit a political party (i.e., are gerrymandered). We identify this effect by matching a longitudinal panel of consumer credit data with changes in congressional district boundaries following decennial censuses. Reductions in credit access are concentrated in states that allow elected politicians to draw political boundaries and in districts where subsequent congressional elections are less competitive. We find similar reductions in credit access when state senate district boundaries are irregularly redrawn and when states make it more difficult for constituents to vote. Overall, our findings are consistent with theories suggesting that less-competitive political races reduce politicians' incentives to cater to their constituents' preferences.</div>
       <div class="paper-footer">
-        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3031604" class="paper-link" target="_blank">SSRN <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-      
-        <span class="paper-link-divider">·</span>
-        <button class="bib-btn" onclick="copyBibRA('w2')">BibTeX</button>
+        <div class="paper-links-row">
+          <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3031604" class="paper-link" target="_blank">SSRN <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+          <span class="paper-link-divider">·</span>
+          <button class="bib-btn" onclick="copyBibRA('w2')">BibTeX</button>
+        </div>
       </div>
     </div>
 
@@ -321,14 +331,16 @@
       <div class="paper-venue"><em>Journal of Financial Economics</em>, 132(3): 1–21 · <em>Lead article</em></div>
       <div class="paper-abstract">Does the provision of leverage to retail traders improve market quality or facilitate socially inefficient speculation that enriches financial intermediaries? We evaluate the effects of 2010 regulations that cap leverage in the U.S. retail foreign exchange market. Using three unique data sets and a difference-in-differences approach, we document that the leverage constraint reduces trading volume by 23%, alleviates high-leverage traders' losses by 40%, and reduces brokerages' operating capital by 25%. Yet, the policy does not affect the relative bid-ask prices charged by the brokerages. These results suggest the policy improves belief-neutral social welfare without reducing market liquidity.</div>
       <div class="paper-footer">
-        <span class="paper-award">Best Paper Finalist, SFS Cavalcade</span>
-        <span class="paper-link-divider">·</span>
-        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2150980" class="paper-link" target="_blank">SSRN <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-        <span class="paper-link-divider">·</span>
-        <a href="https://www.sciencedirect.com/science/article/pii/S0304405X18303076" class="paper-link" target="_blank">Journal <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-      
-        <span class="paper-link-divider">·</span>
-        <button class="bib-btn" onclick="copyBibRA('p7')">BibTeX</button>
+        <div class="paper-awards-row">
+          <span class="paper-award">Best Paper Finalist, SFS Cavalcade</span>
+        </div>
+        <div class="paper-links-row">
+          <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2150980" class="paper-link" target="_blank">SSRN <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+          <span class="paper-link-divider">·</span>
+          <a href="https://www.sciencedirect.com/science/article/pii/S0304405X18303076" class="paper-link" target="_blank">Journal <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+          <span class="paper-link-divider">·</span>
+          <button class="bib-btn" onclick="copyBibRA('p7')">BibTeX</button>
+        </div>
       </div>
     </div>
 
@@ -338,12 +350,13 @@
       <div class="paper-venue"><em>Review of Financial Studies</em>, 29(11): 3177–3209</div>
       <div class="paper-abstract">Social interaction contributes to some traders' disposition effect. New data from an investment-specific social network linked to individual-level trading records builds evidence of this connection. To credibly estimate causal peer effects, I exploit the staggered entry of retail brokerages into partnerships with the social trading web platform and compare trader activity before and after exposure to these new social conditions. Access to the social network nearly doubles the magnitude of a trader's disposition effect. Traders connected in the network develop correlated levels of the disposition effect, a finding that can be replicated using workhorse data from a large discount brokerage.</div>
       <div class="paper-footer">
-        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2517772" class="paper-link" target="_blank">SSRN <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-        <span class="paper-link-divider">·</span>
-        <a href="https://academic.oup.com/rfs/article/29/11/3177/2583763" class="paper-link" target="_blank">Journal <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-      
-        <span class="paper-link-divider">·</span>
-        <button class="bib-btn" onclick="copyBibRA('p10')">BibTeX</button>
+        <div class="paper-links-row">
+          <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2517772" class="paper-link" target="_blank">SSRN <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+          <span class="paper-link-divider">·</span>
+          <a href="https://academic.oup.com/rfs/article/29/11/3177/2583763" class="paper-link" target="_blank">Journal <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+          <span class="paper-link-divider">·</span>
+          <button class="bib-btn" onclick="copyBibRA('p10')">BibTeX</button>
+        </div>
       </div>
     </div>
 
@@ -412,13 +425,24 @@
 .bib-copied { font-size:0.72rem; color:#2a7a2a; opacity:0; transition:opacity 0.3s; }
 .bib-copied.show { opacity:1; }
 </style>
+
+<style>
+.bib-popup { display:none; margin-top:0.6rem; }
+.bib-popup.open { display:block; }
+.bib-box { background:#f7f4ef; border:1px solid var(--rule); border-left:3px solid var(--gold); padding:0.8rem 1rem; font-family:'Courier New',monospace; font-size:0.72rem; line-height:1.6; white-space:pre; overflow-x:auto; color:var(--ink); }
+.bib-copy-row { display:flex; align-items:center; gap:0.75rem; margin-top:0.45rem; }
+.bib-copy-btn { font-size:0.72rem; letter-spacing:0.07em; text-transform:uppercase; color:#fff; background:var(--maroon); border:none; padding:0.3rem 0.75rem; cursor:pointer; font-family:'Source Serif 4',serif; transition:background 0.2s; }
+.bib-copy-btn:hover { background:#6b1010; }
+.bib-copied { font-size:0.72rem; color:#2a7a2a; opacity:0; transition:opacity 0.3s; }
+.bib-copied.show { opacity:1; }
+</style>
 <script>
 function _doCopy(id, store) {
   var existingPopup = document.getElementById('bibpop-' + id);
   if (existingPopup) { existingPopup.classList.toggle('open'); return; }
   var btn = document.querySelector('[onclick*="\'' + id + '\'"]');
   if (!btn) return;
-  var anchor = btn.closest('.pub-links') || btn.closest('.paper-footer');
+  var anchor = btn.closest('.pub-links') || btn.closest('.paper-links-row') || btn.closest('.paper-footer');
   if (!anchor) return;
   var popup = document.createElement('div');
   popup.className = 'bib-popup open';
@@ -449,7 +473,9 @@ function _doCopy(id, store) {
   });
   row.appendChild(copyBtn); row.appendChild(msg);
   popup.appendChild(box); popup.appendChild(row);
-  anchor.insertAdjacentElement('afterend', popup);
+  // Insert after the paper-footer, not inside it
+  var footer = anchor.closest('.paper-footer') || anchor;
+  footer.insertAdjacentElement('afterend', popup);
 }
 </script>
 <script>

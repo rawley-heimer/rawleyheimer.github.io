@@ -64,7 +64,9 @@
     .paper-authors { font-size: 0.85rem; color: var(--ink-light); margin-bottom: 0.25rem; }
     .paper-venue { font-size: 0.85rem; font-weight: 500; color: var(--ink-mid); margin-bottom: 1rem; }
     .paper-abstract { font-size: 0.91rem; color: var(--ink-mid); line-height: 1.78; margin-bottom: 1rem; border-left: 3px solid var(--gold); padding-left: 1.1rem; }
-    .paper-footer { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; margin-top: 0.6rem; }
+    .paper-footer { margin-top: 0.7rem; }
+    .paper-awards-row { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.55rem; }
+    .paper-links-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.8rem; }
     .paper-award { display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.67rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--maroon); border: 1px solid var(--gold); padding: 0.18rem 0.55rem; background: rgba(255,198,39,0.12); }
     .paper-award::before { content: '★'; font-size: 0.58rem; color: var(--gold); }
     .paper-link { display: inline-flex; align-items: center; gap: 0.3rem; font-size: 0.74rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--maroon); text-decoration: none; border-bottom: 1px solid transparent; padding-bottom: 1px; transition: border-color 0.2s, opacity 0.2s; }
@@ -228,12 +230,13 @@
       <div class="paper-venue"><em>American Economic Review</em>, 115(1): 330–363</div>
       <div class="paper-abstract">We document a robust dynamic inconsistency in risky choice. Using a unique brokerage dataset and a series of experiments, we compare people's initial risk-taking plans to their subsequent decisions. Across settings, people accept risk as part of a "loss-exit" strategy — planning to continue taking risk after gains and stopping after losses. Actual behavior deviates from initial strategies by cutting gains early and chasing losses. More people accept risk when offered a commitment to their initial strategy. Our results help reconcile seemingly contradictory findings on risk-taking in static versus dynamic contexts. We explore implications for theory and welfare.</div>
       <div class="paper-footer">
-        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3600583" class="paper-link" target="_blank">SSRN <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-        <span class="paper-link-divider">·</span>
-        <a href="https://www.aeaweb.org/articles?id=10.1257/aer.20210307" class="paper-link" target="_blank">Journal <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-      
-        <span class="paper-link-divider">·</span>
-        <button class="bib-btn" onclick="copyBibRA('p1')">BibTeX</button>
+        <div class="paper-links-row">
+          <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3600583" class="paper-link" target="_blank">SSRN <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+          <span class="paper-link-divider">·</span>
+          <a href="https://www.aeaweb.org/articles?id=10.1257/aer.20210307" class="paper-link" target="_blank">Journal <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+          <span class="paper-link-divider">·</span>
+          <button class="bib-btn" onclick="copyBibRA('p1')">BibTeX</button>
+        </div>
       </div>
     </div>
 
@@ -244,14 +247,16 @@
       <div class="paper-venue"><em>Review of Financial Studies</em>, 35(4): 1643–1681</div>
       <div class="paper-abstract">We show that constraints can improve financial decision-making by disciplining behavioral biases. In financial markets, restrictions on leverage limit traders' ability to borrow to open new positions. We demonstrate that regulation that restricts the provision of leverage to retail traders improves trading performance. By increasing the opportunity cost of postponing the realization of losses, leverage constraints improve traders' market timing and reduce their disposition effect. We replicate these findings in two distinct experimental settings, further isolating the mechanism and demonstrating generality of the results. The interaction between constraints and behavioral biases has implications for policy and choice architecture.</div>
       <div class="paper-footer">
-        <span class="paper-award">RFS Rising Scholar Award</span>
-        <span class="paper-link-divider">·</span>
-        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3300456" class="paper-link" target="_blank">SSRN <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-        <span class="paper-link-divider">·</span>
-        <a href="https://academic.oup.com/rfs/article/35/4/1643/6308957" class="paper-link" target="_blank">Journal <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-      
-        <span class="paper-link-divider">·</span>
-        <button class="bib-btn" onclick="copyBibRA('p3')">BibTeX</button>
+        <div class="paper-awards-row">
+          <span class="paper-award">RFS Rising Scholar Award</span>
+        </div>
+        <div class="paper-links-row">
+          <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3300456" class="paper-link" target="_blank">SSRN <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+          <span class="paper-link-divider">·</span>
+          <a href="https://academic.oup.com/rfs/article/35/4/1643/6308957" class="paper-link" target="_blank">Journal <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+          <span class="paper-link-divider">·</span>
+          <button class="bib-btn" onclick="copyBibRA('p3')">BibTeX</button>
+        </div>
       </div>
     </div>
 
@@ -262,15 +267,17 @@
       <div class="paper-venue"><em>Journal of Finance</em>, 74(6): 2957–2996</div>
       <div class="paper-abstract">We study the effect of subjective mortality beliefs on life-cycle behavior. With new survey evidence, we document that survival is underestimated by the young and overestimated by the old. We calibrate a canonical life-cycle model to elicited beliefs. Relative to calibrations using actuarial probabilities, the young under-save by 26%, and retirees draw down their assets 27% slower, while the model's fit to consumption data improves by 88%. Cross-sectional regressions support the model's predictions: distorted mortality beliefs correlate with savings behavior while controlling for risk preferences, cognitive, and socioeconomic factors. Overweighting the likelihood of rare events contributes to mortality belief distortions.</div>
       <div class="paper-footer">
-        <span class="paper-award">Dimensional Fund Advisors Distinguished Paper Award</span>
-        <span class="paper-award">TIAA Paul A. Samuelson Award Finalist</span>
-        <span class="paper-link-divider">·</span>
-        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2669484" class="paper-link" target="_blank">SSRN <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-        <span class="paper-link-divider">·</span>
-        <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/jofi.12828" class="paper-link" target="_blank">Journal <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-      
-        <span class="paper-link-divider">·</span>
-        <button class="bib-btn" onclick="copyBibRA('p6')">BibTeX</button>
+        <div class="paper-awards-row">
+          <span class="paper-award">Dimensional Fund Advisors Distinguished Paper Award</span>
+          <span class="paper-award">TIAA Paul A. Samuelson Award Finalist</span>
+        </div>
+        <div class="paper-links-row">
+          <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2669484" class="paper-link" target="_blank">SSRN <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+          <span class="paper-link-divider">·</span>
+          <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/jofi.12828" class="paper-link" target="_blank">Journal <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+          <span class="paper-link-divider">·</span>
+          <button class="bib-btn" onclick="copyBibRA('p6')">BibTeX</button>
+        </div>
       </div>
     </div>
 
@@ -280,9 +287,9 @@
       <div class="paper-authors">with S. Kogan and N. Xu</div>
       <div class="paper-venue">Inquire Europe Working Paper, 2022</div>
       <div class="paper-footer">
-        
-        <span class="paper-link-divider">·</span>
-        <button class="bib-btn" onclick="copyBibRA('w7')">BibTeX</button>
+        <div class="paper-links-row">
+          <button class="bib-btn" onclick="copyBibRA('w7')">BibTeX</button>
+        </div>
       </div>
     </div>
 
@@ -295,12 +302,13 @@
       <div class="paper-venue"><em>Review of Financial Studies</em>, 29(11): 3177–3209</div>
       <div class="paper-abstract">Social interaction contributes to some traders' disposition effect. New data from an investment-specific social network linked to individual-level trading records builds evidence of this connection. To credibly estimate causal peer effects, I exploit the staggered entry of retail brokerages into partnerships with the social trading web platform and compare trader activity before and after exposure to these new social conditions. Access to the social network nearly doubles the magnitude of a trader's disposition effect. Traders connected in the network develop correlated levels of the disposition effect, a finding that can be replicated using workhorse data from a large discount brokerage.</div>
       <div class="paper-footer">
-        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2517772" class="paper-link" target="_blank">SSRN <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-        <span class="paper-link-divider">·</span>
-        <a href="https://academic.oup.com/rfs/article/29/11/3177/2583763" class="paper-link" target="_blank">Journal <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-      
-        <span class="paper-link-divider">·</span>
-        <button class="bib-btn" onclick="copyBibRA('p10')">BibTeX</button>
+        <div class="paper-links-row">
+          <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2517772" class="paper-link" target="_blank">SSRN <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+          <span class="paper-link-divider">·</span>
+          <a href="https://academic.oup.com/rfs/article/29/11/3177/2583763" class="paper-link" target="_blank">Journal <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+          <span class="paper-link-divider">·</span>
+          <button class="bib-btn" onclick="copyBibRA('p10')">BibTeX</button>
+        </div>
       </div>
     </div>
 
@@ -311,10 +319,11 @@
       <div class="paper-venue">Federal Reserve Bank of Cleveland Working Paper Series, No. 1522</div>
       <div class="paper-abstract">This paper shows how active investing strategies propagate through social connections in a network of retail traders, using a new database of social activity linked to individual-level trading records. A trader's good short-term performance causes them to contact others. A trader's activity increases when peers perform well and increase communication. We use the staggered entry of brokerages into partnerships with the social networking platform, which is a necessary precursor for traders to access the network, to argue these effects are causal. This pattern of communication supports active trading, even though the network reveals the low success rate of retail traders.</div>
       <div class="paper-footer">
-        <a href="https://www.clevelandfed.org/publications/working-paper/2015/wp-1522-facebook-finance-social-interaction-investing" class="paper-link" target="_blank">FRB Cleveland <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-      
-        <span class="paper-link-divider">·</span>
-        <button class="bib-btn" onclick="copyBibRA('p13')">BibTeX</button>
+        <div class="paper-links-row">
+          <a href="https://www.clevelandfed.org/publications/working-paper/2015/wp-1522-facebook-finance-social-interaction-investing" class="paper-link" target="_blank">FRB Cleveland <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+          <span class="paper-link-divider">·</span>
+          <button class="bib-btn" onclick="copyBibRA('p13')">BibTeX</button>
+        </div>
       </div>
     </div>
 
@@ -324,12 +333,13 @@
       <div class="paper-venue"><em>Journal of Economic Behavior and Organization</em>, 107B(11): 527–540</div>
       <div class="paper-abstract">This research is the first to provide empirical evidence that social interaction is more prevalent amongst active rather than passive investors. While previous empirical work, spearheaded by Hong, Kubik, and Stein (2004), shows that proxies for sociability are related to participation in asset markets, the literature is unable to distinguish between the types of participants because of data limitations. I address this shortcoming by using data from the Consumer Expenditure Quarterly Interview Survey on individual holdings, and buying and selling of financial assets as well as expenditure variables which imply variation in the level of social activity. My findings support a new explanation for the active investing puzzle in which informal communication tends to promote active rather than passive strategies (Han and Hirshleifer 2012).</div>
       <div class="paper-footer">
-        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2354050" class="paper-link" target="_blank">SSRN <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-        <span class="paper-link-divider">·</span>
-        <a href="https://www.sciencedirect.com/science/article/pii/S0167268114001243" class="paper-link" target="_blank">Journal <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-      
-        <span class="paper-link-divider">·</span>
-        <button class="bib-btn" onclick="copyBibRA('p12')">BibTeX</button>
+        <div class="paper-links-row">
+          <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2354050" class="paper-link" target="_blank">SSRN <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+          <span class="paper-link-divider">·</span>
+          <a href="https://www.sciencedirect.com/science/article/pii/S0167268114001243" class="paper-link" target="_blank">Journal <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+          <span class="paper-link-divider">·</span>
+          <button class="bib-btn" onclick="copyBibRA('p12')">BibTeX</button>
+        </div>
       </div>
     </div>
 
@@ -341,10 +351,11 @@
       <div class="paper-authors">with Haoyang Liu and Xiaohan Zhang</div>
       <div class="paper-abstract">Using the Federal Reserve Bank of New York's Survey of Consumer Expectations, we document that people expect significantly lower personal exposure to COVID-19 than they attribute to the general public — a gap of 17.5 percentage points at the three-month horizon. This overconfidence is stronger among higher-income and younger households and fades over longer horizons. Overconfidence is distinct from absolute confidence: high-income respondents still perceive greater personal risk than low-income respondents, even while perceiving themselves as less exposed than the public. These behavioral biases may have contributed to the difficulty of containing the virus.</div>
       <div class="paper-footer">
-        <a href="https://libertystreeteconomics.newyorkfed.org/2020/10/are-people-overconfident-about-avoiding-covid-19/" class="paper-link" target="_blank">NY Fed <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-      
-        <span class="paper-link-divider">·</span>
-        <button class="bib-btn" onclick="copyBibRA('b1')">BibTeX</button>
+        <div class="paper-links-row">
+          <a href="https://libertystreeteconomics.newyorkfed.org/2020/10/are-people-overconfident-about-avoiding-covid-19/" class="paper-link" target="_blank">NY Fed <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+          <span class="paper-link-divider">·</span>
+          <button class="bib-btn" onclick="copyBibRA('b1')">BibTeX</button>
+        </div>
       </div>
     </div>
 
@@ -424,13 +435,24 @@
 .bib-copied { font-size:0.72rem; color:#2a7a2a; opacity:0; transition:opacity 0.3s; }
 .bib-copied.show { opacity:1; }
 </style>
+
+<style>
+.bib-popup { display:none; margin-top:0.6rem; }
+.bib-popup.open { display:block; }
+.bib-box { background:#f7f4ef; border:1px solid var(--rule); border-left:3px solid var(--gold); padding:0.8rem 1rem; font-family:'Courier New',monospace; font-size:0.72rem; line-height:1.6; white-space:pre; overflow-x:auto; color:var(--ink); }
+.bib-copy-row { display:flex; align-items:center; gap:0.75rem; margin-top:0.45rem; }
+.bib-copy-btn { font-size:0.72rem; letter-spacing:0.07em; text-transform:uppercase; color:#fff; background:var(--maroon); border:none; padding:0.3rem 0.75rem; cursor:pointer; font-family:'Source Serif 4',serif; transition:background 0.2s; }
+.bib-copy-btn:hover { background:#6b1010; }
+.bib-copied { font-size:0.72rem; color:#2a7a2a; opacity:0; transition:opacity 0.3s; }
+.bib-copied.show { opacity:1; }
+</style>
 <script>
 function _doCopy(id, store) {
   var existingPopup = document.getElementById('bibpop-' + id);
   if (existingPopup) { existingPopup.classList.toggle('open'); return; }
   var btn = document.querySelector('[onclick*="\'' + id + '\'"]');
   if (!btn) return;
-  var anchor = btn.closest('.pub-links') || btn.closest('.paper-footer');
+  var anchor = btn.closest('.pub-links') || btn.closest('.paper-links-row') || btn.closest('.paper-footer');
   if (!anchor) return;
   var popup = document.createElement('div');
   popup.className = 'bib-popup open';
@@ -461,7 +483,9 @@ function _doCopy(id, store) {
   });
   row.appendChild(copyBtn); row.appendChild(msg);
   popup.appendChild(box); popup.appendChild(row);
-  anchor.insertAdjacentElement('afterend', popup);
+  // Insert after the paper-footer, not inside it
+  var footer = anchor.closest('.paper-footer') || anchor;
+  footer.insertAdjacentElement('afterend', popup);
 }
 </script>
 <script>
