@@ -258,7 +258,7 @@
   </div>
   <div class="page-eyebrow">For Researchers</div>
   <h1 class="page-title">Experiments in Finance</h1>
-  <p class="page-intro">Experiments are increasingly becoming a common tool for finance researchers. Below is a database of papers published in the <em>JF</em>, <em>JFE</em>, and <em>RFS</em> that use some form of experimental methods. <a href="mailto:rawley.heimer@asu.edu">rawley.heimer@asu.edu</a> if any papers are missing.</p>
+  <p class="page-intro">Experiments are increasingly becoming a common tool for finance researchers. Below is a database of papers published in the <em>JF</em>, <em>JFE</em>, and <em>RFS</em> that use some form of experimental methods. <a href="/cdn-cgi/l/email-protection#9be9faecf7fee2b5f3fef2f6fee9dbfae8eeb5feffee"><span class="__cf_email__" data-cfemail="ee9c8f99828b97c0868b87838b9cae8f9d9bc08b8a9b">[email&#160;protected]</span></a> if any papers are missing.</p>
 </div>
 
 <div class="jump-nav">
@@ -279,7 +279,7 @@
 
     <!-- SUBMIT NOTICE -->
     <div class="submit-notice">
-      This database is a work in progress. If you know of a paper that should be included — or if your own work is missing — please <a href="mailto:rawley.heimer@asu.edu">rawley.heimer@asu.edu</a>. I aim to keep this current through the most recent issues.
+      This database is a work in progress. If you know of a paper that should be included — or if your own work is missing — please <a href="/cdn-cgi/l/email-protection#e29083958e879bcc8a878b8f8790a2839197cc878697"><span class="__cf_email__" data-cfemail="b1c3d0c6ddd4c89fd9d4d8dcd4c3f1d0c2c49fd4d5c4">[email&#160;protected]</span></a>. I aim to keep this current through the most recent issues.
     </div>
 
     <!-- FILTERS -->
@@ -451,21 +451,21 @@
     <div class="side-section">
       <div class="side-heading">Missing a Paper?</div>
       <div class="side-item" style="border:none; padding-top:0;"><span>If a paper is missing from the database, please send the citation.</span></div>
-      <a href="mailto:rawley.heimer@asu.edu">rawley.heimer@asu.edu</a>
+      <a href="/cdn-cgi/l/email-protection#5f2d3e28333a2671373a36323a2d1f3e2c2a713a3b2a"><span class="__cf_email__" data-cfemail="384a594f545d4116505d51555d4a78594b4d165d5c4d">[email&#160;protected]</span></a>
     </div>
 
   </aside>
 </div>
 
 <footer>
-  &copy; 2025 Rawley Z. Heimer &nbsp;·&nbsp; W.P. Carey School of Business, Arizona State University &nbsp;·&nbsp; <a href="mailto:rawley.heimer@asu.edu">rawley.heimer@asu.edu</a>
+  &copy; 2025 Rawley Z. Heimer &nbsp;·&nbsp; W.P. Carey School of Business, Arizona State University &nbsp;·&nbsp; <a href="/cdn-cgi/l/email-protection#3d4f5c4a5158441355585450584f7d5c4e4813585948"><span class="__cf_email__" data-cfemail="89fbe8fee5ecf0a7e1ece0e4ecfbc9e8fafca7ecedfc">[email&#160;protected]</span></a>
 </footer>
 
 
 
 
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 const papers = [
   { year: 1990, journal: "RFS", title: "Pooling, Separating, and Semiseparating Equilibria in Financial Markets: Some Experimental Evidence", authors: "Charles B Cadsby, Murray Frank & Vojislav Maksimovic", type: ["lab"] },
   { year: 1991, journal: "JF", title: "Partial Revelation of Information in Experimental Asset Markets", authors: "Thomas E Copeland & Daniel Friedman", type: ["lab"] },
@@ -546,10 +546,21 @@ let currentFilter = "all", currentSearch = "";
 
 function renderTable() {
   var tbody = document.getElementById("paper-tbody");
+  var countEl = document.getElementById("paper-count");
+  var table = document.getElementById("paper-table");
+
+  // Hide table and show prompt if no search query
+  if (!currentSearch.trim()) {
+    table.style.display = "none";
+    countEl.textContent = "Type above to search " + papers.length + " papers.";
+    return;
+  }
+
+  table.style.display = "";
   var filtered = papers.filter(function(p) {
     var mf = currentFilter === "all" || p.journal === currentFilter;
     var q  = currentSearch.toLowerCase();
-    var ms = !q || p.title.toLowerCase().includes(q)
+    var ms = p.title.toLowerCase().includes(q)
               || p.authors.toLowerCase().includes(q)
               || p.type.some(function(t){ return t.includes(q); });
     return mf && ms;
@@ -565,8 +576,7 @@ function renderTable() {
       +'<div class="paper-authors">'+p.authors+'</div></td>'
       +'<td>'+tags+'</td></tr>';
   }).join("");
-  document.getElementById("paper-count").textContent =
-    "Showing " + filtered.length + " of " + papers.length + " papers";
+  countEl.textContent = filtered.length + " of " + papers.length + " papers";
 }
 
 function filterTable(btn, filter) {
@@ -592,28 +602,4 @@ updateStats();
 <script>
 
 document.addEventListener('DOMContentLoaded', function(){
-  var btn = document.getElementById('nav-hamburger');
-  var menu = document.querySelector('.nav-links');
-  if (!btn || !menu) return;
-  btn.addEventListener('click', function(e){
-    e.stopPropagation();
-    btn.classList.toggle('open');
-    menu.classList.toggle('open');
-  });
-  menu.querySelectorAll('a').forEach(function(a){
-    a.addEventListener('click', function(){
-      btn.classList.remove('open');
-      menu.classList.remove('open');
-    });
-  });
-  document.addEventListener('click', function(e){
-    if (!btn.contains(e.target) && !menu.contains(e.target)){
-      btn.classList.remove('open');
-      menu.classList.remove('open');
-    }
-  });
-});
-
-</script>
-</body>
-</html>
+  var btn = document.get
