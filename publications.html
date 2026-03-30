@@ -634,16 +634,4 @@ document.addEventListener('DOMContentLoaded', function(){
   menu.querySelectorAll('a').forEach(function(a){
     a.addEventListener('click', function(){
       btn.classList.remove('open');
-      menu.classList.remove('open');
-    });
-  });
-  document.addEventListener('click', function(e){
-    if (!btn.contains(e.target) && !menu.contains(e.target)){
-      btn.classList.remove('open');
-      menu.classList.remove('open');
-    }
-  });
-});
-</script>
-</body>
-</html>
+      menu.classList.remove('op

@@ -223,7 +223,7 @@
         <span class="press-topic">Financial regulation</span>
         <span class="press-topic">Housing markets</span>
       </div>
-      <a href="mailto:rawley.heimer@asu.edu" class="press-email">Contact for Press →</a>
+      <a href="mailto:rawley.heimer@asu.edu">rawley.heimer@asu.edu</a>
     </div>
 
     <!-- COVERAGE -->
@@ -365,17 +365,4 @@ document.addEventListener('DOMContentLoaded', function(){
   });
   menu.querySelectorAll('a').forEach(function(a){
     a.addEventListener('click', function(){
-      btn.classList.remove('open');
-      menu.classList.remove('open');
-    });
-  });
-  document.addEventListener('click', function(e){
-    if (!btn.contains(e.target) && !menu.contains(e.target)){
-      btn.classList.remove('open');
-      menu.classList.remove('open');
-    }
-  });
-});
-</script>
-</body>
-</html>
+      btn.classList.rem
