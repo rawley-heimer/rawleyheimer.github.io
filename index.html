@@ -346,6 +346,31 @@
 
     .wp-authors { font-size: 0.82rem; color: var(--ink-light); }
 
+    /* Paper titles link to SSRN */
+    .pub-title a,
+    .wp-title a {
+      color: inherit;
+      text-decoration: underline;
+      text-decoration-color: var(--rule);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+      transition: color 0.15s, text-decoration-color 0.15s;
+    }
+
+    .pub-title a:hover,
+    .wp-title a:hover,
+    .pub-title a:focus-visible,
+    .wp-title a:focus-visible {
+      color: var(--maroon);
+      text-decoration-color: var(--maroon);
+    }
+
+    .pub-title a:focus-visible,
+    .wp-title a:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 2px;
+    }
+
     /* ─── SIDEBAR ─── */
     .side-section { margin-bottom: 2.5rem; }
 
@@ -640,7 +665,7 @@
         <li class="pub-item" data-journal="aer">
           <span class="pub-num">1</span>
           <div>
-            <div class="pub-title">"Dynamic Inconsistency in Risky Choice: Evidence from the Lab and Field"</div>
+            <div class="pub-title">"<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3600583" target="_blank" rel="noopener">Dynamic Inconsistency in Risky Choice: Evidence from the Lab and Field</a>"</div>
             <div class="pub-authors">with Iliewa, Imas, and Weber</div>
             <div class="pub-venue">American Economic Review, 115(1): 330–363</div>
           </div>
@@ -649,7 +674,7 @@
         <li class="pub-item" data-journal="jfe">
           <span class="pub-num">2</span>
           <div>
-            <div class="pub-title">"Shale Shocked: Cash Windfalls and Household Debt Repayment"</div>
+            <div class="pub-title">"<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3682223" target="_blank" rel="noopener">Shale Shocked: Cash Windfalls and Household Debt Repayment</a>"</div>
             <div class="pub-authors">with J.A. Cookson and E. Gilje</div>
             <div class="pub-venue">Journal of Financial Economics, 146(3): 905–931</div>
           </div>
@@ -658,7 +683,7 @@
         <li class="pub-item" data-journal="rfs">
           <span class="pub-num">3</span>
           <div>
-            <div class="pub-title">"Biased by Choice: How Financial Constraints Can Reduce Financial Mistakes"</div>
+            <div class="pub-title">"<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3300456" target="_blank" rel="noopener">Biased by Choice: How Financial Constraints Can Reduce Financial Mistakes</a>"</div>
             <div class="pub-authors">with A. Imas</div>
             <div class="pub-venue">Review of Financial Studies, 35(4): 1643–1681</div>
             <div><span class="pub-award">RFS Rising Scholar Award</span></div>
@@ -668,7 +693,7 @@
         <li class="pub-item" data-journal="rfs">
           <span class="pub-num">4</span>
           <div>
-            <div class="pub-title">"Personal Wealth, Self-Employment, and Business Ownership"</div>
+            <div class="pub-title">"<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3551576" target="_blank" rel="noopener">Personal Wealth, Self-Employment, and Business Ownership</a>"</div>
             <div class="pub-authors">with A. Bellon, J.A. Cookson, and E. Gilje</div>
             <div class="pub-venue">Review of Financial Studies, 34(8): 3935–3975</div>
           </div>
@@ -677,7 +702,7 @@
         <li class="pub-item" data-journal="jfe">
           <span class="pub-num">5</span>
           <div>
-            <div class="pub-title">"Politicizing Consumer Credit"</div>
+            <div class="pub-title">"<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3042896" target="_blank" rel="noopener">Politicizing Consumer Credit</a>"</div>
             <div class="pub-authors">with P. Akey and S. Lewellen</div>
             <div class="pub-venue">Journal of Financial Economics, 139(2): 627–655</div>
           </div>
@@ -686,7 +711,7 @@
         <li class="pub-item" data-journal="jf">
           <span class="pub-num">6</span>
           <div>
-            <div class="pub-title">"YOLO: Mortality Beliefs and Household Finance Puzzles"</div>
+            <div class="pub-title">"<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2669484" target="_blank" rel="noopener">YOLO: Mortality Beliefs and Household Finance Puzzles</a>"</div>
             <div class="pub-authors">with K. Myrseth and R. Schoenle</div>
             <div class="pub-venue">Journal of Finance, 74(6): 2957–2996</div>
             <div>
@@ -699,7 +724,7 @@
         <li class="pub-item" data-journal="jfe">
           <span class="pub-num">7</span>
           <div>
-            <div class="pub-title">"Should Retail Investors' Leverage Be Limited?"</div>
+            <div class="pub-title">"<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2150980" target="_blank" rel="noopener">Should Retail Investors' Leverage Be Limited?</a>"</div>
             <div class="pub-authors">with A. Simsek</div>
             <div class="pub-venue">Journal of Financial Economics, 132(3): 1–21 · <em>Lead article</em></div>
             <div><span class="pub-award">Best Paper Finalist, SFS Cavalcade</span></div>
@@ -709,7 +734,7 @@
         <li class="pub-item" data-journal="jfe">
           <span class="pub-num">8</span>
           <div>
-            <div class="pub-title">"Growing Up Without Finance"</div>
+            <div class="pub-title">"<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2809164" target="_blank" rel="noopener">Growing Up Without Finance</a>"</div>
             <div class="pub-authors">with J. Brown and J.A. Cookson</div>
             <div class="pub-venue">Journal of Financial Economics, 134(3): 591–616</div>
             <div>
@@ -722,7 +747,7 @@
         <li class="pub-item" data-journal="rfs">
           <span class="pub-num">9</span>
           <div>
-            <div class="pub-title">"Law and Finance Matter: Lessons from Externally Imposed Courts"</div>
+            <div class="pub-title">"<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2448091" target="_blank" rel="noopener">Law and Finance Matter: Lessons from Externally Imposed Courts</a>"</div>
             <div class="pub-authors">with J. Brown and J.A. Cookson</div>
             <div class="pub-venue">Review of Financial Studies, 30(3): 1019–1051</div>
             <div><span class="pub-award">Best Paper, FMA 2015</span></div>
@@ -732,7 +757,7 @@
         <li class="pub-item" data-journal="rfs">
           <span class="pub-num">10</span>
           <div>
-            <div class="pub-title">"Peer Pressure: Social Interaction and the Disposition Effect"</div>
+            <div class="pub-title">"<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2517772" target="_blank" rel="noopener">Peer Pressure: Social Interaction and the Disposition Effect</a>"</div>
             <div class="pub-authors"></div>
             <div class="pub-venue">Review of Financial Studies, 29(11): 3177–3209</div>
           </div>
@@ -746,19 +771,19 @@
       <div class="section-label">Working Papers</div>
       <div>
         <div class="wp-item">
-          <div class="wp-title">"Temporal Focal Points and Economic Outcomes: Evidence from U.S. Mortgage Lending"</div>
+          <div class="wp-title">"<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3795547" target="_blank" rel="noopener">Temporal Focal Points and Economic Outcomes: Evidence from U.S. Mortgage Lending</a>"</div>
           <div class="wp-authors">with M. Giacoletti and E. Yu · <em>Best Paper, MFA Conference</em></div>
         </div>
         <div class="wp-item">
-          <div class="wp-title">"The Hidden Costs of Financial Services: Consumer Complaints and Financial Restitution"</div>
+          <div class="wp-title">"<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5218602" target="_blank" rel="noopener">The Hidden Costs of Financial Services: Consumer Complaints and Financial Restitution</a>"</div>
           <div class="wp-authors">with C. Haendler</div>
         </div>
         <div class="wp-item">
-          <div class="wp-title">"Pushing Boundaries: Political Redistricting and Consumer Credit"</div>
+          <div class="wp-title">"<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3031604" target="_blank" rel="noopener">Pushing Boundaries: Political Redistricting and Consumer Credit</a>"</div>
           <div class="wp-authors">with P. Akey, C. Dobridge, and S. Lewellen</div>
         </div>
         <div class="wp-item">
-          <div class="wp-title">"Five Facts about Bequest Motives"</div>
+          <div class="wp-title">"<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5331388" target="_blank" rel="noopener">Five Facts about Bequest Motives</a>"</div>
           <div class="wp-authors">with X. Li</div>
         </div>
         <div class="wp-item">
@@ -766,7 +791,7 @@
           <div class="wp-authors">with C. Ahn</div>
         </div>
         <div class="wp-item">
-          <div class="wp-title">"Single Family REITs and Local Housing Markets"</div>
+          <div class="wp-title">"<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4895275" target="_blank" rel="noopener">Single Family REITs and Local Housing Markets</a>"</div>
           <div class="wp-authors">with Giacoletti, Li, and Yu</div>
         </div>
       </div>
