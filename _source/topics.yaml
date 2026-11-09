@@ -1,0 +1,68 @@
+# Research topics, in display order. 'legacy' is the old page name that now redirects here.
+
+- slug: retail-investing-brokerage
+  name: Retail investing and brokerage
+  legacy: research-retail-trading
+  intro: >-
+    How individual investors behave in financial markets, why they so often trade against their own interests,
+    and how leverage limits, brokerage practices, and social networks change their outcomes.
+  terms: >-
+    leverage and margin limits, retail foreign exchange, brokerage commissions, the disposition effect,
+    loss chasing, social trading platforms, active versus passive investing
+- slug: consumer-credit-debt
+  name: Consumer credit and debt
+  legacy: research-consumer-finance
+  intro: >-
+    How households get, use, and repay credit, and how early-life conditions, cash windfalls, regulation,
+    and politics shape credit outcomes, studied mostly with individual credit bureau records.
+  terms: >-
+    credit access, credit scores, delinquency, debt repayment, financial inclusion, credit card regulation,
+    the Credit CARD Act, gerrymandering, credit bureau data
+- slug: mortgage-lending-housing
+  name: Mortgage lending and housing
+  legacy: research-real-estate
+  intro: >-
+    Who gets mortgage credit and on what terms, including tests for disparate treatment in lending, the
+    politics of fair-lending enforcement, and the role of institutional investors in single-family housing.
+  terms: >-
+    fair lending, disparate treatment, racial disparities in mortgage approvals, loan officers, Community
+    Reinvestment Act, single-family rentals, institutional investors, homeownership
+- slug: consumer-protection-regulation
+  name: Consumer protection and financial regulation
+  legacy: research-financial-institutions
+  intro: >-
+    How regulation, supervision, and politics affect people who use financial services, from leverage
+    limits for retail traders and age limits on credit cards to complaint resolution at the Consumer Financial
+    Protection Bureau.
+  terms: >-
+    CFPB, consumer complaints, restitution and redress, leverage limits, Dodd-Frank, fair-lending enforcement,
+    Community Reinvestment Act, Credit CARD Act, gerrymandering
+- slug: saving-retirement-inheritance
+  name: Saving, retirement, and inheritance
+  legacy: research-lifelong-security
+  intro: >-
+    How people accumulate, spend down, and pass on wealth over their lives: saving for retirement, beliefs
+    about longevity, bequests and inheritances, private family foundations, and the effects of wealth
+    shocks.
+  terms: >-
+    life-cycle model, retirement saving, mortality beliefs, bequest motives, inheritances, estate taxes,
+    private foundations, cash windfalls, entrepreneurship
+- slug: behavioral-finance-beliefs
+  name: Behavioral finance and beliefs
+  legacy: research-behavioral-social
+  intro: >-
+    Why people’s financial choices depart from what standard models predict: biased beliefs about risk
+    and longevity, plans that change once outcomes arrive, social influence among investors, and how generative
+    AI may change financial decisions.
+  terms: >-
+    disposition effect, loss chasing, dynamic inconsistency, overconfidence, subjective beliefs, social
+    transmission, commitment devices, generative AI
+- slug: legal-institutions-development
+  name: Legal institutions and financial development
+  legacy: null
+  intro: >-
+    How courts and contract enforcement shape credit markets and long-run economic development, studied
+    through the assignment of state versus tribal courts on Native American reservations.
+  terms: >-
+    contract enforcement, Public Law 280, tribal courts, state courts, financial development, small-business
+    lending, financial inclusion, economic growth

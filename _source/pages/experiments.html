@@ -1,0 +1,174 @@
+<!--FRONT
+{
+ "title": "Experiments in Finance | Rawley Z. Heimer",
+ "description": "A growing database of experimental papers published in the JF, JFE, and RFS, plus resources for researchers running experiments in finance.",
+ "h1": "Experiments in Finance",
+ "intro": "Experiments are increasingly becoming a common tool for finance researchers. Below is a database of papers published in the <em>JF</em>, <em>JFE</em>, and <em>RFS</em> that use some form of experimental methods. <a href=\"mailto:rawley.heimer@asu.edu\">rawley.heimer@asu.edu</a> if any papers are missing.",
+ "crumbs": [
+  [
+   "Resources",
+   "resources.html"
+  ]
+ ],
+ "wide": true,
+ "script": "assets/experiments.js",
+ "jsonld": []
+}
+FRONT-->
+<div class="jump-nav">
+  <a href="#database" class="jump-link">Paper Database</a>
+  <a href="#survey-articles" class="jump-link">Survey Articles</a>
+  <a href="#platforms" class="jump-link">Platforms &amp; Tools</a>
+</div>
+<div class="page">
+  <div class="main-col">
+        <h2 class="sec" id="database">Paper Database</h2>
+    <div class="chart-wrap">
+      <img src="{{root}}assets/img/experiments-0.jpg" alt="Publications using experiments (cumulative) — JF, JFE, RFS" />
+    </div>
+        <div class="submit-notice">
+      This database is a work in progress. If you know of a paper that should be included — or if your own work is missing — please <a href="mailto:rawley.heimer@asu.edu">rawley.heimer@asu.edu</a>. I aim to keep this current through the most recent issues.
+    </div>
+        <div class="filter-bar">
+      <span class="filter-label">Filter:</span>
+      <button class="filter-btn active" data-filter="all" onclick="filterTable(this,'all')">All</button>
+      <button class="filter-btn jf" data-filter="JF" onclick="filterTable(this,'JF')">JF</button>
+      <button class="filter-btn jfe" data-filter="JFE" onclick="filterTable(this,'JFE')">JFE</button>
+      <button class="filter-btn rfs" data-filter="RFS" onclick="filterTable(this,'RFS')">RFS</button>
+    </div>
+    <div class="search-wrap">
+      <input class="search-input" type="text" placeholder="Search by author, title, or keyword…" oninput="searchTable(this.value)" />
+    </div>
+    <div class="paper-count" id="paper-count"></div>
+    <table class="paper-table" id="paper-table">
+      <thead>
+        <tr>
+          <th>Year</th>
+          <th>Journal</th>
+          <th>Title &amp; Authors</th>
+          <th>Type</th>
+        </tr>
+      </thead>
+      <tbody id="paper-tbody">
+              </tbody>
+    </table>
+        <h2 class="sec" id="survey-articles">Survey Articles &amp; Methods Guides</h2>
+    <div class="reading-item">
+      <div class="reading-title">"Field Experiments"</div>
+      <div class="reading-authors">Glenn W. Harrison &amp; John A. List</div>
+      <div class="reading-venue">Journal of Economic Literature, 2004</div>
+      <div class="reading-why">The foundational taxonomy distinguishing conventional lab, artefactual field, framed field, and natural field experiments. Essential reading before designing any experiment.</div>
+    </div>
+    <div class="reading-item">
+      <div class="reading-title">"Experimental Methods: Between-Subject and Within-Subject Design"</div>
+      <div class="reading-authors">Gary Charness, Uri Gneezy &amp; Michael A. Kuhn</div>
+      <div class="reading-venue">Journal of Economic Behavior &amp; Organization, 2012</div>
+      <div class="reading-why">Practical guide to choosing between-subject vs. within-subject designs, with guidance on statistical power and demand effects.</div>
+    </div>
+    <div class="reading-item">
+      <div class="reading-title">"What Do Laboratory Experiments Measuring Social Preferences Reveal About the Real World?"</div>
+      <div class="reading-authors">Steven D. Levitt &amp; John A. List</div>
+      <div class="reading-venue">Journal of Economic Perspectives, 2007</div>
+      <div class="reading-why">An influential and provocative assessment of external validity concerns — when and why lab findings may not generalize.</div>
+    </div>
+    <div class="reading-item">
+      <div class="reading-title">"Doing Survey Research"</div>
+      <div class="reading-authors">Stefano DellaVigna &amp; Devin Pope</div>
+      <div class="reading-venue">NBER Reporter, 2018</div>
+      <div class="reading-why">Accessible overview of survey experiment design for economists, with practical advice on framing, incentives, and validation.</div>
+    </div>
+    <div class="reading-item">
+      <div class="reading-title">"Lab Experiments Are a Major Source of Knowledge in the Social Sciences"</div>
+      <div class="reading-authors">Armin Falk &amp; James J. Heckman</div>
+      <div class="reading-venue">Science, 2009</div>
+      <div class="reading-why">A response to external validity critics — argues that controlled lab experiments yield uniquely reliable causal identification that field settings cannot replicate.</div>
+    </div>
+    <div class="reading-item">
+      <div class="reading-title">"Using Predictions from a Stochastic Model to Measure Subjective Probabilities"</div>
+      <div class="reading-authors">Charles F. Manski</div>
+      <div class="reading-venue">Review of Economic Studies, 2004</div>
+      <div class="reading-why">Foundational work on eliciting probabilistic expectations in surveys — relevant for finance researchers using subjective belief elicitation.</div>
+    </div>
+    <div class="reading-item">
+      <div class="reading-title">"Conduct a Survey Experiment"</div>
+      <div class="reading-authors">Rourke O'Brien &amp; Brandyn F. Churchill</div>
+      <div class="reading-venue">In <em>Handbook of Research Methods in Sociology and Social Policy</em>, 2022</div>
+      <div class="reading-why">A practical how-to covering design, pre-registration, Qualtrics implementation, and analysis of survey experiments.</div>
+    </div>
+        <h2 class="sec" id="platforms">Platforms &amp; Tools</h2>
+    <div class="platform-grid">
+      <div class="platform-card">
+        <div class="platform-tag">Recruitment · Academic</div>
+        <div class="platform-name">Prolific</div>
+        <div class="platform-desc">The preferred participant recruitment platform for academic research. Large pool of pre-screened participants with detailed demographic filters. Faster and more representative than MTurk for most research purposes.</div>
+        <a href="https://www.prolific.com" class="platform-link">prolific.com</a>
+      </div>
+      <div class="platform-card">
+        <div class="platform-tag">Survey Software</div>
+        <div class="platform-name">Qualtrics</div>
+        <div class="platform-desc">The industry standard for survey design and administration. Supports complex branching logic, embedded data, randomization, and direct integration with Prolific and MTurk. Most universities provide institutional access.</div>
+        <a href="https://www.qualtrics.com" class="platform-link">qualtrics.com</a>
+      </div>
+      <div class="platform-card">
+        <div class="platform-tag">Lab Experiments · Open Source</div>
+        <div class="platform-name">oTree</div>
+        <div class="platform-desc">Python-based platform for building interactive economic experiments — games, auctions, markets, and incentivized tasks. Runs in the browser, supports multiplayer interactions, and integrates easily with lab infrastructure. Open source.</div>
+        <a href="https://www.otree.org" class="platform-link">otree.org</a>
+      </div>
+      <div class="platform-card">
+        <div class="platform-tag">Lab Experiments</div>
+        <div class="platform-name">z-Tree</div>
+        <div class="platform-desc">The classic lab experiment software (Zurich Toolbox for Readymade Economic Experiments). Widely used in economics labs worldwide. Best for incentivized tasks in a controlled lab setting with networked computers.</div>
+        <a href="https://www.ztree.uzh.ch" class="platform-link">ztree.uzh.ch</a>
+      </div>
+      <div class="platform-card">
+        <div class="platform-tag">Representative Panel · U.S.</div>
+        <div class="platform-name">Understanding America Study</div>
+        <div class="platform-desc">USC's probability-based internet panel of ~9,000 U.S. adults, designed for longitudinal survey research. Allows repeated measurement of the same individuals. Particularly useful for household finance and retirement topics.</div>
+        <a href="https://uasdata.usc.edu" class="platform-link">uasdata.usc.edu</a>
+      </div>
+      <div class="platform-card">
+        <div class="platform-tag">Representative Panel · U.S.</div>
+        <div class="platform-name">RAND American Life Panel</div>
+        <div class="platform-desc">A probability-based online panel of ~6,000 U.S. adults surveyed monthly. Supports researcher-designed surveys with access to a broadly representative sample. Good for belief elicitation, financial literacy, and expectations research.</div>
+        <a href="https://alpdata.rand.org" class="platform-link">alpdata.rand.org</a>
+      </div>
+      <div class="platform-card">
+        <div class="platform-tag">Recruitment · Crowdsourcing</div>
+        <div class="platform-name">Amazon Mechanical Turk</div>
+        <div class="platform-desc">Large crowdsourcing marketplace for recruiting online participants. Low cost and fast, but well-documented concerns about data quality and worker demographics. Better suited for pilot testing and replication than primary data collection.</div>
+        <a href="https://www.mturk.com" class="platform-link">mturk.com</a>
+      </div>
+      <div class="platform-card">
+        <div class="platform-tag">Recruitment · Commercial Panel</div>
+        <div class="platform-name">Lucid (Cint)</div>
+        <div class="platform-desc">Large-scale commercial panel with quota-based sampling, giving researchers access to demographically representative samples in the U.S. and internationally. Widely used in political science and economics for survey experiments requiring national representativeness.</div>
+        <a href="https://luc.id" class="platform-link">luc.id</a>
+      </div>
+    </div>
+  </div>
+  <aside class="side-col">
+    <div class="side-section">
+      <div class="side-heading">Database Stats</div>
+      <div class="stat-row"><span class="stat-label">JF papers</span><span class="stat-val jf" id="stat-jf">—</span></div>
+      <div class="stat-row"><span class="stat-label">JFE papers</span><span class="stat-val jfe" id="stat-jfe">—</span></div>
+      <div class="stat-row"><span class="stat-label">RFS papers</span><span class="stat-val rfs" id="stat-rfs">—</span></div>
+    </div>
+    <div class="side-section">
+      <div class="side-heading">On This Page</div>
+      <a href="#database" class="side-link">Paper Database</a>
+      <a href="#survey-articles" class="side-link">Survey Articles</a>
+      <a href="#platforms" class="side-link">Platforms &amp; Tools</a>
+    </div>
+    <div class="side-section">
+      <div class="side-heading">Resources</div>
+      <a href="{{root}}resources.html" class="side-link">← Back to Resources</a>
+      <a href="{{root}}data.html" class="side-link">Key Datasets</a>
+    </div>
+    <div class="side-section">
+      <div class="side-heading">Missing a Paper?</div>
+      <div class="side-item"><span>If a paper is missing from the database, please send the citation.</span></div>
+      <a href="mailto:rawley.heimer@asu.edu">rawley.heimer@asu.edu</a>
+    </div>
+  </aside>
+</div>

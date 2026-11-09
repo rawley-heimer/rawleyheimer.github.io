@@ -1,0 +1,45 @@
+# Content for the home page (index.html). Paper lists on the home page come from papers.yaml
+# ("selected: true" for Selected publications; all working papers are listed).
+
+about:
+  - >-
+    Professor Rawley Heimer is an expert in financial markets whose research examines how households
+    build and lose financial security through their decisions in investment and credit markets. His
+    research shows how social networks shape investor behavior, how leverage drives retail investors’
+    trading and affects financial markets, and how mistaken beliefs distort saving and investment over
+    the life cycle. Current work examines how AI affects personal finances. He also studies real estate
+    markets, including mortgage lending and institutional investment in housing.
+  - >-
+    His research is published in leading finance and economics journals and has received numerous
+    awards, including the Dimensional Fund Advisors Distinguished Paper Award at the <i>Journal of
+    Finance</i> and the Rising Scholar Award at the <i>Review of Financial Studies</i>. This research
+    has been featured in <i>Bloomberg News</i>, the <i>Financial Times</i>, <i>Forbes</i>, and the
+    <i>Wall Street Journal</i>, among others.
+  - >-
+    Prof. Heimer is an Associate Editor at <i>Management Science</i>, the <i>Review of Corporate
+    Financial Studies</i>, and <i>Financial Management</i>. Outside of academia, he was formerly an
+    economist at the Federal Reserve Bank and served as Senior Advisor for Research and Policy at the
+    Consumer Financial Protection Bureau. He frequently gives presentations to asset managers and
+    supports litigation in areas such as consumer banking, financial markets, and digital assets.
+
+positions:
+  - [Associate Professor of Finance, 'W. P. Carey School of Business, Arizona State University', '2022–']
+  - [Associate Editor, Management Science, '2025–']
+  - [Associate Editor, Review of Corporate Financial Studies, '2022–']
+  - [Associate Editor, Financial Management, '2022–']
+  - [Visiting Scholar, Federal Reserve Bank of Philadelphia, '2024–']
+  - [Affiliated Faculty, W. P. Carey Center for Real Estate and Finance, '2024–']
+  - [Affiliate, '<a href="https://thebureau.org/">The Bureau Consulting Group</a>', '2025–']
+  - [Senior Advisor for Research and Policy, Consumer Financial Protection Bureau, '2022–2025']
+  - [Assistant Professor of Finance, Boston College, '2017–2022']
+  - [Research Economist, Federal Reserve Bank of Cleveland, '2013–2017']
+
+education:
+  - ['Ph.D., International Economics and Finance', Brandeis University, '2013']
+  - ['B.A., Economics', University of Rochester, '2005']
+
+media:
+  - [Wall Street Journal, How to Make Peace With Your Stock Market Losses, 'https://www.wsj.com/articles/selling-stock-in-down-market-11665153733']
+  - [Bloomberg, "Brokers Flock to Paradise of Sun, Sand and ‘Unlimited’ Leverage", 'https://www.bloomberg.com/news/features/2026-04-17/seychelles-broker-boom-driven-by-high-leverage-low-taxes']
+  - [PBS NewsHour, How Growing Up in a Bank Desert Can Hurt Your Credit for Life, 'https://www.pbs.org/newshour/economy/making-sense/column-how-growing-up-in-a-bank-desert-can-hurt-your-credit-for-the-rest-of-your-life']
+  - [Børsen, Tech Darling Lost Billions on AI Stocks, 'https://borsen.dk/nyheder/investor/tech-darling-mistede-milliarder-pa-ai-aktier-ifolge-eksperter-blotlaegger-det-stor-risiko']
