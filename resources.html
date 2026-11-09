@@ -1,408 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Household Finance Resources for Researchers | Rawley Z. Heimer</title>
-  <meta name="description" content="A curated guide to household finance research: key datasets (PSID, SCF, HMDA, credit bureau), top journals, foundational readings, and major conferences. Compiled by Rawley Z. Heimer, Associate Professor of Finance at ASU." />
-  <meta name="keywords" content="household finance resources, PSID data household finance, Survey of Consumer Finances SCF, HMDA mortgage data, credit bureau research data, household finance journals, household finance conferences, foundational papers household finance, behavioral finance reading list, consumer credit research resources" />
-  <meta name="author" content="Rawley Z. Heimer" />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://www.rawleyheimer.com/resources.html" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.rawleyheimer.com/resources.html" />
-  <meta property="og:title" content="Household Finance Resources for Researchers — Rawley Z. Heimer" />
-  <meta property="og:description" content="Curated datasets, journals, foundational readings, and conferences for researchers in household finance and consumer economics." />
-  <meta property="og:site_name" content="Rawley Z. Heimer" />
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Household Finance Resources — Rawley Z. Heimer" />
-  <meta name="twitter:description" content="Datasets, journals, readings, and conferences for household finance researchers." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,500;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --cream: #faf9f7; --cream-dark: #f0ece6;
-      --ink: #1a0a0f; --ink-mid: #3a1520; --ink-light: #7a5060;
-      --maroon: #8C1D40; --gold: #FFC627; --rule: #ddd0d5; --max: 1100px;
-    }
-    html { scroll-behavior: smooth; }
-    body { background: var(--cream); color: var(--ink); font-family: 'Source Serif 4', Georgia, serif; font-size: 17px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
-    body::before { content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 999; opacity: 0.035; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E"); background-size: 200px 200px; }
-
-    nav { position: sticky; top: 0; z-index: 100; background: var(--maroon); border-bottom: 3px solid var(--gold); padding: 0 clamp(1.5rem,5vw,4rem); display: flex; align-items: center; justify-content: space-between; height: 56px; }
-    .nav-name { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 600; color: #fff; text-decoration: none; }
-    .nav-links { display: flex; gap: 2rem; list-style: none; }
-    .nav-links a { font-size: 0.82rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.75); text-decoration: none; transition: color 0.2s; }
-    .nav-links a:hover, .nav-links a.active { color: var(--gold); }
-
-    .page-header { max-width: var(--max); margin: 0 auto; padding: clamp(2.5rem,6vw,5rem) clamp(1.5rem,5vw,4rem) clamp(1.5rem,4vw,3rem); border-bottom: 1px solid var(--rule); animation: fadeUp 0.7s ease both; }
-    .breadcrumb { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-light); margin-bottom: 1.2rem; display: flex; align-items: center; gap: 0.5rem; }
-    .breadcrumb a { color: var(--maroon); text-decoration: none; }
-    .breadcrumb a:hover { opacity: 0.7; }
-    .breadcrumb-sep { color: var(--rule); }
-    .page-eyebrow { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--maroon); font-weight: 500; margin-bottom: 0.8rem; }
-    .page-title { font-family: 'Playfair Display', serif; font-size: clamp(2rem,4vw,3.2rem); font-weight: 700; line-height: 1.1; color: var(--ink); margin-bottom: 1.2rem; letter-spacing: -0.01em; }
-    .page-intro { max-width: 700px; font-size: 1rem; color: var(--ink-mid); line-height: 1.78; }
-
-    /* ── JUMP NAV ── */
-    .jump-nav { max-width: var(--max); margin: 0 auto; padding: 1.4rem clamp(1.5rem,5vw,4rem); border-bottom: 1px solid var(--rule); display: flex; flex-wrap: wrap; gap: 0.5rem; }
-    .jump-link { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--maroon); text-decoration: none; padding: 0.3rem 0.8rem; border: 1px solid var(--rule); background: #fff; transition: background 0.15s, border-color 0.15s; }
-    .jump-link:hover { background: var(--cream-dark); border-color: var(--maroon); }
-
-    /* ── LAYOUT ── */
-    .page { max-width: var(--max); margin: 0 auto; padding: 0 clamp(1.5rem,5vw,4rem); display: grid; grid-template-columns: 1fr 260px; gap: 4rem; align-items: start; }
-    .main-col { padding: clamp(2rem,4vw,3.5rem) 0 clamp(3rem,6vw,6rem); }
-    .side-col { padding: clamp(2rem,4vw,3.5rem) 0; border-left: 1px solid var(--rule); padding-left: 2.5rem; position: sticky; top: 70px; }
-
-    /* ── SECTION LABELS ── */
-    .section-label { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--maroon); font-weight: 500; margin: 3rem 0 1.4rem; display: flex; align-items: center; gap: 0.8rem; scroll-margin-top: 80px; }
-    .section-label:first-child { margin-top: 0; }
-    .section-label::after { content: ''; flex: 1; height: 1px; background: var(--maroon); opacity: 0.2; }
-
-    /* ── DATASET CARDS ── */
-    .dataset-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-    .dataset-card { border: 1px solid var(--rule); background: #fff; padding: 1.3rem 1.4rem 1.2rem; transition: border-color 0.2s, box-shadow 0.2s; }
-    .dataset-card:hover { border-color: var(--maroon); box-shadow: 0 2px 12px rgba(140,29,64,0.07); }
-    .dataset-tag { font-size: 0.64rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--maroon); margin-bottom: 0.4rem; }
-    .dataset-name { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 600; color: var(--ink); margin-bottom: 0.35rem; line-height: 1.3; }
-    .dataset-desc { font-size: 0.83rem; color: var(--ink-mid); line-height: 1.6; margin-bottom: 0.8rem; }
-    .dataset-meta { font-size: 0.75rem; color: var(--ink-light); margin-bottom: 0.6rem; }
-    .dataset-link { font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--maroon); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s; display: inline-flex; align-items: center; gap: 0.3rem; }
-    .dataset-link:hover { border-color: var(--maroon); }
-    .dataset-link svg { width: 10px; height: 10px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-
-    /* ── JOURNAL ROWS ── */
-    .journal-row { padding: 0.95rem 0; border-bottom: 1px solid var(--rule); display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: start; }
-    .journal-row:first-of-type { border-top: 1px solid var(--rule); }
-    .journal-name { font-size: 0.97rem; font-style: italic; font-weight: 500; color: var(--ink); margin-bottom: 0.15rem; }
-    .journal-pub { font-size: 0.8rem; color: var(--ink-light); }
-    .journal-scope { font-size: 0.83rem; color: var(--ink-mid); line-height: 1.55; }
-    .journal-badge { font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.18rem 0.55rem; white-space: nowrap; align-self: start; }
-    .badge-top { color: var(--maroon); border: 1px solid var(--gold); background: rgba(255,198,39,0.12); }
-    .badge-field { color: var(--ink-light); border: 1px solid var(--rule); background: var(--cream-dark); }
-
-    /* ── READING LIST ── */
-    .reading-group { margin-bottom: 2rem; }
-    .reading-group-title { font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-light); font-weight: 500; margin-bottom: 0.8rem; padding-bottom: 0.4rem; border-bottom: 1px solid var(--rule); }
-    .reading-item { padding: 0.85rem 0; border-bottom: 1px dotted var(--rule); }
-    .reading-title { font-size: 0.93rem; font-style: italic; color: var(--ink); margin-bottom: 0.2rem; }
-    .reading-authors { font-size: 0.82rem; color: var(--ink-light); margin-bottom: 0.2rem; }
-    .reading-venue { font-size: 0.82rem; color: var(--ink-mid); font-weight: 500; margin-bottom: 0.2rem; }
-    .reading-why { font-size: 0.82rem; color: var(--ink-mid); line-height: 1.55; }
-    .reading-link { font-size: 0.72rem; letter-spacing: 0.07em; text-transform: uppercase; color: var(--maroon); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s; }
-    .reading-link:hover { border-color: var(--maroon); }
-
-    /* ── CONFERENCE ROWS ── */
-    .conf-row { padding: 1rem 0; border-bottom: 1px solid var(--rule); }
-    .conf-row:first-of-type { border-top: 1px solid var(--rule); }
-    .conf-name { font-size: 0.97rem; font-weight: 500; color: var(--ink); margin-bottom: 0.2rem; }
-    .conf-org { font-size: 0.83rem; color: var(--ink-light); margin-bottom: 0.3rem; }
-    .conf-desc { font-size: 0.83rem; color: var(--ink-mid); line-height: 1.55; margin-bottom: 0.4rem; }
-    .conf-link { font-size: 0.72rem; letter-spacing: 0.07em; text-transform: uppercase; color: var(--maroon); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s; display: inline-flex; align-items: center; gap: 0.3rem; }
-    .conf-link:hover { border-color: var(--maroon); }
-    .conf-link svg { width: 10px; height: 10px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-
-    /* ── SIDEBAR ── */
-    .side-section { margin-bottom: 2.2rem; }
-    .side-heading { font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--maroon); font-weight: 500; margin-bottom: 0.9rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--gold); }
-    .side-item { font-size: 0.83rem; color: var(--ink-mid); padding: 0.4rem 0; line-height: 1.45; border-bottom: 1px dotted var(--cream-dark); }
-    .side-item strong { display: block; font-weight: 500; color: var(--ink); font-size: 0.82rem; }
-    .side-item span { color: var(--ink-light); font-size: 0.78rem; }
-    .side-link { display: block; font-size: 0.83rem; color: var(--maroon); text-decoration: none; padding: 0.45rem 0; border-bottom: 1px dotted var(--cream-dark); transition: opacity 0.2s; }
-    .side-link:hover { opacity: 0.7; }
-
-    footer { border-top: 3px solid var(--maroon); background: var(--cream-dark); text-align: center; padding: 2rem; font-size: 0.78rem; color: var(--ink-light); letter-spacing: 0.05em; }
-
-    @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
-
-    @media (max-width: 860px) {
-      .page { grid-template-columns: 1fr; }
-      .side-col { border-left: none; padding-left: 0; border-top: 1px solid var(--rule); padding-top: 2rem; position: static; }
-      .dataset-grid { grid-template-columns: 1fr; }
-    }
-  
-    /* ── RESOURCES DROPDOWN ── */
-    .nav-dropdown { position: relative; }
-    .nav-dropdown > a { display: inline-flex; align-items: center; gap: 0.3rem; vertical-align: middle; }
-    .nav-dropdown > a::after { content: '▾'; font-size: 0.6rem; opacity: 0.7; }
-    .dropdown-menu { display: none; position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: var(--maroon); border-top: 2px solid var(--gold); min-width: 180px; z-index: 200; box-shadow: 0 4px 16px rgba(0,0,0,0.25); }
-    .dropdown-menu a { display: block; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.8); text-decoration: none; padding: 0.65rem 1rem; border-bottom: 1px solid rgba(255,255,255,0.08); transition: color 0.15s, background 0.15s; }
-    .dropdown-menu a:last-child { border-bottom: none; }
-    .dropdown-menu a:hover { color: var(--gold); background: rgba(255,255,255,0.06); }
-    .nav-dropdown:hover .dropdown-menu { display: block; }
-    .nav-dropdown::after { content: ''; position: absolute; top: 100%; left: 0; right: 0; height: 12px; }
-
-    /* ── HAMBURGER / MOBILE NAV ── */
-    .nav-hamburger {
-      display: none;
-      flex-direction: column;
-      justify-content: center;
-      gap: 5px;
-      width: 36px;
-      height: 36px;
-      cursor: pointer;
-      background: none;
-      border: none;
-      padding: 4px;
-      z-index: 201;
-    }
-    .nav-hamburger span {
-      display: block;
-      height: 2px;
-      background: #fff;
-      border-radius: 2px;
-      transition: transform 0.25s, opacity 0.25s;
-    }
-    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
-    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-    @media (max-width: 700px) {
-      .nav-hamburger { display: flex; }
-      .nav-links {
-        display: none;
-        position: absolute;
-        top: 59px;
-        left: 0;
-        right: 0;
-        background: var(--maroon);
-        border-bottom: 3px solid var(--gold);
-        flex-direction: column;
-        gap: 0;
-        z-index: 200;
-        box-shadow: 0 4px 16px rgba(0,0,0,0.3);
-      }
-      .nav-links.open { display: flex; }
-      .nav-links > li { border-bottom: 1px solid rgba(255,255,255,0.1); }
-      .nav-links > li > a {
-        display: block;
-        padding: 0.85rem 1.5rem;
-        font-size: 0.82rem;
-      }
-      /* Mobile dropdowns: always show sub-items indented */
-      .nav-dropdown .dropdown-menu {
-        display: block !important;
-        position: static;
-        transform: none;
-        box-shadow: none;
-        border-top: none;
-        border-left: 3px solid var(--gold);
-        margin-left: 1.5rem;
-        margin-bottom: 0.4rem;
-        min-width: unset;
-      }
-      .nav-dropdown .dropdown-menu a {
-        padding: 0.5rem 1rem;
-        font-size: 0.72rem;
-      }
-      .nav-dropdown > a::after { display: none; }
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Household Finance Resources for Researchers | Rawley Z. Heimer</title>
+<meta name="description" content="A curated guide to household finance research: key datasets (PSID, SCF, HMDA, credit bureau), top journals, foundational readings, and major conferences. Compiled by Rawley Z. Heimer, Associate Professor of Finance at ASU.">
+<meta name="author" content="Rawley Z. Heimer">
+<link rel="canonical" href="https://rawleyheimer.com/resources.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Household Finance Resources for Researchers | Rawley Z. Heimer">
+<meta property="og:description" content="A curated guide to household finance research: key datasets (PSID, SCF, HMDA, credit bureau), top journals, foundational readings, and major conferences. Compiled by Rawley Z. Heimer, Associate Professor of Finance at ASU.">
+<meta property="og:url" content="https://rawleyheimer.com/resources.html">
+<meta property="og:site_name" content="Rawley Z. Heimer">
+<meta name="twitter:card" content="summary">
+<link rel="preload" href="assets/fonts/stix-two-text.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/site.css">
+<link rel="alternate" type="text/plain" title="Summary for AI tools" href="llms.txt">
 </head>
 <body>
-
-<nav>
-  <a href="index.html" class="nav-name">Rawley Z. Heimer</a>
-  <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
-  <ul class="nav-links">
-    <li class="nav-dropdown"><a href="research.html">Research</a>
-      <div class="dropdown-menu">
-        <a href="research.html">Research Areas</a>
-        <a href="publications.html">Publications</a>
-        <a href="working-papers.html">Working Papers</a>
-      </div>
-    </li>
-    <li class="nav-dropdown"><a href="resources.html" class="active">Resources</a>
-      <div class="dropdown-menu">
-        <a href="resources.html" style="color:var(--gold);">For Researchers</a>
-        <a href="data.html">Key Datasets</a>
-        <a href="experiments.html">Experiments in Finance</a>
-      </div>
-    </li>
-    <li><a href="media.html">Media</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
-
-<div class="page-header">
-  <div class="breadcrumb">
-    <a href="index.html">Home</a><span class="breadcrumb-sep">›</span>
-    <span>Resources</span>
-  </div>
-  <div class="page-eyebrow">For Researchers</div>
-  <h1 class="page-title">Household Finance Resources</h1>
-  <p class="page-intro">A curated guide for researchers working in household finance, consumer economics, and related fields — covering the datasets I use and recommend, the journals where this work appears, the foundational papers worth reading first, and the conferences where the field gathers. I update this page periodically; suggestions are welcome.</p>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+<div class="site-head-inner">
+<a class="site-name" href="index.html">Rawley Z. Heimer</a>
+<nav class="nav-wide" aria-label="Site"><ul class="nav-list"><li><a href="research.html">Research</a></li><li><a href="media.html">Media</a></li><li><a href="resources.html" aria-current="page">Resources</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
+<details class="nav-narrow"><summary>Menu</summary><nav aria-label="Site"><ul class="nav-list"><li><a href="research.html">Research</a></li><li><a href="media.html">Media</a></li><li><a href="resources.html" aria-current="page">Resources</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></nav></details>
 </div>
-
+</header>
+<main id="main" class="wrap">
+<div style="height:2.75rem"></div>
+<h1 class="page-title">Household Finance Resources</h1>
+<p class="intro">A curated guide for researchers working in household finance, consumer economics, and related fields — covering the datasets I use and recommend, the journals where this work appears, the foundational papers worth reading first, and the conferences where the field gathers. I update this page periodically; suggestions are welcome.</p>
 <div class="jump-nav">
-  <a href="data.html" class="jump-link">Key Datasets →</a>
+  <a href="data.html" class="jump-link">Key Datasets</a>
   <a href="#guides" class="jump-link">My Guides &amp; Surveys</a>
   <a href="#readings" class="jump-link">Survey Articles</a>
   <a href="#conferences" class="jump-link">Conferences &amp; Seminars</a>
 </div>
-
 <div class="page">
-  <main class="main-col">
-
-    <!-- ══ MY GUIDES ══ -->
-    <div id="guides" class="section-label">My Guides &amp; Surveys</div>
-
-    <div class="reading-item" style="padding:1.2rem 0; border-bottom:1px solid var(--rule);">
-      <div class="reading-title">"Financial Decision Making in the Age of AI"</div>
+  <div class="main-col">
+        <h2 class="sec" id="guides">My Guides &amp; Surveys</h2>
+    <div class="reading-item">
+      <div class="reading-title">"<a href="papers/financial-decision-making-dawn-of-ai.html">Financial Decision Making, at the Dawn of AI</a>"</div>
       <div class="reading-authors">Rawley Z. Heimer</div>
-      <div class="reading-venue">SSRN · February 2026</div>
-      <div class="reading-why" style="margin-top:0.5rem;">This article gives perspective on the academic literature on personal financial decision making. I explore three main domains of financial choices: savings versus consumption, investment decision making, and choices around debt. In each domain, people behave in ways that deviate from normative prescriptions of financial economics. I explore the main drivers of financial decisions that result in these deviations. The article concludes with a forward-looking perspective of how generative artificial intelligence (GenAI) might reshape the landscape of individual's financial decisions.</div>
-      <div style="margin-top:0.6rem;"><a href="https://ssrn.com/abstract=" class="reading-link" target="_blank">Download on SSRN →</a></div>
+      <div class="reading-venue">Oxford Research Encyclopedia of Economics and Finance, forthcoming</div>
+      <div class="reading-why">This article gives perspective on the academic literature on personal financial decision making. I explore three main domains of financial choices: savings versus consumption, investment decision making, and choices around debt. In each domain, people behave in ways that deviate from normative prescriptions of financial economics. I explore the main drivers of financial decisions that result in these deviations. The article concludes with a forward-looking perspective of how generative artificial intelligence (GenAI) might reshape the landscape of individual's financial decisions.</div>
+      <div><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6249619" class="reading-link">Download on SSRN</a></div>
     </div>
-
-    <div class="reading-item" style="padding:1.2rem 0; border-bottom:1px solid var(--rule);">
-      <div class="reading-title">"Subjective Beliefs, Saving, and Spending for Retirement"</div>
+    <div class="reading-item">
+      <div class="reading-title">"<a href="papers/subjective-beliefs-saving-spending-retirement.html">Subjective Beliefs, Saving, and Spending for Retirement</a>"</div>
       <div class="reading-authors">Rawley Z. Heimer</div>
-      <div class="reading-venue">Wharton Pension Research Council Working Paper No. 2024-13 · October 2024</div>
-      <div class="reading-why" style="margin-top:0.5rem;">Beliefs about future events are crucial to the decisions that people make when developing financial plans over the life cycle. Yet peoples' subjective beliefs can often differ from the objective probabilities that economists and financial planners use in their models. This chapter discusses findings on subjective beliefs, how people might form their beliefs, and how these beliefs affect conclusions drawn from a classical economic life cycle model. I highlight a specific divergence between subjective beliefs and objective probabilities: subjective beliefs about peoples' mortality.</div>
-      <div style="margin-top:0.6rem;"><a href="https://ssrn.com/abstract=4976823" class="reading-link" target="_blank">Download on SSRN →</a></div>
+      <div class="reading-venue">In <em>Retirement Saving, Investment, and Spending: New Lessons from Behavioral Research</em>, Oxford University Press, 2026</div>
+      <div class="reading-why">Beliefs about future events are crucial to the decisions that people make when developing financial plans over the life cycle. Yet peoples' subjective beliefs can often differ from the objective probabilities that economists and financial planners use in their models. This chapter discusses findings on subjective beliefs, how people might form their beliefs, and how these beliefs affect conclusions drawn from a classical economic life cycle model. I highlight a specific divergence between subjective beliefs and objective probabilities: subjective beliefs about peoples' mortality.</div>
+      <div><a href="https://ssrn.com/abstract=4976823" class="reading-link">Download on SSRN</a></div>
     </div>
-
-    <div class="reading-item" style="padding:1.2rem 0; border-bottom:1px solid var(--rule);">
-      <div class="reading-title">"Navigating Credit Bureau Data: Field Notes for Researchers"</div>
+    <div class="reading-item">
+      <div class="reading-title">"<a href="papers/navigating-credit-bureau-data.html">Navigating Credit Bureau Data: Field Notes for Researchers</a>"</div>
       <div class="reading-authors">Rawley Z. Heimer</div>
       <div class="reading-venue">SSRN Working Paper 4891923 · 2024</div>
-      <div class="reading-why" style="margin-top:0.5rem;">A practical guide for researchers working with credit bureau data — covering acquisition from vendors, understanding the panel structure, constructing key variables (credit scores, utilization, delinquency flags), merging with external datasets, and common pitfalls. Written from hands-on experience with Equifax, TransUnion, and the NY Fed Consumer Credit Panel.</div>
-      <div style="margin-top:0.6rem;"><a href="#" class="reading-link" target="_blank">Download on SSRN →</a></div>
+      <div class="reading-why">A practical guide for researchers working with credit bureau data — covering acquisition from vendors, understanding the panel structure, constructing key variables (credit scores, utilization, delinquency flags), merging with external datasets, and common pitfalls. Written from hands-on experience with Equifax, TransUnion, and the NY Fed Consumer Credit Panel.</div>
+      <div><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4891923" class="reading-link">Download on SSRN</a></div>
     </div>
-
-    <!-- ══ JOURNALS ══ -->
-    <!-- ══ RECOMMENDED READINGS ══ -->
-    <div id="readings" class="section-label">Survey Articles</div>
-
+            <h2 class="sec" id="readings">Survey Articles</h2>
     <div class="reading-item">
       <div class="reading-title">"Household Finance"</div>
       <div class="reading-authors">John Y. Campbell</div>
       <div class="reading-venue">Journal of Finance, 2006</div>
-      <a href="https://scholar.harvard.edu/files/campbell/files/householdfinance_jof_2006.pdf" class="reading-link" target="_blank">PDF →</a>
+      <a href="https://scholar.harvard.edu/files/campbell/files/householdfinance_jof_2006.pdf" class="reading-link">PDF</a>
     </div>
-
     <div class="reading-item">
       <div class="reading-title">"Household Finance"</div>
       <div class="reading-authors">Francisco Gomes, Michael Haliassos, and Tarun Ramadorai</div>
       <div class="reading-venue">Journal of Economic Literature, 2021</div>
-      <a href="https://www.aeaweb.org/articles?id=10.1257/jel.20201461" class="reading-link" target="_blank">Journal →</a>
+      <a href="https://www.aeaweb.org/articles?id=10.1257/jel.20201461" class="reading-link">Journal</a>
     </div>
-
     <div class="reading-item">
       <div class="reading-title">"Presidential Address: Social Transmission Bias in Economics and Finance"</div>
       <div class="reading-authors">David Hirshleifer</div>
       <div class="reading-venue">Journal of Finance, 2020</div>
-      <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/jofi.12906" class="reading-link" target="_blank">Journal →</a>
+      <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/jofi.12906" class="reading-link">Journal</a>
     </div>
-
     <div class="reading-item">
       <div class="reading-title">"Behavioral Household Finance"</div>
       <div class="reading-authors">John Beshears, James J. Choi, David Laibson, and Brigitte C. Madrian</div>
       <div class="reading-venue">Handbook of Behavioral Economics, Vol. 1, 2018</div>
-      <a href="https://www.nber.org/papers/w24854" class="reading-link" target="_blank">NBER →</a>
+      <a href="https://www.nber.org/papers/w24854" class="reading-link">NBER</a>
     </div>
-
     <div class="reading-item">
       <div class="reading-title">"Household Debt: Facts, Puzzles, Theories, and Policies"</div>
       <div class="reading-authors">Jonathan Zinman</div>
       <div class="reading-venue">Annual Review of Economics, 2015</div>
-      <a href="https://www.annualreviews.org/doi/abs/10.1146/annurev-economics-080614-115640" class="reading-link" target="_blank">Journal →</a>
+      <a href="https://www.annualreviews.org/doi/abs/10.1146/annurev-economics-080614-115640" class="reading-link">Journal</a>
     </div>
-
-
-    <!-- ══ CONFERENCES ══ -->
-    <div id="conferences" class="section-label">Conferences &amp; Seminars</div>
-
+        <h2 class="sec" id="conferences">Conferences &amp; Seminars</h2>
     <div class="conf-row">
       <div class="conf-name">NBER Household Finance Summer Institute</div>
       <div class="conf-org">National Bureau of Economic Research · Annual, July · Cambridge, MA</div>
-      <a href="https://www.nber.org/conferences/si-2025-household-finance" class="conf-link" target="_blank">NBER Summer Institute <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+      <a href="https://www.nber.org/conferences/si-2025-household-finance" class="conf-link">NBER Summer Institute</a>
     </div>
-
     <div class="conf-row">
       <div class="conf-name">NBER Innovative Data in Household Finance</div>
       <div class="conf-org">National Bureau of Economic Research · Annual, Fall · Cambridge, MA</div>
-      <a href="https://www.nber.org/conferences/innovative-data-household-finance-fall-2025" class="conf-link" target="_blank">NBER workshop <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+      <a href="https://www.nber.org/conferences/innovative-data-household-finance-fall-2025" class="conf-link">NBER workshop</a>
     </div>
-
     <div class="conf-row">
       <div class="conf-name">CEPR Household Finance Network</div>
       <div class="conf-org">Centre for Economic Policy Research · Annual European Conference + Spring Workshop + Monthly Online Seminar · Europe</div>
-      <a href="https://cepr.org/research/research-policy-networks/household-finance" class="conf-link" target="_blank">CEPR HF Network <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+      <a href="https://cepr.org/research/research-policy-networks/household-finance" class="conf-link">CEPR HF Network</a>
     </div>
-
     <div class="conf-row">
       <div class="conf-name">Helsinki Finance Summit on Investor Behavior</div>
       <div class="conf-org">Aalto University School of Business · Annual, August · Helsinki/Espoo, Finland</div>
-      <a href="https://www.aalto.fi/en/department-of-finance/helsinki-finance-summit" class="conf-link" target="_blank">Conference website <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+      <a href="https://www.aalto.fi/en/department-of-finance/helsinki-finance-summit" class="conf-link">Conference website</a>
     </div>
-
     <div class="conf-row">
       <div class="conf-name">Georgia Tech – Atlanta Fed Household Finance Conference</div>
       <div class="conf-org">Georgia Tech Scheller College of Business &amp; Federal Reserve Bank of Atlanta · Annual, Spring · Atlanta, GA</div>
-      <a href="https://www.scheller.gatech.edu/events/household-finance-conference/index.html" class="conf-link" target="_blank">Conference website <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+      <a href="https://www.scheller.gatech.edu/events/household-finance-conference/index.html" class="conf-link">Conference website</a>
     </div>
-
     <div class="conf-row">
       <div class="conf-name">Chicago Booth: Behavioral Approaches to Financial Decision Making</div>
       <div class="conf-org">Fama-Miller Center, University of Chicago Booth School of Business · Biennial · Chicago, IL</div>
-      <a href="https://www.chicagobooth.edu/research/fama-miller/events/behavioral-approaches-to-financial-decision-making" class="conf-link" target="_blank">Booth website <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2ph6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+      <a href="https://www.chicagobooth.edu/research/fama-miller/events/behavioral-approaches-to-financial-decision-making" class="conf-link">Booth website</a>
     </div>
-
     <div class="conf-row">
       <div class="conf-name">Chicago Household Finance Conference</div>
       <div class="conf-org">Fama-Miller Center, University of Chicago Booth School of Business · Annual · Chicago, IL</div>
-      <a href="https://www.chicagobooth.edu/research/fama-miller/events/chicago-household-finance-conference" class="conf-link" target="_blank">Booth website <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+      <a href="https://www.chicagobooth.edu/research/fama-miller/events/chicago-household-finance-conference" class="conf-link">Booth website</a>
     </div>
-
     <div class="conf-row">
       <div class="conf-name">Wharton Pension Research Council Annual Conference</div>
       <div class="conf-org">Wharton School, University of Pennsylvania · Annual, Spring · Philadelphia, PA</div>
-      <a href="https://pensionresearchcouncil.wharton.upenn.edu/conference/" class="conf-link" target="_blank">PRC website <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+      <a href="https://pensionresearchcouncil.wharton.upenn.edu/conference/" class="conf-link">PRC website</a>
     </div>
-
     <div class="conf-row">
       <div class="conf-name">Virtual Household Finance Seminar Series</div>
       <div class="conf-org">Co-organized by William Bazley, Charlotte Haendler &amp; Lubo Litov · Ongoing · Online (Zoom)</div>
-      <a href="https://sites.google.com/view/household-finance-seminar/" class="conf-link" target="_blank">Seminar website <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+      <a href="https://sites.google.com/view/household-finance-seminar/" class="conf-link">Seminar website</a>
     </div>
-
-  </main>
-
-<footer>
-  &copy; 2025 Rawley Z. Heimer &nbsp;·&nbsp; W.P. Carey School of Business, Arizona State University &nbsp;·&nbsp; <a href="mailto:rawley.heimer@asu.edu">rawley.heimer@asu.edu</a>
-</footer>
-
-
-
-
-<script>
-document.addEventListener('DOMContentLoaded', function(){
-  var btn = document.getElementById('nav-hamburger');
-  var menu = document.querySelector('.nav-links');
-  if (!btn || !menu) return;
-  btn.addEventListener('click', function(e){
-    e.stopPropagation();
-    btn.classList.toggle('open');
-    menu.classList.toggle('open');
-  });
-  menu.querySelectorAll('a').forEach(function(a){
-    a.addEventListener('click', function(){
-      btn.classList.remove('open');
-      menu.classList.remove('open');
-    });
-  });
-  document.addEventListener('click', function(e){
-    if (!btn.contains(e.target) && !menu.contains(e.target)){
-      btn.classList.remove('open');
-      menu.classList.remove('open');
-    }
-  });
-});
-</script>
+  </div>
+</div>
+</main>
+<footer class="site-foot"><span>Rawley Z. Heimer, W. P. Carey School of Business, Arizona State University</span><span><a href="papers.bib">Citations for every paper (BibTeX)</a></span><span>Updated November 2026</span></footer>
 </body>
 </html>
