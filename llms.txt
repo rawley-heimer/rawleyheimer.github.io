@@ -12,7 +12,7 @@ Contact: rawley.heimer@asu.edu. Former Senior Advisor for Research and Policy at
 - [Consumer protection and financial regulation](https://rawleyheimer.com/topics/consumer-protection-regulation.html): How regulation, supervision, and politics affect people who use financial services, from leverage limits for retail traders and age limits on credit cards to complaint resolution at the Consumer Financial Protection Bureau.
 - [Saving, retirement, and inheritance](https://rawleyheimer.com/topics/saving-retirement-inheritance.html): How people accumulate, spend down, and pass on wealth over their lives: saving for retirement, beliefs about longevity, bequests and inheritances, private family foundations, and the effects of wealth shocks.
 - [Behavioral finance and beliefs](https://rawleyheimer.com/topics/behavioral-finance-beliefs.html): Why people’s financial choices depart from what standard models predict: biased beliefs about risk and longevity, plans that change once outcomes arrive, social influence among investors, and how generative AI may change financial decisions.
-- [Legal institutions and financial development](https://rawleyheimer.com/topics/legal-institutions-development.html): How courts and contract enforcement shape credit markets and long-run economic development, studied through the assignment of state versus tribal courts on Native American reservations.
+- [Legal and regulatory institutions](https://rawleyheimer.com/topics/legal-regulatory-institutions.html): How courts, regulators, and politics shape credit markets and what consumers get from them: contract enforcement and long-run development on Native American reservations, political interference in fair-lending enforcement, and how complaints to the Consumer Financial Protection Bureau turn into restitution.
 
 ## Published papers
 
@@ -53,7 +53,6 @@ Contact: rawley.heimer@asu.edu. Former Senior Advisor for Research and Policy at
 
 ## Optional
 
-- [Citations for every paper in BibTeX](https://rawleyheimer.com/papers.bib)
 - [All abstracts and summaries in one file](https://rawleyheimer.com/llms-full.txt)
 - [About Rawley Z. Heimer](https://rawleyheimer.com/about.html)
 - [Media coverage](https://rawleyheimer.com/media.html)

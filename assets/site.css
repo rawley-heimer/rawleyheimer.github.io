@@ -54,7 +54,9 @@ main>p+p,.prose p+p{margin-top:.8rem}
 .entry-title{line-height:1.35}
 .entry-title a{text-decoration:underline;text-decoration-color:var(--rule);font-weight:500}
 .entry-title a:hover{text-decoration-color:var(--maroon)}
-.entry-meta{font-size:1rem;margin-top:.2rem}
+.entry-authors{font-size:1rem;margin-top:.2rem}
+.entry-venue{font-size:1rem}
+.entry-authors+.entry-venue{margin-top:0}
 .entry-note{font-size:.9375rem;font-style:italic;color:var(--muted);margin-top:.1rem}
 .entry-finding{font-size:1rem;color:var(--muted);margin-top:.15rem;max-width:37rem}
 .see-also{columns:2;column-gap:2rem;font-size:1.0625rem}
@@ -64,7 +66,6 @@ main>p+p,.prose p+p{margin-top:.8rem}
 @media (max-width:30rem){.see-also{columns:1}}
 .contents>li{margin-bottom:1.1rem}
 .contents .ct{font-weight:500;font-size:1.125rem}
-.contents .cn{font-style:italic;font-size:.9375rem;color:var(--muted);margin-left:.4rem;white-space:nowrap}
 .contents .cd{font-size:1rem;color:var(--muted);margin-top:.1rem}
 
 /* Paper page: an article's first page */

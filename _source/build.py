@@ -70,7 +70,19 @@ GROUPS = [('published', 'Published papers'), ('working', 'Working papers'), ('ot
 
 def url(path): return BASE + '/' + path
 
+SITE_HOSTS = ('https://rawleyheimer.com', 'http://rawleyheimer.com', 'https://www.rawleyheimer.com')
+def new_tab(doc):
+    """Links to other sites and to the CV open in a new tab."""
+    def fix(m):
+        tag, href = m.group(0), m.group(1)
+        external = href.startswith(('http://', 'https://')) and not href.startswith(SITE_HOSTS)
+        if (external or href.endswith(CV)) and 'target=' not in tag:
+            return tag[:-1] + ' target="_blank" rel="noopener">'
+        return tag
+    return re.sub(r'<a\b[^>]*?\bhref="([^"]+)"[^>]*>', fix, doc)
+
 def write(path, text):
+    if path.endswith('.html'): text = new_tab(text)
     f = OUT / path
     f.parent.mkdir(parents=True, exist_ok=True)
     f.write_text(text, encoding='utf-8')
@@ -104,9 +116,20 @@ def venue_line(p):
         return f"<i>{esc(p['outlet'])}</i>{num}, {esc(p['publisher'])}"
     return ''
 
-def entry_meta(p):
+def entry_lines(p):
+    """Coauthors on one line, outlet on the next. Working papers and guides already sit under
+    their own headings, so they get no outlet line (unless the draft is available on request)."""
+    out = []
     co = coauthors(p)
-    return (f"With {esc(names(co))}. " if co else '') + venue_short(p) + '.'
+    if co: out.append(f'  <p class="entry-authors">With {esc(names(co))}</p>')
+    if p['kind'] == 'working':
+        venue = 'Draft available on request' if p.get('request') else ''
+    elif p['kind'] == 'guide':
+        venue = ''
+    else:
+        venue = venue_short(p)
+    if venue: out.append(f'  <p class="entry-venue">{venue}</p>')
+    return out
 
 def citation(p):
     """Chicago author-date style."""
@@ -225,7 +248,6 @@ def page(path, depth, title, desc, body, active=None, meta='', ld=None, og='webs
            f'<details class="nav-narrow"><summary>Menu</summary><nav aria-label="Site">{nav_list(depth, active)}</nav></details>\n'
            f'</div>\n</header>')
     foot = (f'<footer class="site-foot"><span>{ME}, W. P. Carey School of Business, Arizona State University</span>'
-            f'<span><a href="{r}papers.bib">Citations for every paper (BibTeX)</a></span>'
             f'<span>Updated {UPDATED}</span></footer>')
     scr = ''.join(f'\n<script src="{r}{s}" defer></script>' for s in scripts)
     doc = (head(title, desc, path, depth, meta, ld, og) +
@@ -251,8 +273,8 @@ def crumbs_ld(items):
 # ---------------------------------------------------------------- listings
 def entry(p, depth, finding=True, note=False):
     r = '../' * depth
-    out = [f'<li>\n  <p class="entry-title"><a href="{r}papers/{p["slug"]}.html">{esc(p["title"])}</a></p>',
-           f'  <p class="entry-meta">{entry_meta(p)}</p>']
+    out = [f'<li>\n  <p class="entry-title"><a href="{r}papers/{p["slug"]}.html">{esc(p["title"])}</a></p>']
+    out += entry_lines(p)
     if note:
         extras = (p.get('notes') or []) + (p.get('awards') or [])
         if extras: out.append(f'  <p class="entry-note">{esc(". ".join(extras))}.</p>')
@@ -274,9 +296,8 @@ def contents(depth):
     r = '../' * depth
     items = []
     for t in topics:
-        n = len(topic_papers(t['slug']))
-        items.append(f'<li><p><a class="ct" href="{r}topics/{t["slug"]}.html">{esc(t["name"])}</a>'
-                     f'<span class="cn">{n} papers</span></p><p class="cd">{esc(t["intro"])}</p></li>')
+        items.append(f'<li><p><a class="ct" href="{r}topics/{t["slug"]}.html">{esc(t["name"])}</a></p>'
+                     f'<p class="cd">{esc(t["intro"])}</p></li>')
     return '<ul class="contents">\n' + '\n'.join(items) + '\n</ul>'
 
 # ---------------------------------------------------------------- paper pages
@@ -435,7 +456,6 @@ def research_page():
     body = f'''<main id="main" class="wrap">
 <h1 class="page-title" style="margin-top:2.75rem">Research</h1>
 <p class="intro">My research spans household finance, behavioral economics, consumer credit, and financial institutions. I use high-quality microeconomic data, such as credit bureau records, brokerage accounts, and administrative datasets, to study how individuals and institutions make financial decisions and what the consequences are for welfare and policy.</p>
-<p class="terms">Each paper has its own page with the abstract, a plain-language summary, a study-at-a-glance table, and citation data. <a href="papers.bib">Download citations for every paper (BibTeX)</a>.</p>
 <h2 class="sec">Research topics</h2>
 {contents(0)}
 {grouped(papers, 0)}
@@ -491,6 +511,7 @@ def home_page():
 <ol class="entries">
 {chr(10).join(entry(p, 0, finding=False) for p in wps)}
 </ol>
+<p class="more"><a href="working-papers.html">Working papers with summaries</a></p>
 <h2 class="sec">Positions and affiliations</h2>
 <ul class="cv-list">{pos}</ul>
 <h2 class="sec">Education</h2>
@@ -554,8 +575,7 @@ def text_files():
     out += [f"- [{t['name']}]({url('topics/' + t['slug'] + '.html')}): {t['intro']}" for t in topics]
     for g, label in GROUPS:
         out += ['', f'## {label}', ''] + [line(p) for p in papers if group(p) == g]
-    out += ['', '## Optional', '', f'- [Citations for every paper in BibTeX]({url("papers.bib")})',
-            f'- [All abstracts and summaries in one file]({url("llms-full.txt")})',
+    out += ['', '## Optional', '', f'- [All abstracts and summaries in one file]({url("llms-full.txt")})',
             f'- [About {ME}]({url("about.html")})', f'- [Media coverage]({url("media.html")})']
     write('llms.txt', '\n'.join(out) + '\n')
 
@@ -597,6 +617,8 @@ REDIRECTS = {}
 for t in topics:
     if t.get('legacy'): REDIRECTS[t['legacy'] + '.html'] = f"topics/{t['slug']}.html"
 REDIRECTS['papers/consumer-complaints-financial-restitution.html'] = 'papers/fallible-firms-consumer-redress.html'
+for t in topics:
+    if t.get('former_slug'): REDIRECTS[f"topics/{t['former_slug']}.html"] = f"topics/{t['slug']}.html"
 
 # ---------------------------------------------------------------- build
 if __name__ == '__main__':

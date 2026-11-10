@@ -342,6 +342,7 @@
   - consumer-protection-regulation
   - consumer-credit-debt
   - mortgage-lending-housing
+  - legal-regulatory-institutions
   finding: >-
     When a state’s senator becomes a powerful committee chair, credit access in the state’s minority neighborhoods
     falls by 7.5%.
@@ -578,7 +579,7 @@
     American reservations, early-life exposure, consumer credit
   topics:
   - consumer-credit-debt
-  - legal-institutions-development
+  - legal-regulatory-institutions
   finding: >-
     People who grow up without local banks enter credit markets later and, as adults, have lower credit
     scores and more delinquent accounts.
@@ -658,7 +659,7 @@
     law and finance, contract enforcement, legal institutions, credit markets, economic growth, tribal
     courts, state courts, Native American reservations
   topics:
-  - legal-institutions-development
+  - legal-regulatory-institutions
   finding: >-
     Reservations assigned to state courts, which enforce contracts more predictably, have stronger credit
     markets and higher incomes.
@@ -884,7 +885,7 @@
     economic development, court enforcement, legal uncertainty, tribal courts, Public Law 280, Native
     American reservations, income growth
   topics:
-  - legal-institutions-development
+  - legal-regulatory-institutions
   finding: >-
     Reservations under state courts grew faster over the long run than similar reservations whose tribal
     courts enforced contracts less predictably.
@@ -1151,6 +1152,7 @@
   topics:
   - consumer-protection-regulation
   - consumer-credit-debt
+  - legal-regulatory-institutions
   finding: >-
     Whether consumers get money back after complaining about a financial firm depends more on who complains
     than on which firm is involved.

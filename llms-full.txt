@@ -104,7 +104,7 @@ Authors: Pat Akey, Rawley Z. Heimer, and Stefan Lewellen
 Status: Journal of Financial Economics 139 (2): 627–655 (2021)
 Page: https://rawleyheimer.com/papers/politicizing-consumer-credit.html
 DOI: https://doi.org/10.1016/j.jfineco.2020.07.017
-Topics: Consumer protection and financial regulation, Consumer credit and debt, Mortgage lending and housing
+Topics: Consumer protection and financial regulation, Consumer credit and debt, Mortgage lending and housing, Legal and regulatory institutions
 
 In brief: Political power can weaken the enforcement of fair-lending rules, and lenders respond. When a state’s senator becomes chair of a Senate committee, credit access to minority neighborhoods in that state falls by 7.5%. The declines are larger in neighborhoods eligible under the Community Reinvestment Act and when the senator’s committee oversees fair-lending enforcement, and they are driven by banks headquartered in the senator’s home state. Expected regulatory relief, not only formal changes to the rules, shapes who gets credit.
 
@@ -176,7 +176,7 @@ Authors: James R. Brown, J. Anthony Cookson, and Rawley Z. Heimer
 Status: Journal of Financial Economics 134 (3): 591–616 (2019)
 Page: https://rawleyheimer.com/papers/growing-up-without-finance.html
 DOI: https://doi.org/10.1016/j.jfineco.2019.05.006
-Topics: Consumer credit and debt, Legal institutions and financial development
+Topics: Consumer credit and debt, Legal and regulatory institutions
 
 In brief: Growing up near banks and other financial institutions has lasting benefits for people’s financial lives. Congressional legislation created unintended differences in financial development across Native American reservations, which the paper uses to isolate the effect of local financial markets. People from financially underdeveloped reservations enter credit markets later and, as adults, have credit scores about 10 points lower and 4 percentage points more delinquent accounts; these effects fade only slowly even after they move to more developed areas. Early exposure to local banking appears to work by building financial literacy and trust in financial institutions.
 
@@ -201,7 +201,7 @@ Authors: James R. Brown, J. Anthony Cookson, and Rawley Z. Heimer
 Status: Review of Financial Studies 30 (3): 1019–1051 (2017)
 Page: https://rawleyheimer.com/papers/law-and-finance-matter-externally-imposed-courts.html
 DOI: https://doi.org/10.1093/rfs/hhw030
-Topics: Legal institutions and financial development
+Topics: Legal and regulatory institutions
 
 In brief: Predictable contract enforcement leads to stronger credit markets and higher incomes. When Congress assigned state courts, rather than tribal courts, to adjudicate contracts on some Native American reservations, it created lasting differences in how predictably contracts were enforced. Reservations under state courts have stronger small-business and household credit markets. The part of credit market development driven by this legal difference is associated with significantly higher per capita income, especially in sectors that depend more on outside financing.
 
@@ -279,7 +279,7 @@ Authors: James R. Brown, J. Anthony Cookson, and Rawley Z. Heimer
 Status: World Bank Economic Review 30 (Supplement 1): S176–S187 (2017)
 Page: https://rawleyheimer.com/papers/courting-economic-development.html
 DOI: https://doi.org/10.1093/wber/lhw027
-Topics: Legal institutions and financial development
+Topics: Legal and regulatory institutions
 
 In brief: Uncertainty about how courts will enforce contracts holds back economic development. A 1953 federal law gave state courts authority over civil disputes on some Native American reservations, while tribal courts kept that authority on others. Although the two groups of reservations were economically similar when the law passed, those under state courts grew significantly faster over the long run. The gap is driven by the poorest reservations with tribal courts, and specifically by those where court enforcement was most uncertain.
 
@@ -370,7 +370,7 @@ BibTeX key: heimer2021temporal
 Authors: Charlotte Haendler and Rawley Z. Heimer
 Status: Working paper (2025)
 Page: https://rawleyheimer.com/papers/fallible-firms-consumer-redress.html
-Topics: Consumer protection and financial regulation, Consumer credit and debt
+Topics: Consumer protection and financial regulation, Consumer credit and debt, Legal and regulatory institutions
 
 In brief: Who gets money back after complaining about a financial company depends heavily on who is complaining. Using confidential Consumer Financial Protection Bureau (CFPB) data on nearly two million complaints filed since 2014, the paper finds that successful complaints pay out $1,470 on average and that total restitution has grown substantially over time. Differences across firms explain little; instead, higher-income and more educated consumers are more likely to request refunds, allege fraud, and submit documentation, and firms respond to them more. CFPB monitoring raises restitution but disproportionately benefits these higher-socioeconomic-status consumers.
 

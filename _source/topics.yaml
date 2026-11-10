@@ -57,12 +57,15 @@
   terms: >-
     disposition effect, loss chasing, dynamic inconsistency, overconfidence, subjective beliefs, social
     transmission, commitment devices, generative AI
-- slug: legal-institutions-development
-  name: Legal institutions and financial development
+- slug: legal-regulatory-institutions
+  name: Legal and regulatory institutions
   legacy: null
+  former_slug: legal-institutions-development
   intro: >-
-    How courts and contract enforcement shape credit markets and long-run economic development, studied
-    through the assignment of state versus tribal courts on Native American reservations.
+    How courts, regulators, and politics shape credit markets and what consumers get from them: contract
+    enforcement and long-run development on Native American reservations, political interference in
+    fair-lending enforcement, and how complaints to the Consumer Financial Protection Bureau turn into
+    restitution.
   terms: >-
-    contract enforcement, Public Law 280, tribal courts, state courts, financial development, small-business
-    lending, financial inclusion, economic growth
+    contract enforcement, Public Law 280, tribal courts, financial development, regulatory enforcement,
+    political interference, fair-lending enforcement, CFPB, consumer complaints, restitution and redress
