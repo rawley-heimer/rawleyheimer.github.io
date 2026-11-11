@@ -1,71 +1,156 @@
-# Research topics, in display order. 'legacy' is the old page name that now redirects here.
+# Research topics, in display order. 'summary' appears in topic lists and opens the topic page;
+# 'synthesis' summarizes the findings; 'terms' lists search vocabulary. 'legacy' is an old page name that redirects here.
 
 - slug: retail-investing-brokerage
   name: Retail investing and brokerage
   legacy: research-retail-trading
-  intro: >-
-    How individual investors behave in financial markets, why they so often trade against their own interests,
-    and how leverage limits, brokerage practices, and social networks change their outcomes.
   terms: >-
-    leverage and margin limits, retail foreign exchange, brokerage commissions, the disposition effect,
-    loss chasing, social trading platforms, active versus passive investing
+    retail investors, retail trading, individual investors, retail brokerages, leverage and margin, margin
+    requirements, speculation, trading costs, brokerage commissions, zero-commission trading, payment
+    for order flow, broker incentives, Robinhood, gamification, meme stocks, options trading, crypto trading,
+    disposition effect, loss chasing, realization utility, prospect theory, dynamic inconsistency, active
+    versus passive investing, retail foreign exchange (forex), Dodd-Frank, CFTC
+  summary: >-
+    How retail investors trade, why they so often trade against their own interests, and how leverage,
+    trading costs, brokerage practices, and social networks change their outcomes.
+  synthesis: >-
+    Using natural experiments and account-level trading records, this research shows that limiting retail
+    investors’ access to leverage cut traders’ losses without reducing market liquidity, that leverage
+    constraints improve trading performance by curbing the disposition effect, that investors abandon
+    their planned risk-taking strategies once gains or losses arrive, that social interaction spreads
+    active trading and amplifies the disposition effect, and that higher brokerage commissions can raise
+    rather than lower trading volume when brokers can steer their clients. The leverage studies use a
+    U.S. cap on leverage in the retail foreign exchange market as a clean test of margin and leverage
+    policy that applies to retail trading in stocks, options, and crypto assets.
+- slug: social-media-finance
+  name: Social media and finance
+  legacy: null
+  terms: >-
+    Stocktwits, Reddit and WallStreetBets, X (Twitter), social trading platforms, eToro, copy trading,
+    myForexBook, investor social networks, online investor communities, finfluencers, social finance,
+    peer effects, social transmission, word of mouth, investor sentiment, investor attention
+  summary: >-
+    How online social networks and social media shape what retail investors believe and how they trade.
+  synthesis: >-
+    Using myForexBook, a social trading platform that linked members’ messages to their brokerage accounts,
+    this research shows that joining an investor social network nearly doubles a trader’s disposition
+    effect, that traders respond to peers’ gains but ignore peers’ losses so active strategies spread
+    despite low success rates, and that the same platform data can be used to evaluate regulation such
+    as leverage limits. The findings bear directly on research using data from Stocktwits, Reddit (WallStreetBets),
+    X (Twitter), eToro, and other investor social media.
 - slug: consumer-credit-debt
   name: Consumer credit and debt
   legacy: research-consumer-finance
-  intro: >-
-    How households get, use, and repay credit, and how early-life conditions, cash windfalls, regulation,
-    and politics shape credit outcomes, studied mostly with individual credit bureau records.
   terms: >-
-    credit access, credit scores, delinquency, debt repayment, financial inclusion, credit card regulation,
-    the Credit CARD Act, gerrymandering, credit bureau data
+    consumer credit, household debt, debt repayment, credit access, credit scores, delinquency and default,
+    credit cards, Credit CARD Act, young adults, financial inclusion, banking deserts, cash windfalls,
+    credit bureau data, FRBNY Consumer Credit Panel, Equifax, gerrymandering, political economy of credit
+  summary: >-
+    How households get, use, and repay credit, and how early-life conditions, cash windfalls, regulation,
+    and politics shape credit access and credit outcomes.
+  synthesis: >-
+    Studied mostly with individual-level credit bureau records, this research shows that households use
+    cash windfalls mainly to pay down debt, that growing up on financially underdeveloped Native American
+    reservations leaves people with lower credit scores as adults, that the Credit CARD Act’s age limits
+    raised credit scores and homeownership by age 30 but increased mortgage delinquency, and that gerrymandering
+    and senators’ political power reduce credit access.
+- slug: local-banking-access-to-finance
+  name: Local banking and access to finance
+  legacy: null
+  summary: >-
+    How access to local banks and credit markets shapes the financial lives of households and small businesses
+    over the long run.
+  synthesis: >-
+    This research shows that people who grow up in places with less-developed local banking enter credit
+    markets later and, as adults, have lower credit scores and more delinquent accounts, with effects
+    that fade only slowly after they move away; that stronger local credit markets, driven by more predictable
+    contract enforcement, raise small-business and household credit and incomes; and that banks cut lending
+    to protected communities when they expect political relief from fair-lending enforcement. The studies
+    exploit plausibly exogenous variation in local financial development, including differences created
+    by federal law across Native American reservations.
+  terms: >-
+    local banking, bank branches, branch networks, banking deserts, access to finance, financial inclusion,
+    unbanked and underbanked households, local financial development, credit market development, small
+    business lending, community banks, bank lending, early-life exposure to banks, trust in banks, financial
+    literacy, Community Reinvestment Act
 - slug: mortgage-lending-housing
   name: Mortgage lending and housing
   legacy: research-real-estate
-  intro: >-
-    Who gets mortgage credit and on what terms, including tests for disparate treatment in lending, the
-    politics of fair-lending enforcement, and the role of institutional investors in single-family housing.
   terms: >-
-    fair lending, disparate treatment, racial disparities in mortgage approvals, loan officers, Community
-    Reinvestment Act, single-family rentals, institutional investors, homeownership
+    racial disparities in lending, lending discrimination, mortgage lending, fair lending, disparate treatment,
+    racial disparities in mortgage approvals, benchmarking and outcome tests, loan officers, HMDA, Community
+    Reinvestment Act, Equal Credit Opportunity Act, homeownership, single-family rentals, institutional
+    investors, single-family REITs, house prices, housing supply
+  summary: >-
+    Who gets mortgage credit and on what terms, how racial disparities in lending emerge, and how institutional
+    investors affect local housing markets.
+  synthesis: >-
+    This research shows how racial disparities in mortgage lending emerge: when month-end volume quotas
+    push loan officers to approve more loans, the unexplained racial gap in approval rates shrinks by
+    at least half, pointing to lender behavior. It also shows that expected political relief from fair-lending
+    enforcement reduces lending in minority neighborhoods, that children whose parents had mortgage trouble
+    in the 2008 crisis are less likely to buy homes, and that the growth of single-family REITs shows
+    little evidence of harming local housing markets.
 - slug: consumer-protection-regulation
   name: Consumer protection and financial regulation
   legacy: research-financial-institutions
-  intro: >-
-    How regulation, supervision, and politics affect people who use financial services, from leverage
-    limits for retail traders and age limits on credit cards to complaint resolution at the Consumer Financial
-    Protection Bureau.
   terms: >-
-    CFPB, consumer complaints, restitution and redress, leverage limits, Dodd-Frank, fair-lending enforcement,
-    Community Reinvestment Act, Credit CARD Act, gerrymandering
+    consumer financial protection, CFPB, consumer complaint database, restitution, consumer redress, supervision
+    and enforcement, leverage limits, Dodd-Frank, CFTC, Credit CARD Act, fair lending, disparate treatment,
+    fixed brokerage commissions, political economy of regulation
+  summary: How regulation, supervision, and politics affect people who use financial services.
+  synthesis: >-
+    This research evaluates limits on retail investors’ leverage, which reduced trader losses without
+    harming market liquidity; the Credit CARD Act’s age restrictions on credit cards, which improved long-run
+    credit outcomes at the cost of more mortgage delinquency; and consumer complaints to the Consumer
+    Financial Protection Bureau, where restitution depends more on who complains than on which firm is
+    involved. It also documents how political power and gerrymandering weaken credit access and fair-lending
+    enforcement.
 - slug: saving-retirement-inheritance
   name: Saving, retirement, and inheritance
   legacy: research-lifelong-security
-  intro: >-
-    How people accumulate, spend down, and pass on wealth over their lives: saving for retirement, beliefs
-    about longevity, bequests and inheritances, private family foundations, and the effects of wealth
-    shocks.
   terms: >-
-    life-cycle model, retirement saving, mortality beliefs, bequest motives, inheritances, estate taxes,
-    private foundations, cash windfalls, entrepreneurship
+    time discounting, time preference, life-cycle model, retirement saving, decumulation, wealth drawdown,
+    subjective survival beliefs, mortality beliefs, longevity risk, bequest motives, inheritances, intergenerational
+    transfers, estate taxes, Tax Cuts and Jobs Act, private foundations, charitable giving, donor-advised
+    funds, wealth inequality, cash windfalls, entrepreneurship
+  summary: How people accumulate, spend down, and pass on wealth over the life cycle.
+  synthesis: >-
+    This research shows that subjective survival beliefs act like age-varying time discounting in the
+    life-cycle model, helping explain under-saving by the young and slow asset drawdown by retirees, that
+    expected inheritances raise consumption long before they arrive, that bequest motives follow a U-shape
+    over life and rise sharply with wealth, that the wealthiest families move assets into private foundations
+    at death rather than drawing them down, and that cash windfalls increase business formation but not
+    self-employment.
 - slug: behavioral-finance-beliefs
   name: Behavioral finance and beliefs
   legacy: research-behavioral-social
-  intro: >-
-    Why people’s financial choices depart from what standard models predict: biased beliefs about risk
-    and longevity, plans that change once outcomes arrive, social influence among investors, and how generative
-    AI may change financial decisions.
   terms: >-
-    disposition effect, loss chasing, dynamic inconsistency, overconfidence, subjective beliefs, social
-    transmission, commitment devices, generative AI
+    behavioral finance, household finance, disposition effect, loss chasing, prospect theory, realization
+    utility, dynamic inconsistency, time inconsistency, time discounting, commitment devices, overconfidence,
+    subjective beliefs, survival beliefs, social learning, generative AI, large language models, financial
+    advice
+  summary: Why people’s financial choices depart from what standard economic models predict.
+  synthesis: >-
+    This research documents dynamic inconsistency in risky choice, with people abandoning their planned
+    strategies after gains and losses; shows how social interaction amplifies the disposition effect and
+    spreads active trading; shows that biased survival beliefs act like time discounting in life-cycle
+    decisions and that people are overconfident about avoiding personal risks such as COVID-19; and examines
+    how generative AI may change household financial decision making.
 - slug: legal-regulatory-institutions
   name: Legal and regulatory institutions
   legacy: null
   former_slug: legal-institutions-development
-  intro: >-
-    How courts, regulators, and politics shape credit markets and what consumers get from them: contract
-    enforcement and long-run development on Native American reservations, political interference in
-    fair-lending enforcement, and how complaints to the Consumer Financial Protection Bureau turn into
-    restitution.
   terms: >-
-    contract enforcement, Public Law 280, tribal courts, financial development, regulatory enforcement,
-    political interference, fair-lending enforcement, CFPB, consumer complaints, restitution and redress
+    law and finance, legal institutions, contract enforcement, courts, regulatory enforcement, political
+    economy, Senate committees, fair-lending enforcement, CFPB supervision, consumer complaints, financial
+    development, economic growth, Public Law 280, Native American reservations
+  summary: >-
+    How courts, regulators, and politics shape credit markets and what consumers get from them.
+  synthesis: >-
+    This research shows that more predictable contract enforcement strengthens local credit markets and
+    raises incomes, and that growing up with little access to local banks has lasting effects on credit
+    outcomes, using the assignment of state rather than tribal courts on some Native American reservations
+    as a source of variation in local financial development. It also shows that the prospect of political
+    relief from regulators leads banks to cut lending to protected communities, and that CFPB monitoring
+    of complaint handling raises restitution, especially for higher-income, more educated consumers.

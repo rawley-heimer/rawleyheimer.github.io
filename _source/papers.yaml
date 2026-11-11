@@ -1,5 +1,6 @@
 # Papers on rawleyheimer.com. Edit this file, then run: python _source/build.py
-# Fields: authors are in published order; topics list the primary topic first;
+# Fields: authors are in published order; topics list the primary topic first; 'lead' and 'finding'
+# state the broad lesson first and the setting second; 'contributes' lists the literatures the paper speaks to;
 # 'glance' fills the Study at a glance table; 'request: true' marks drafts available on request.
 
 - slug: dynamic-inconsistency-risky-choice
@@ -37,7 +38,8 @@
     strategy. Our results help reconcile seemingly contradictory findings on risk-taking in static versus
     dynamic contexts. We explore implications for theory and welfare.
   lead: >-
-    People’s plans for taking risk differ systematically from what they actually do once outcomes arrive.
+    Risk preferences are dynamically inconsistent: people’s plans for taking risk differ systematically
+    from what they do once gains or losses arrive.
   brief: >-
     Using brokerage account data and a series of experiments, the paper shows that people typically plan
     to keep taking risk after gains and to stop after losses, but in practice they do the reverse: they
@@ -46,14 +48,14 @@
     of one-shot gambles and studies of ongoing, repeated risk-taking often reach different conclusions
     about people’s appetite for risk.
   keywords: >-
-    dynamic inconsistency, risk-taking, loss chasing, realization of gains, commitment devices, prospect
-    theory, brokerage data, lab experiments
+    time inconsistency, risk preferences, dynamic inconsistency, risk-taking, loss chasing, realization
+    of gains, commitment devices, prospect theory, brokerage data, lab experiments
   topics:
   - retail-investing-brokerage
   - behavioral-finance-beliefs
   finding: >-
-    People plan to keep taking risk after gains and stop after losses, but in practice they cash out gains
-    early and chase losses.
+    Risk-taking is dynamically inconsistent: people plan to keep taking risk after gains and stop after
+    losses, but instead cash out gains early and chase losses, in experiments and brokerage data.
   glance:
     design:
     - - Question
@@ -75,6 +77,11 @@
       - Cash out gains early and chase losses
     - - Offering commitment to the plan
       - More people accept the risk
+  contributes:
+  - time-inconsistent preferences
+  - risk preferences and prospect theory
+  - commitment devices
+  - realization of gains and losses
 - slug: shale-shocked-cash-windfalls-household-debt
   order: 2
   selected: true
@@ -113,7 +120,8 @@
     models of debt. Indeed, when we incorporate a windfall shock into a forward-looking model, the model
     predicts an increase in debt that runs counter to our evidence of debt repayment.
   lead: >-
-    When households receive a sudden cash windfall, many use it to pay down debt rather than borrow more.
+    When households receive a sudden cash windfall, many use it to pay down debt rather than borrow more,
+    a pattern that purely forward-looking models of household debt struggle to explain.
   brief: >-
     Matching individual credit bureau records to royalty payments from shale oil and gas drilling (fracking),
     the paper finds that windfall recipients cut their debt-to-income ratio by 2.4 percentage points relative
@@ -122,14 +130,16 @@
     future payments are coming. That pattern is hard to square with purely forward-looking models of borrowing,
     which predict that debt should rise after good news about future income.
   keywords: >-
-    cash windfalls, household debt, debt repayment, fracking, shale royalties, credit bureau data, subprime
-    borrowers, permanent income hypothesis
+    income shocks, liquidity constraints, marginal propensity to consume, cash windfalls, household debt,
+    debt repayment, fracking, shale royalties, credit bureau data, subprime borrowers, permanent income
+    hypothesis
   topics:
   - consumer-credit-debt
   - saving-retirement-inheritance
   finding: >-
-    Households that receive cash windfalls mostly pay down debt, and the effect is three times larger
-    for subprime borrowers than for prime borrowers.
+    Households use cash windfalls mainly to pay down debt, timed to when cash arrives rather than to news
+    of future income, which challenges forward-looking models of household debt; evidence from shale drilling
+    payments.
   glance:
     design:
     - - Question
@@ -150,6 +160,11 @@
       - 3 times larger
     - - Repayment timed to
       - Cash receipt, not news
+  contributes:
+  - household debt and deleveraging
+  - household responses to income and wealth shocks
+  - liquidity constraints
+  - the permanent income hypothesis
 - slug: biased-by-choice-financial-constraints
   order: 3
   selected: true
@@ -186,7 +201,9 @@
     findings in two distinct experimental settings, further isolating the mechanism and demonstrating
     generality of the results. The interaction between constraints and behavioral biases has implications
     for policy and choice architecture.
-  lead: Limits on borrowing can make investors better off by curbing their behavioral biases.
+  lead: >-
+    Restricting people’s choices can improve their financial decisions by disciplining their behavioral
+    biases.
   brief: >-
     Studying a regulation that restricted how much leverage retail traders could use, the paper finds
     that constrained traders had better market timing and a weaker disposition effect — the tendency to
@@ -195,13 +212,17 @@
     a loss becomes more expensive. Two separate experiments reproduce the result, suggesting that well-designed
     constraints can work as a form of choice architecture.
   keywords: >-
-    leverage constraints, disposition effect, behavioral biases, retail traders, financial regulation,
-    choice architecture, experiments
+    debiasing, paternalism, retail investors, retail trading, margin and leverage, leverage constraints,
+    disposition effect, behavioral biases, retail traders, financial regulation, choice architecture,
+    experiments, social trading network
   topics:
   - retail-investing-brokerage
   - behavioral-finance-beliefs
   - consumer-protection-regulation
-  finding: Limits on borrowing can make investors better off by curbing their behavioral biases.
+  - social-media-finance
+  finding: >-
+    Constraints can reduce financial mistakes: leverage limits improved traders’ performance by curbing
+    the disposition effect, in retail trading data and in two experiments.
   glance:
     design:
     - - Question
@@ -209,7 +230,7 @@
     - - Setting
       - A regulation restricting the leverage available to retail traders
     - - Data
-      - Retail trading records and two experimental settings
+      - Retail forex trading records from a social trading network, and two experimental settings
     - - Method
       - Trading before and after the leverage restriction; replication in two experiments
     effects_title: Main findings
@@ -223,6 +244,11 @@
       - Declines
     - - Mechanism
       - Constraints raise the opportunity cost of postponing realized losses
+  contributes:
+  - debiasing and choice architecture
+  - paternalism and the welfare effects of financial regulation
+  - the disposition effect
+  - margin and leverage regulation
 - slug: personal-wealth-self-employment-business-ownership
   order: 4
   selected: true
@@ -258,22 +284,22 @@
     of business ownership. Our findings help reconcile contrasting findings in prior work: liquidity constraints
     have different effects on entrepreneurial activity that may depend on the entrepreneur’s motivations.
   lead: >-
-    Does having more money make people more likely to start a business? Using mineral payments from Texas
-    shale drilling to individuals across the United States, the paper finds that large cash windfalls
-    raise business formation by 0.8 to 2.1 percentage points but do not make people more likely to become
-    self-employed.
+    More personal wealth leads people to start businesses but not to become self-employed, so liquidity
+    constraints affect different kinds of entrepreneurs differently.
   brief: >-
     Windfalls do let people who are already self-employed stay self-employed longer, while having no effect
     on how long business owners keep their businesses. Liquidity constraints therefore matter differently
     depending on what motivates the would-be entrepreneur, which helps reconcile conflicting results in
     earlier research.
   keywords: >-
-    entrepreneurship, liquidity constraints, business formation, self-employment, cash windfalls, shale
-    royalties, personal wealth
+    wealth effects, entrepreneurship, liquidity constraints, business formation, self-employment, cash
+    windfalls, shale royalties, personal wealth
   topics:
   - saving-retirement-inheritance
   finding: >-
-    Large cash windfalls raise business formation but do not make people more likely to become self-employed.
+    More personal wealth raises business formation but not transitions to self-employment, suggesting
+    liquidity constraints matter differently for different kinds of entrepreneurs; evidence from shale
+    mineral payments.
   glance:
     design:
     - - Question
@@ -293,6 +319,11 @@
       - Longer
     - - Duration of business ownership
       - No effect
+  contributes:
+  - entrepreneurship and liquidity constraints
+  - wealth effects on household behavior
+  - business formation
+  - self-employment
 - slug: politicizing-consumer-credit
   order: 5
   selected: true
@@ -328,7 +359,9 @@
     occur in Community Reinvestment Act-eligible neighborhoods and when Senators serve on committees that
     oversee the enforcement of fair-lending laws. Banks headquartered in powerful Senators’ states are
     responsible for the reduction in credit access.
-  lead: Political power can weaken the enforcement of fair-lending rules, and lenders respond.
+  lead: >-
+    Expected political interference with regulation changes how regulated firms behave: when politicians
+    can shield banks from fair-lending enforcement, banks lend less to protected communities.
   brief: >-
     When a state’s senator becomes chair of a Senate committee, credit access to minority neighborhoods
     in that state falls by 7.5%. The declines are larger in neighborhoods eligible under the Community
@@ -336,16 +369,19 @@
     driven by banks headquartered in the senator’s home state. Expected regulatory relief, not only formal
     changes to the rules, shapes who gets credit.
   keywords: >-
-    fair lending, Community Reinvestment Act, political economy, Senate committee chairs, regulatory enforcement,
-    minority neighborhoods, credit access, mortgage lending
+    political economy of regulation, bank lending, fair lending, Community Reinvestment Act, political
+    economy, Senate committee chairs, regulatory enforcement, minority neighborhoods, credit access, mortgage
+    lending
   topics:
   - consumer-protection-regulation
   - consumer-credit-debt
   - mortgage-lending-housing
   - legal-regulatory-institutions
+  - local-banking-access-to-finance
   finding: >-
-    When a state’s senator becomes a powerful committee chair, credit access in the state’s minority neighborhoods
-    falls by 7.5%.
+    Expected political interference weakens regulation: when a state’s senator becomes a powerful committee
+    chair, credit to the state’s minority neighborhoods falls by 7.5%, driven by banks headquartered in
+    the state.
   glance:
     design:
     - - Question
@@ -367,6 +403,11 @@
         enforcement
     - - Source of the decline
       - Banks headquartered in the senator’s state
+  contributes:
+  - the political economy of regulation
+  - regulatory enforcement
+  - fair lending and the Community Reinvestment Act
+  - bank lending
 - slug: yolo-mortality-beliefs-household-finance
   order: 6
   selected: true
@@ -405,8 +446,9 @@
     cognitive, and socioeconomic factors. Overweighting the likelihood of rare events contributes to mortality
     belief distortions.
   lead: >-
-    People’s beliefs about how long they will live are systematically off, and this helps explain why
-    the young save too little and retirees spend down their savings too slowly.
+    Beliefs about survival act like time discounting in the life-cycle model: because young people underestimate
+    and older people overestimate their chances of living, the young save too little and retirees spend
+    down their savings too slowly.
   brief: >-
     New survey evidence shows that young people underestimate their chances of survival while older people
     overestimate theirs. Feeding these beliefs into a standard life-cycle model, the young under-save
@@ -414,19 +456,21 @@
     and the model’s fit to real consumption data improves by 88%. The distortions are linked to overweighting
     the likelihood of rare events.
   keywords: >-
-    subjective mortality beliefs, life expectancy, life-cycle model, retirement saving, undersaving, asset
-    decumulation, probability weighting, survey evidence
+    time discounting, time preference, discount rates, consumption puzzles, subjective mortality beliefs,
+    life expectancy, life-cycle model, retirement saving, undersaving, asset decumulation, probability
+    weighting, survey evidence
   topics:
   - saving-retirement-inheritance
   - behavioral-finance-beliefs
   finding: >-
-    Young people underestimate their chances of survival and older people overestimate theirs, which helps
-    explain under-saving and slow retirement drawdown.
+    Subjective survival beliefs work like age-varying time discounting in the life-cycle model, helping
+    explain why the young under-save and retirees draw down their assets slowly.
   glance:
     design:
     - - Question
       - >-
-        How do people’s beliefs about their own survival affect saving and spending over the life cycle?
+        How do subjective survival beliefs, which act like time discounting, shape saving and spending
+        over the life cycle?
     - - Data
       - New survey evidence on subjective survival beliefs
     - - Method
@@ -442,6 +486,11 @@
       - 27% slower
     - - Model fit to consumption data
       - 88% better
+  contributes:
+  - time discounting and time preference
+  - life-cycle saving and consumption puzzles
+  - retirement saving and decumulation
+  - subjective expectations
 - slug: should-retail-investors-leverage-be-limited
   order: 7
   selected: true
@@ -493,13 +542,16 @@
     operating capital by 25%, yet brokerages did not raise the bid-ask spreads they charged. The authors
     conclude that the policy improved (belief-neutral) social welfare without reducing market liquidity.
   keywords: >-
-    leverage limits, retail forex trading, Dodd-Frank, speculation, financial regulation, market liquidity,
-    brokerages, difference-in-differences
+    retail investors, retail trading, margin and leverage, leverage limits, retail forex trading, Dodd-Frank,
+    speculation, financial regulation, market liquidity, brokerages, difference-in-differences, social
+    trading network
   topics:
   - retail-investing-brokerage
   - consumer-protection-regulation
+  - social-media-finance
   finding: >-
-    Capping how much leverage retail traders can use made them better off without harming market liquidity.
+    Limiting retail investors’ access to leverage cut high-leverage traders’ losses by 40% without reducing
+    market liquidity, based on the 2010 U.S. leverage cap in the retail forex market.
   glance:
     design:
     - - Question
@@ -509,7 +561,8 @@
     - - Setting
       - 2010 U.S. regulations capping leverage in the retail foreign exchange market
     - - Data
-      - Three unique data sets
+      - >-
+        Three unique data sets, including retail forex trading records from a social trading network
     - - Method
       - Difference-in-differences
     effects_title: Reported effects of the leverage cap
@@ -523,6 +576,11 @@
       - −25%
     - - Relative bid-ask prices charged by brokerages
       - No effect
+  contributes:
+  - margin and leverage regulation
+  - speculation and belief disagreement
+  - welfare analysis of financial regulation
+  - market liquidity and retail trading
 - slug: growing-up-without-finance
   order: 8
   selected: true
@@ -575,14 +633,16 @@
     after they move to more developed areas. Early exposure to local banking appears to work by building
     financial literacy and trust in financial institutions.
   keywords: >-
-    financial inclusion, financial development, credit scores, financial literacy, trust in banks, Native
-    American reservations, early-life exposure, consumer credit
+    local banking, bank branches, banking deserts, access to finance, financial inclusion, financial development,
+    credit scores, financial literacy, trust in banks, Native American reservations, early-life exposure,
+    consumer credit
   topics:
+  - local-banking-access-to-finance
   - consumer-credit-debt
   - legal-regulatory-institutions
   finding: >-
-    People who grow up without local banks enter credit markets later and, as adults, have lower credit
-    scores and more delinquent accounts.
+    People who grow up with less access to local banks enter credit markets later and, as adults, have
+    lower credit scores and more delinquent accounts.
   glance:
     design:
     - - Question
@@ -609,6 +669,11 @@
       - Later
     - - Persistence after moving away
       - Fades slowly
+  contributes:
+  - local banking and access to finance
+  - financial inclusion
+  - early-life experiences and household finance
+  - consumer credit outcomes
 - slug: law-and-finance-matter-externally-imposed-courts
   order: 9
   selected: true
@@ -656,13 +721,15 @@
     of credit market development driven by this legal difference is associated with significantly higher
     per capita income, especially in sectors that depend more on outside financing.
   keywords: >-
-    law and finance, contract enforcement, legal institutions, credit markets, economic growth, tribal
-    courts, state courts, Native American reservations
+    local credit markets, bank lending, small business lending, financial development, law and finance,
+    contract enforcement, legal institutions, credit markets, economic growth, tribal courts, state courts,
+    Native American reservations
   topics:
+  - local-banking-access-to-finance
   - legal-regulatory-institutions
   finding: >-
-    Reservations assigned to state courts, which enforce contracts more predictably, have stronger credit
-    markets and higher incomes.
+    More predictable contract enforcement produces stronger local credit markets for small businesses
+    and households, and higher incomes.
   glance:
     design:
     - - Question
@@ -684,6 +751,11 @@
       - Significantly higher where law-driven credit development is greater
     - - Where effects are largest
       - Sectors that depend more on external financing
+  contributes:
+  - law and finance
+  - legal institutions and financial development
+  - local credit markets
+  - economic growth
 - slug: peer-pressure-social-interaction-disposition-effect
   order: 10
   selected: true
@@ -707,6 +779,9 @@
   - label: Working paper version
     source: SSRN
     url: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2517772
+  - label: Working paper version (open access)
+    source: Federal Reserve Bank of Cleveland Working Paper 16-18
+    url: https://doi.org/10.26509/frbc-wp-201618
   abstract: >-
     Social interaction contributes to some traders’ disposition effect. New data from an investment-specific
     social network linked to individual-level trading records builds evidence of this connection. To credibly
@@ -716,8 +791,8 @@
     effect. Traders connected in the network develop correlated levels of the disposition effect, a finding
     that can be replicated using workhorse data from a large discount brokerage.
   lead: >-
-    Social interaction makes investors more prone to the disposition effect — selling winning positions
-    too soon and holding on to losers.
+    Social interaction amplifies investors’ behavioral biases: it makes them more prone to the disposition
+    effect, selling winning positions too soon and holding on to losers.
   brief: >-
     Using an investment-focused social network linked to individual trading records, and exploiting the
     staggered timing with which brokerages partnered with the platform, the paper finds that gaining access
@@ -725,20 +800,23 @@
     develop similar levels of the bias, a pattern that also shows up in standard data from a large discount
     brokerage.
   keywords: >-
-    disposition effect, peer effects, social interaction, social trading networks, retail traders, behavioral
-    finance
+    social finance, retail investors, retail trading, disposition effect, peer effects, social interaction,
+    social trading networks, retail traders, behavioral finance, myForexBook, social trading platform,
+    social media, online investor networks, retail forex trading
   topics:
+  - social-media-finance
   - retail-investing-brokerage
   - behavioral-finance-beliefs
   finding: >-
-    Gaining access to a social trading network nearly doubles a trader’s tendency to sell winners and
-    hold on to losers.
+    Social interaction amplifies investors’ biases: joining an investor social network nearly doubles
+    a trader’s disposition effect, the tendency to sell winners and hold losers.
   glance:
     design:
     - - Question
       - Does social interaction make investors more prone to the disposition effect?
     - - Setting
-      - An investment-specific social network linked to individual trading records
+      - >-
+        myForexBook, an investment-specific online social network linked to members’ brokerage accounts
     - - Data
       - Social network activity and trading records; data from a large discount brokerage
     - - Method
@@ -750,6 +828,11 @@
       - Nearly doubles
     - - Traders connected in the network
       - Develop correlated levels of the bias
+  contributes:
+  - peer effects in financial decisions
+  - social finance
+  - the disposition effect
+  - investor social media
 - slug: financial-decision-making-dawn-of-ai
   order: 11
   bibkey: heimer2026ai
@@ -789,6 +872,10 @@
   finding: >-
     Reviews why people’s saving, investing, and borrowing choices depart from what financial economics
     prescribes, and how generative AI might change them.
+  contributes:
+  - household finance
+  - behavioral finance
+  - generative AI and financial decision making
 - slug: subjective-beliefs-saving-spending-retirement
   order: 12
   bibkey: heimer2026subjective
@@ -832,14 +919,18 @@
     of a standard life-cycle model of saving and spending. It focuses on one especially consequential
     gap: what people believe about their own chances of survival.
   keywords: >-
-    subjective beliefs, retirement saving, retirement spending, mortality beliefs, life-cycle model, financial
-    planning
+    time discounting, subjective beliefs, retirement saving, retirement spending, mortality beliefs, life-cycle
+    model, financial planning
   topics:
   - saving-retirement-inheritance
   - behavioral-finance-beliefs
   finding: >-
     Reviews how beliefs about the future, especially about one’s own survival, change the predictions
     of standard models of retirement saving and spending.
+  contributes:
+  - subjective expectations
+  - time discounting and survival beliefs in life-cycle models
+  - retirement saving and spending
 - slug: courting-economic-development
   order: 13
   bibkey: heimer2015courting
@@ -882,13 +973,14 @@
     The gap is driven by the poorest reservations with tribal courts, and specifically by those where
     court enforcement was most uncertain.
   keywords: >-
-    economic development, court enforcement, legal uncertainty, tribal courts, Public Law 280, Native
-    American reservations, income growth
+    financial development, contract enforcement, economic development, court enforcement, legal uncertainty,
+    tribal courts, Public Law 280, Native American reservations, income growth
   topics:
   - legal-regulatory-institutions
+  - local-banking-access-to-finance
   finding: >-
-    Reservations under state courts grew faster over the long run than similar reservations whose tribal
-    courts enforced contracts less predictably.
+    Uncertain court enforcement holds back long-run development: similar reservations under state courts
+    grew faster than those under tribal courts.
   glance:
     design:
     - - Question
@@ -911,6 +1003,10 @@
       - Lower incomes on the poorest reservations with tribal courts
     - - Where the gap is largest
       - Reservations with the most uncertain court enforcement
+  contributes:
+  - institutions and economic development
+  - legal uncertainty
+  - contract enforcement
 - slug: friends-do-let-friends-buy-stocks-actively
   order: 14
   bibkey: heimer2014friends
@@ -947,7 +1043,9 @@
     which imply variation in the level of social activity. My findings support a new explanation for the
     active investing puzzle in which informal communication tends to promote active rather than passive
     strategies (Han and Hirshleifer 2012).
-  lead: Sociable people are more likely to be active traders than passive investors.
+  lead: >-
+    Social interaction promotes active rather than passive investing, which helps explain why so many
+    investors trade actively despite its costs.
   brief: >-
     Earlier work linked sociability to stock market participation but could not tell which kinds of investors
     were more social. Using Consumer Expenditure Survey data on individuals’ asset holdings, trading,
@@ -960,7 +1058,10 @@
   topics:
   - retail-investing-brokerage
   - behavioral-finance-beliefs
-  finding: Social interaction is more common among active traders than among passive investors.
+  - social-media-finance
+  finding: >-
+    Sociable people are more likely to invest actively than passively, consistent with word of mouth spreading
+    active strategies; evidence from the Consumer Expenditure Survey.
   glance:
     design:
     - - Question
@@ -978,6 +1079,10 @@
       - More prevalent among active than passive investors
     - - Implication
       - Word of mouth tends to spread active rather than passive strategies
+  contributes:
+  - social interaction and stock market participation
+  - the active investing puzzle
+  - word of mouth in finance
 - slug: facebook-finance-social-interaction-active-investing
   order: 15
   bibkey: heimer2015facebook
@@ -1005,7 +1110,8 @@
     partnerships with the social networking platform, which is a necessary precursor for traders to access
     the network, to argue these effects are causal. This pattern of communication supports active trading,
     even though the network reveals the low success rate of retail traders.
-  lead: Active trading strategies spread through social networks of retail investors.
+  lead: >-
+    Social interaction spreads active investing because investors share their successes, not their failures.
   brief: >-
     Using a social network for traders linked to individual trading records, the paper finds that traders
     who do well in the short run reach out to others, and that traders trade more when their peers perform
@@ -1013,30 +1119,40 @@
     a causal interpretation. This communication pattern promotes active trading even though the network
     itself reveals how rarely retail traders succeed.
   keywords: >-
-    social networks, active trading, retail traders, peer effects, social transmission, investor communication
+    social transmission bias, retail investors, retail trading, social networks, active trading, retail
+    traders, peer effects, social transmission, investor communication, myForexBook, social trading platform,
+    social media, online investor networks, retail forex trading
   topics:
+  - social-media-finance
   - retail-investing-brokerage
   - behavioral-finance-beliefs
   finding: >-
-    Active trading strategies spread through social networks of retail traders, even though the network
-    reveals how rarely they succeed.
+    Investors broadcast their successes and stay quiet about losses, so social networks spread active
+    trading despite its low success rates; evidence from a social trading platform.
   glance:
     design:
     - - Question
       - How do active investing strategies spread through social networks?
     - - Data
-      - A new database of social activity linked to individual-level trading records
+      - >-
+        Messages and trades of about 3,100 retail foreign exchange traders on myForexBook, a social trading
+        platform linked to members’ brokerage accounts
     - - Method
       - Staggered entry of brokerages into partnerships with the social networking platform
     effects_title: Main findings
     numeric: false
     effects:
-    - - Traders with good short-term performance
-      - Contact others
-    - - When peers perform well and communicate more
-      - A trader’s activity increases
+    - - After a peer’s strong short-term performance
+      - The trader trades more, about 20% more trades per week
+    - - After a peer’s losses
+      - No change; losses go undiscussed
     - - Net effect
       - Communication supports active trading despite low success rates
+  contributes:
+  - social transmission bias
+  - peer effects in investing
+  - active trading
+  - investor social media
 - slug: temporal-focal-points-mortgage-lending
   order: 16
   bibkey: heimer2021temporal
@@ -1064,8 +1180,9 @@
     supply-side mechanisms, applications arrive at a constant rate within-month, and neither differences
     in credit risk nor applicant preferences explain the month-end decline in racial differences.
   lead: >-
-    Monthly volume quotas for loan officers reveal how much of the racial gap in mortgage approvals stems
-    from lender behavior.
+    Racial disparities in lending emerge in part from how lenders make decisions: when month-end volume
+    quotas push loan officers to approve more loans, the unexplained racial gap in mortgage approvals
+    shrinks by at least half.
   brief: >-
     Studying 25 years of mortgage lending, the authors develop a new test for disparate treatment: approval
     rates rise at the end of each month as loan officers try to hit their quotas, and they estimate these
@@ -1074,18 +1191,22 @@
     arrive at a steady rate through the month and neither credit risk nor applicant preferences explain
     the pattern, the evidence points to supply-side (lender) mechanisms.
   keywords: >-
+    racial disparities in lending, lending discrimination, credit access, discrimination, fair lending,
     mortgage lending, racial disparities, disparate treatment, discrimination testing, loan officer quotas,
     month-end effects, HMDA
   topics:
   - mortgage-lending-housing
   - consumer-protection-regulation
   finding: >-
-    Loan officers’ month-end volume quotas account for at least half of the unexplained racial gap in
-    mortgage approvals, pointing to lender behavior.
+    Racial disparities in mortgage approvals emerge partly from lender behavior: when month-end quotas
+    push loan officers to approve more loans, the unexplained 7-point Black approval gap shrinks by at
+    least half.
   glance:
     design:
     - - Question
-      - How much of the racial gap in mortgage approvals reflects lender behavior?
+      - >-
+        How do racial disparities in mortgage lending emerge, and how much of the gap reflects lender
+        behavior?
     - - Setting
       - Loan officers’ monthly volume quotas, which raise approval rates at the end of each month
     - - Data
@@ -1107,6 +1228,11 @@
       - >-
         Applications arrive steadily within the month; credit risk and applicant preferences do not explain
         the pattern
+  contributes:
+  - racial disparities in lending and how they emerge
+  - discrimination and disparate treatment
+  - fair lending
+  - incentives and decision making in financial institutions
 - slug: fallible-firms-consumer-redress
   order: 17
   bibkey: heimer2025fallible
@@ -1138,7 +1264,8 @@
     complementary nature of regulatory interventions and suggest that financial sophistication and self-advocacy
     are critical determinants of consumer redress.
   lead: >-
-    Who gets money back after complaining about a financial company depends heavily on who is complaining.
+    Access to redress is unequal: who gets money back after a complaint about a financial firm depends
+    more on the consumer than on the firm.
   brief: >-
     Using confidential Consumer Financial Protection Bureau (CFPB) data on nearly two million complaints
     filed since 2014, the paper finds that successful complaints pay out $1,470 on average and that total
@@ -1147,15 +1274,15 @@
     and firms respond to them more. CFPB monitoring raises restitution but disproportionately benefits
     these higher-socioeconomic-status consumers.
   keywords: >-
-    consumer complaints, CFPB, financial restitution, consumer redress, financial sophistication, regulatory
-    supervision, consumer protection
+    inequality, consumer complaints, CFPB, financial restitution, consumer redress, financial sophistication,
+    regulatory supervision, consumer protection
   topics:
   - consumer-protection-regulation
   - consumer-credit-debt
   - legal-regulatory-institutions
   finding: >-
-    Whether consumers get money back after complaining about a financial firm depends more on who complains
-    than on which firm is involved.
+    In CFPB complaint data, whether consumers get money back after complaining about a financial firm
+    depends more on who complains than on which firm is involved.
   glance:
     design:
     - - Question
@@ -1181,6 +1308,11 @@
       - More likely to request refunds, claim fraud, and document complaints
     - - CFPB monitoring reviews
       - Raise restitution, disproportionately for higher-income, more educated consumers
+  contributes:
+  - consumer protection and redress
+  - inequality in access to remedies
+  - financial sophistication
+  - regulatory supervision
 - slug: pushing-boundaries-redistricting-consumer-credit
   order: 18
   bibkey: heimer2017pushing
@@ -1208,7 +1340,8 @@
     redrawn and when states make it more difficult for constituents to vote. Overall, our findings are
     consistent with theories suggesting that less-competitive political races reduce politicians’ incentives
     to cater to their constituents’ preferences.
-  lead: Gerrymandering reduces people’s access to credit.
+  lead: >-
+    Political competition matters for household finance: gerrymandering reduces people’s access to credit.
   brief: >-
     Matching a long-running panel of consumer credit data to changes in congressional district boundaries
     after each census, the paper finds that consumers lose access to credit when their districts are irregularly
@@ -1242,6 +1375,10 @@
       - States where elected politicians draw the maps; districts with less competitive elections
     - - Similar declines
       - Gerrymandered state senate maps; laws that make voting harder
+  contributes:
+  - the political economy of finance
+  - electoral institutions
+  - credit access
 - slug: five-facts-bequest-motives
   order: 19
   bibkey: heimer2025bequest
@@ -1270,8 +1407,8 @@
     Finally, we examine the implications of these findings for wealth accumulation and portfolio choice
     within a canonical life-cycle model with precautionary savings.
   lead: >-
-    Using three decades of survey data, the paper documents five facts about how people think about leaving
-    an inheritance.
+    Bequest motives, a key ingredient in models of saving and wealth inequality, follow five robust empirical
+    patterns.
   brief: >-
     People with heirs care more about bequests; the importance of bequests follows a U-shape over the
     life cycle; it rises sharply among the wealthiest fifth of households; stock owners, especially those
@@ -1280,10 +1417,11 @@
     suggest that bequest motives change over time rather than staying fixed. The paper also works through
     what the facts imply for wealth accumulation and portfolio choice in a life-cycle model.
   keywords: >-
-    bequest motives, inheritances, intergenerational wealth, life-cycle model, wealth inequality, portfolio
-    choice, subjective expectations
+    saving, bequest motives, inheritances, intergenerational wealth, life-cycle model, wealth inequality,
+    portfolio choice, subjective expectations
   topics:
   - saving-retirement-inheritance
+  - behavioral-finance-beliefs
   finding: >-
     Bequest motives are stronger for people with heirs and the very wealthy, follow a U-shape over life,
     and people overestimate the bequests they will leave.
@@ -1308,6 +1446,11 @@
       - Stock owners, especially after high returns, have stronger bequest preferences
     - - '5'
       - People overestimate how likely and how large their bequests will be
+  contributes:
+  - bequest motives in life-cycle models
+  - late-life saving
+  - wealth inequality
+  - subjective expectations
 - slug: wealth-drawdown-private-family-foundations
   order: 20
   bibkey: heimer2025foundations
@@ -1347,8 +1490,8 @@
     After the 2017 Tax Cuts and Jobs Act doubled the estate and gift tax exemption, post-death inflows
     fell by 47.2%, suggesting many families use foundations to manage estate taxes.
   keywords: >-
-    private family foundations, intergenerational wealth inequality, bequest motives, charitable giving,
-    estate taxation, Tax Cuts and Jobs Act, donor-advised funds
+    wealth decumulation, private family foundations, intergenerational wealth inequality, bequest motives,
+    charitable giving, estate taxation, Tax Cuts and Jobs Act, donor-advised funds
   topics:
   - saving-retirement-inheritance
   finding: >-
@@ -1378,6 +1521,11 @@
       - Falls
     - - Post-death inflows after the 2017 tax law
       - −47.2%
+  contributes:
+  - wealth decumulation and late-life saving
+  - bequests and charitable giving
+  - estate taxation
+  - wealth inequality at the top
 - slug: single-family-reits-local-housing-markets
   order: 21
   bibkey: heimer2024reits
@@ -1442,6 +1590,10 @@
       - Likely reflects where REITs choose to buy rather than causal effects
     - - REIT returns
       - Mirror representative housing portfolios
+  contributes:
+  - institutional investors in housing
+  - housing supply and prices
+  - homeownership
 - slug: brokerage-commissions-trading-volume
   order: 22
   bibkey: heimer2026brokerage
@@ -1472,8 +1624,8 @@
     scope for brokers to steer naïve investors toward high-commission stocks, amplifying speculative trading
     precisely where volatility is highest.
   lead: >-
-    When the New York Stock Exchange set brokerage commissions, higher commissions led to more trading,
-    not less.
+    Higher trading costs do not always mean less trading: when brokerage commissions were fixed, higher
+    commissions raised trading volume as brokers steered clients toward high-commission stocks.
   brief: >-
     Before commissions were deregulated in 1975, NYSE minimum commissions were a fixed function of a stock’s
     price, with kinks in the schedule and periodic revisions. Exploiting both, the paper finds that a
@@ -1481,13 +1633,14 @@
     in more volatile stocks. The authors attribute this to brokers: fixed schedules limited price competition
     and gave brokers the incentive and room to steer naïve investors toward high-commission stocks.
   keywords: >-
-    brokerage commissions, trading costs, trading volume, fixed commissions, NYSE, May Day 1975, market
-    microstructure, broker incentives, volatility
+    conflicts of interest, retail investors, brokerage commissions, trading costs, trading volume, fixed
+    commissions, NYSE, May Day 1975, market microstructure, broker incentives, volatility
   topics:
   - retail-investing-brokerage
+  - consumer-protection-regulation
   finding: >-
-    Under fixed NYSE commission schedules, higher commissions led to more trading, consistent with brokers
-    steering investors toward high-commission stocks.
+    Higher trading costs can increase trading: under fixed NYSE commission schedules, higher commissions
+    raised volume, consistent with brokers steering investors toward high-commission stocks.
   glance:
     design:
     - - Question
@@ -1511,6 +1664,11 @@
       - More volatile stocks
     - - Mechanism
       - Fixed schedules let brokers steer naïve investors toward high-commission stocks
+  contributes:
+  - trading costs and trading volume
+  - broker conflicts of interest
+  - retail investor protection
+  - market microstructure
 - slug: borrowing-young-paying-later
   order: 23
   bibkey: heimer2026borrowing
@@ -1541,8 +1699,8 @@
     market — borrowers who never had the opportunity to reveal their credit risk through card delinquency
     appear creditworthy on paper but default at elevated rates.
   lead: >-
-    Keeping young adults away from credit cards protected them from early defaults and raised their credit
-    scores and homeownership by age 30, but led to more mortgage defaults.
+    Restricting credit protects young borrowers from early mistakes but keeps lenders from learning who
+    is risky, a tradeoff that shapes credit outcomes for years.
   brief: >-
     The paper studies the Credit CARD Act of 2009, which barred card issuance to people under 21 without
     a cosigner or verified income, and follows affected cohorts into their early thirties in credit bureau
@@ -1552,15 +1710,16 @@
     Their mortgages defaulted more often, however: people who never had a chance to reveal their credit
     risk on a card looked creditworthy on paper.
   keywords: >-
-    Credit CARD Act, young adults, credit card access, consumer credit, credit scores, homeownership,
-    mortgage delinquency, adverse selection, credit bureau data
+    credit history, information in lending, Credit CARD Act, young adults, credit card access, consumer
+    credit, credit scores, homeownership, mortgage delinquency, adverse selection, credit bureau data
   topics:
   - consumer-credit-debt
   - consumer-protection-regulation
   - mortgage-lending-housing
   finding: >-
-    The Credit CARD Act’s limits on cards for people under 21 raised credit scores and homeownership by
-    age 30 but increased mortgage delinquency.
+    Restricting young adults’ credit access protects them from early defaults but creates adverse selection
+    later: after the Credit CARD Act, credit scores and homeownership rose by age 30 while mortgage delinquency
+    increased.
   glance:
     design:
     - - Question
@@ -1588,6 +1747,11 @@
       - +5 to 6 pp
     - - Severe delinquency among mortgage holders
       - +7.4 pp
+  contributes:
+  - credit access and consumer protection
+  - credit histories and information in lending
+  - adverse selection
+  - young adults’ finances
 - slug: waiting-for-wealth-inheritances-household-savings
   order: 24
   bibkey: heimer2026waiting
@@ -1615,8 +1779,8 @@
     equal. Households would pay substantial amounts to receive their inheritance today, particularly when
     their parents are wealthy.
   lead: >-
-    Inheritances, which account for a quarter to a half of U.S. household wealth, change how households
-    save long before the money arrives.
+    Leaving inheritances out of the life-cycle model makes households look more patient than they are;
+    expected inheritances change saving long before the money arrives.
   brief: >-
     The paper adds inheritances to a standard life-cycle model of saving: households have a living parent
     whose wealth changes over time and who leaves an inheritance at death, with parental mortality, wealth,
@@ -1626,13 +1790,13 @@
     all ages, mostly through anticipation, and raises wealth inequality among younger households. Households
     would pay substantial sums to receive their inheritance today, especially when their parents are wealthy.
   keywords: >-
-    inheritances, bequests, life-cycle model, household saving, consumption, wealth inequality, discount
-    factor, parental wealth, intergenerational transfers
+    time discounting, income risk, inheritances, bequests, life-cycle model, household saving, consumption,
+    wealth inequality, discount factor, parental wealth, intergenerational transfers
   topics:
   - saving-retirement-inheritance
   finding: >-
-    Expected inheritances raise consumption and reduce saving long before they arrive, and leaving them
-    out makes standard models overstate how patient households are.
+    Life-cycle models that omit inheritances overstate how patient households are; expected inheritances
+    raise consumption and lower saving long before they arrive.
   glance:
     design:
     - - Question
@@ -1655,6 +1819,11 @@
       - Higher among households younger than about 60
     - - Willingness to pay to inherit today
       - Positive, and rising with parental wealth
+  contributes:
+  - life-cycle saving and consumption
+  - estimating time discounting
+  - income risk
+  - inheritances and wealth inequality
 - slug: navigating-credit-bureau-data
   order: 25
   bibkey: heimer2024navigating
@@ -1689,6 +1858,9 @@
   finding: >-
     A practical guide to using credit bureau data in research: what it can measure, its limitations, how
     to acquire it, and how to merge it with other data.
+  contributes:
+  - consumer credit research
+  - research data and methods
 - slug: overconfidence-avoiding-covid-19
   order: 27
   bibkey: heimer2020covid
@@ -1718,8 +1890,8 @@
     respondents, even while perceiving themselves as less exposed than the public. These behavioral biases
     may have contributed to the difficulty of containing the virus.
   lead: >-
-    People expect their own exposure to COVID-19 to be much lower than the exposure they attribute to
-    the general public.
+    People are overconfident about avoiding risk: they expect far less exposure to COVID-19 than they
+    expect for others.
   brief: >-
     Using the New York Fed’s Survey of Consumer Expectations, the post documents a gap of 17.5 percentage
     points at a three-month horizon. The overconfidence is stronger among higher-income and younger households
@@ -1730,6 +1902,9 @@
   - behavioral-finance-beliefs
   finding: >-
     People expect their own exposure to COVID-19 to be well below what they expect for the general public.
+  contributes:
+  - overconfidence and risk perception
+  - subjective expectations
 - slug: intergenerational-homeownership-mortgage-distress
   order: 28
   bibkey: heimer2020intergenerational
@@ -1758,19 +1933,24 @@
     less favorably. We find that parental mortgage distress negatively correlates with the probability
     that a child will purchase a home, and we explore various channels through which this link may occur.
   lead: >-
-    Children whose parents experienced mortgage distress during the 2008 financial crisis are less likely
-    to buy a home.
+    Parents’ financial experiences may shape their children’s choices: children whose parents had mortgage
+    distress in the 2008 crisis are less likely to buy homes.
   brief: >-
     Motivated by research on how personal experiences shape financial attitudes, the commentary examines
     whether parents’ negative homeownership experiences in the financial crisis made their children view
     homeownership less favorably, and explores the channels behind the link.
   keywords: >-
-    homeownership, mortgage distress, intergenerational transmission, young adults, 2008 financial crisis
+    experience effects, homeownership, mortgage distress, intergenerational transmission, young adults,
+    2008 financial crisis
   topics:
   - mortgage-lending-housing
   finding: >-
     Parents’ mortgage distress during the 2008 crisis is associated with a lower chance that their children
     buy a home.
+  contributes:
+  - how experiences shape financial beliefs
+  - intergenerational transmission
+  - homeownership
 - slug: geographic-mobility-consumer-financial-health
   order: 29
   bibkey: heimer2016mobility
@@ -1799,17 +1979,20 @@
     around 2010 and a bust thereafter. We find that residents who move after the bust experience stronger
     consumer financial health than residents who stay put.
   lead: >-
-    Residents who leave oil boom towns after the bust have stronger consumer financial health than those
-    who stay.
+    Relocating after a local economic bust is associated with stronger household finances: residents who
+    leave oil boom towns after the bust fare better than those who stay.
   brief: >-
     Using the New York Fed Consumer Credit Panel, the commentary follows residents of areas that saw a
     surge in oil drilling around 2010 and a bust afterward. Those who relocate after the bust have lower
     credit utilization, fewer delinquent accounts, and more new credit than those who stay.
   keywords: >-
-    geographic mobility, consumer financial health, oil boom, credit utilization, delinquency, Consumer
-    Credit Panel
+    local economic shocks, geographic mobility, consumer financial health, oil boom, credit utilization,
+    delinquency, Consumer Credit Panel
   topics:
   - consumer-credit-debt
   finding: >-
     Residents who move away from oil boom towns after the bust end up with stronger consumer financial
     health than those who stay.
+  contributes:
+  - geographic mobility and local economic shocks
+  - household financial health

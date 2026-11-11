@@ -297,7 +297,7 @@ def contents(depth):
     items = []
     for t in topics:
         items.append(f'<li><p><a class="ct" href="{r}topics/{t["slug"]}.html">{esc(t["name"])}</a></p>'
-                     f'<p class="cd">{esc(t["intro"])}</p></li>')
+                     f'<p class="cd">{esc(t["summary"])}</p></li>')
     return '<ul class="contents">\n' + '\n'.join(items) + '\n</ul>'
 
 # ---------------------------------------------------------------- paper pages
@@ -375,6 +375,7 @@ def paper_ld(p, page_url):
     same += [l['url'] for l in p['links']]
     if same: a['sameAs'] = same
     if p.get('awards'): a['award'] = p['awards']
+    if p.get('contributes'): a['keywords'] = ', '.join(p['contributes']) + ', ' + a['keywords']
     if p.get('jel'): a['keywords'] += ', JEL ' + p['jel']
     return a
 
@@ -409,6 +410,7 @@ def paper_page(p):
 <h2>In brief</h2>
 <p class="lead">{esc(p["lead"])}</p>
 <p>{esc(p["brief"])}</p>
+{f'<p class="contrib"><i>Contributes to research on</i> {esc(names(p["contributes"]))}.</p>' if p.get("contributes") else ''}
 </section>
 {glance_table(p)}
 <section class="body-sec">
@@ -433,23 +435,26 @@ def paper_page(p):
 # ---------------------------------------------------------------- topic pages
 def topic_page(t):
     path = f"topics/{t['slug']}.html"
-    plist = topic_papers(t['slug'])
+    # Papers whose primary topic is this one come first, then cross-listed papers.
+    plist = sorted(topic_papers(t['slug']), key=lambda p: (p['topics'][0] != t['slug'], p['order']))
     others = ''.join(f'<li><a href="{o["slug"]}.html">{esc(o["name"])}</a></li>' for o in topics if o is not t)
     body = f'''<main id="main" class="wrap">
 <p class="crumbs"><a href="../research.html">Research</a> › {esc(t["name"])}</p>
 <h1 class="page-title">{esc(t["name"])}</h1>
-<p class="intro">{esc(t["intro"])}</p>
+<p class="intro">{esc(t["summary"])}</p>
+<p class="synthesis">{esc(t["synthesis"])}</p>
 <p class="terms"><i>Related terms:</i> {esc(t["terms"])}.</p>
 {grouped(plist, 1)}
 <h2 class="sec">Other research topics</h2>
 <ul class="see-also">{others}</ul>
 </main>'''
     ld = [{'@context': 'https://schema.org', '@type': 'CollectionPage', '@id': url(path), 'url': url(path),
-           'name': f"{t['name']}: research by {ME}", 'description': t['intro'],
+           'name': f"{t['name']}: research by {ME}", 'description': t['summary'] + ' ' + t['synthesis'], 'keywords': t['terms'],
            'about': {'@type': 'DefinedTerm', 'name': t['name']}, 'author': PERSON_REF,
            'hasPart': [{'@type': 'ScholarlyArticle', 'name': p['title'], 'url': url(f"papers/{p['slug']}.html")} for p in plist]},
           crumbs_ld([('Research', 'research.html'), (t['name'], path)])]
-    page(path, 1, f"{t['name']} | Research by {ME}", t['intro'], body, active='Research', ld=ld)
+    page(path, 1, f"{t['name']} | Research by {ME}", t['summary'], body, active='Research', ld=ld,
+         meta=f'<meta name="keywords" content="{esc(t["terms"])}">')
 
 # ---------------------------------------------------------------- index pages
 def research_page():
@@ -572,7 +577,7 @@ def text_files():
            f'(question, setting, data, method, main findings), and citation data.', '',
            f'Contact: {EMAIL}. Former Senior Advisor for Research and Policy at the Consumer Financial Protection '
            f'Bureau and research economist at the Federal Reserve Bank of Cleveland.', '', '## Research topics', '']
-    out += [f"- [{t['name']}]({url('topics/' + t['slug'] + '.html')}): {t['intro']}" for t in topics]
+    out += [f"- [{t['name']}]({url('topics/' + t['slug'] + '.html')}): {t['summary']} {t['synthesis']}" for t in topics]
     for g, label in GROUPS:
         out += ['', f'## {label}', ''] + [line(p) for p in papers if group(p) == g]
     out += ['', '## Optional', '', f'- [All abstracts and summaries in one file]({url("llms-full.txt")})',
@@ -586,7 +591,9 @@ def text_files():
                  f"Page: {url('papers/' + p['slug'] + '.html')}"]
         if p.get('doi'): full.append(f"DOI: https://doi.org/{p['doi']}")
         full.append(f"Topics: {', '.join(T[t]['name'] for t in p['topics'])}")
-        full += ['', f"In brief: {p['lead']} {p['brief']}", '', f"Abstract: {p['abstract']}", '']
+        full += ['', f"In brief: {p['lead']} {p['brief']}"]
+        if p.get('contributes'): full.append(f"Contributes to research on: {names(p['contributes'])}.")
+        full += ['', f"Abstract: {p['abstract']}", '']
         if p.get('glance'):
             g = p['glance']
             full += [f'- {k}: {v}' for k, v in g['design']]
