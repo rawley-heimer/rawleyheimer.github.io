@@ -325,6 +325,10 @@ def related(p):
             if q['slug'] != p['slug'] and q not in pool: pool.append(q)
     return pool[:4]
 
+def all_keywords(p):
+    """Visible keywords plus hidden ones; hidden keywords appear only in metadata, never on the page."""
+    return p['keywords'] + (', ' + p['hidden_keywords'] if p.get('hidden_keywords') else '')
+
 def paper_meta(p, page_url):
     m = [('citation_title', p['title'])]
     m += [('citation_author', last_first(a)) for a in p['authors']]
@@ -343,8 +347,9 @@ def paper_meta(p, page_url):
         m.append(('citation_publisher', p['publisher']))
     if p.get('doi'): m.append(('citation_doi', p['doi']))
     m += [('citation_abstract_html_url', page_url), ('citation_language', 'en'),
-          ('citation_keywords', '; '.join(x.strip() for x in p['keywords'].split(',')))]
-    return '\n'.join(f'<meta name="{n}" content="{esc(v)}">' for n, v in m)
+          ('citation_keywords', '; '.join(x.strip() for x in all_keywords(p).split(',')))]
+    return (f'<meta name="keywords" content="{esc(all_keywords(p))}">\n' +
+            '\n'.join(f'<meta name="{n}" content="{esc(v)}">' for n, v in m))
 
 def paper_ld(p, page_url):
     status = {'published': 'Published', 'forthcoming': 'Forthcoming', 'working': 'Working paper',
@@ -354,7 +359,7 @@ def paper_ld(p, page_url):
          'author': [PERSON_REF if n == ME else {'@type': 'Person', 'name': n} for n in p['authors']],
          'datePublished': str(p['date']), 'dateModified': UPDATED_ISO, 'creativeWorkStatus': status,
          'abstract': p['abstract'], 'description': p['lead'] + ' ' + p['brief'],
-         'keywords': p['keywords'], 'inLanguage': 'en',
+         'keywords': all_keywords(p), 'inLanguage': 'en',
          'about': [{'@type': 'Thing', 'name': T[t]['name']} for t in p['topics']]}
     k = p['kind']
     if k == 'article':
@@ -449,12 +454,12 @@ def topic_page(t):
 <ul class="see-also">{others}</ul>
 </main>'''
     ld = [{'@context': 'https://schema.org', '@type': 'CollectionPage', '@id': url(path), 'url': url(path),
-           'name': f"{t['name']}: research by {ME}", 'description': t['summary'] + ' ' + t['synthesis'], 'keywords': t['terms'],
+           'name': f"{t['name']}: research by {ME}", 'description': t['summary'] + ' ' + t['synthesis'], 'keywords': t['terms'] + (', ' + t['hidden_terms'] if t.get('hidden_terms') else ''),
            'about': {'@type': 'DefinedTerm', 'name': t['name']}, 'author': PERSON_REF,
            'hasPart': [{'@type': 'ScholarlyArticle', 'name': p['title'], 'url': url(f"papers/{p['slug']}.html")} for p in plist]},
           crumbs_ld([('Research', 'research.html'), (t['name'], path)])]
     page(path, 1, f"{t['name']} | Research by {ME}", t['summary'], body, active='Research', ld=ld,
-         meta=f'<meta name="keywords" content="{esc(t["terms"])}">')
+         meta=f'<meta name="keywords" content="{esc(t["terms"] + (", " + t["hidden_terms"] if t.get("hidden_terms") else ""))}">')
 
 # ---------------------------------------------------------------- index pages
 def research_page():
@@ -599,7 +604,7 @@ def text_files():
             full += [f'- {k}: {v}' for k, v in g['design']]
             full += [f"- {('Fact ' + str(k)) if str(k).isdigit() else k}: {v}" for k, v in g['effects']]
             full.append('')
-        full += [f"Keywords: {p['keywords']}", '', f"BibTeX key: {p['bibkey']}", '']
+        full += [f"Keywords: {all_keywords(p)}", '', f"BibTeX key: {p['bibkey']}", '']
     write('llms-full.txt', '\n'.join(full))
 
     pages_ = [x for x in written if x.endswith('.html') and x not in REDIRECTS]

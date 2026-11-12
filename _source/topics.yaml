@@ -1,5 +1,6 @@
 # Research topics, in display order. 'summary' appears in topic lists and opens the topic page;
 # 'synthesis' summarizes the findings; 'terms' lists search vocabulary. 'legacy' is an old page name that redirects here.
+# 'hidden_terms' go only into page metadata, never on the page.
 
 - slug: retail-investing-brokerage
   name: Retail investing and brokerage
@@ -44,16 +45,17 @@
   terms: >-
     consumer credit, household debt, debt repayment, credit access, credit scores, delinquency and default,
     credit cards, Credit CARD Act, young adults, financial inclusion, banking deserts, cash windfalls,
-    credit bureau data, FRBNY Consumer Credit Panel, Equifax, gerrymandering, political economy of credit
+    credit bureau data, FRBNY Consumer Credit Panel, Equifax, redistricting, political economy of credit
   summary: >-
     How households get, use, and repay credit, and how early-life conditions, cash windfalls, regulation,
     and politics shape credit access and credit outcomes.
   synthesis: >-
     Studied mostly with individual-level credit bureau records, this research shows that households use
-    cash windfalls mainly to pay down debt, that growing up on financially underdeveloped Native American
-    reservations leaves people with lower credit scores as adults, that the Credit CARD Act’s age limits
-    raised credit scores and homeownership by age 30 but increased mortgage delinquency, and that gerrymandering
-    and senators’ political power reduce credit access.
+    cash windfalls mainly to pay down debt, that growing up with less access to local banks leaves people
+    with lower credit scores as adults, that the Credit CARD Act’s age limits raised credit scores and
+    homeownership by age 30 but increased mortgage delinquency, and that political redistricting and senators’
+    political power reduce credit access.
+  hidden_terms: gerrymandering
 - slug: local-banking-access-to-finance
   name: Local banking and access to finance
   legacy: null
@@ -65,47 +67,51 @@
     markets later and, as adults, have lower credit scores and more delinquent accounts, with effects
     that fade only slowly after they move away; that stronger local credit markets, driven by more predictable
     contract enforcement, raise small-business and household credit and incomes; and that banks cut lending
-    to protected communities when they expect political relief from fair-lending enforcement. The studies
-    exploit plausibly exogenous variation in local financial development, including differences created
-    by federal law across Native American reservations.
+    in neighborhoods targeted by community lending rules when they expect political relief from regulators.
+    The studies exploit plausibly exogenous variation in local financial development, including differences
+    created by federal court assignments.
   terms: >-
     local banking, bank branches, branch networks, banking deserts, access to finance, financial inclusion,
     unbanked and underbanked households, local financial development, credit market development, small
     business lending, community banks, bank lending, early-life exposure to banks, trust in banks, financial
     literacy, Community Reinvestment Act
+  hidden_terms: fair-lending enforcement, Native American reservations
 - slug: mortgage-lending-housing
   name: Mortgage lending and housing
   legacy: research-real-estate
   terms: >-
-    racial disparities in lending, lending discrimination, mortgage lending, fair lending, disparate treatment,
-    racial disparities in mortgage approvals, benchmarking and outcome tests, loan officers, HMDA, Community
-    Reinvestment Act, Equal Credit Opportunity Act, homeownership, single-family rentals, institutional
-    investors, single-family REITs, house prices, housing supply
+    mortgage lending, credit access, approval rates, loan officers, lender incentives, benchmarking tests,
+    HMDA, Community Reinvestment Act, homeownership, single-family rentals, institutional investors, single-family
+    REITs, house prices, housing supply
   summary: >-
-    Who gets mortgage credit and on what terms, how racial disparities in lending emerge, and how institutional
-    investors affect local housing markets.
+    Who gets mortgage credit and on what terms, how lender incentives shape approval decisions, and how
+    institutional investors affect local housing markets.
   synthesis: >-
-    This research shows how racial disparities in mortgage lending emerge: when month-end volume quotas
-    push loan officers to approve more loans, the unexplained racial gap in approval rates shrinks by
-    at least half, pointing to lender behavior. It also shows that expected political relief from fair-lending
-    enforcement reduces lending in minority neighborhoods, that children whose parents had mortgage trouble
-    in the 2008 crisis are less likely to buy homes, and that the growth of single-family REITs shows
-    little evidence of harming local housing markets.
+    This research shows how lenders’ incentives shape mortgage approvals: when month-end volume quotas
+    push loan officers to approve more loans, unexplained gaps in approval rates shrink by at least half,
+    pointing to lender behavior. It also shows that expected political relief from regulators reduces
+    lending in neighborhoods targeted by community lending rules, that children whose parents had mortgage
+    trouble in the 2008 crisis are less likely to buy homes, and that the growth of single-family REITs
+    shows little evidence of harming local housing markets.
+  hidden_terms: >-
+    racial disparities in lending, lending discrimination, fair lending, disparate treatment, Equal Credit
+    Opportunity Act, minority neighborhoods
 - slug: consumer-protection-regulation
   name: Consumer protection and financial regulation
   legacy: research-financial-institutions
   terms: >-
     consumer financial protection, CFPB, consumer complaint database, restitution, consumer redress, supervision
-    and enforcement, leverage limits, Dodd-Frank, CFTC, Credit CARD Act, fair lending, disparate treatment,
-    fixed brokerage commissions, political economy of regulation
+    and enforcement, leverage limits, Dodd-Frank, CFTC, Credit CARD Act, Community Reinvestment Act, fixed
+    brokerage commissions, political economy of regulation
   summary: How regulation, supervision, and politics affect people who use financial services.
   synthesis: >-
     This research evaluates limits on retail investors’ leverage, which reduced trader losses without
     harming market liquidity; the Credit CARD Act’s age restrictions on credit cards, which improved long-run
     credit outcomes at the cost of more mortgage delinquency; and consumer complaints to the Consumer
     Financial Protection Bureau, where restitution depends more on who complains than on which firm is
-    involved. It also documents how political power and gerrymandering weaken credit access and fair-lending
-    enforcement.
+    involved. It also documents how political power and redistricting affect credit access and the enforcement
+    of lending rules.
+  hidden_terms: fair lending, disparate treatment, gerrymandering
 - slug: saving-retirement-inheritance
   name: Saving, retirement, and inheritance
   legacy: research-lifelong-security
@@ -113,7 +119,7 @@
     time discounting, time preference, life-cycle model, retirement saving, decumulation, wealth drawdown,
     subjective survival beliefs, mortality beliefs, longevity risk, bequest motives, inheritances, intergenerational
     transfers, estate taxes, Tax Cuts and Jobs Act, private foundations, charitable giving, donor-advised
-    funds, wealth inequality, cash windfalls, entrepreneurship
+    funds, wealth distribution, cash windfalls, entrepreneurship
   summary: How people accumulate, spend down, and pass on wealth over the life cycle.
   synthesis: >-
     This research shows that subjective survival beliefs act like age-varying time discounting in the
@@ -122,6 +128,7 @@
     over life and rise sharply with wealth, that the wealthiest families move assets into private foundations
     at death rather than drawing them down, and that cash windfalls increase business formation but not
     self-employment.
+  hidden_terms: wealth inequality
 - slug: behavioral-finance-beliefs
   name: Behavioral finance and beliefs
   legacy: research-behavioral-social
@@ -143,14 +150,15 @@
   former_slug: legal-institutions-development
   terms: >-
     law and finance, legal institutions, contract enforcement, courts, regulatory enforcement, political
-    economy, Senate committees, fair-lending enforcement, CFPB supervision, consumer complaints, financial
-    development, economic growth, Public Law 280, Native American reservations
+    economy, Senate committees, enforcement of lending rules, CFPB supervision, consumer complaints, financial
+    development, economic growth, Public Law 280
   summary: >-
     How courts, regulators, and politics shape credit markets and what consumers get from them.
   synthesis: >-
     This research shows that more predictable contract enforcement strengthens local credit markets and
     raises incomes, and that growing up with little access to local banks has lasting effects on credit
-    outcomes, using the assignment of state rather than tribal courts on some Native American reservations
-    as a source of variation in local financial development. It also shows that the prospect of political
-    relief from regulators leads banks to cut lending to protected communities, and that CFPB monitoring
-    of complaint handling raises restitution, especially for higher-income, more educated consumers.
+    outcomes, using federal court assignments as a source of variation in local financial development.
+    It also shows that the prospect of political relief from regulators leads banks to cut lending in
+    the neighborhoods that community lending rules target, and that CFPB monitoring of complaint handling
+    raises restitution, especially for higher-income, more educated consumers.
+  hidden_terms: fair-lending enforcement, Native American reservations, tribal courts

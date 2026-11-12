@@ -1,7 +1,7 @@
 # Papers on rawleyheimer.com. Edit this file, then run: python _source/build.py
 # Fields: authors are in published order; topics list the primary topic first; 'lead' and 'finding'
 # state the broad lesson first and the setting second; 'contributes' lists the literatures the paper speaks to;
-# 'glance' fills the Study at a glance table; 'request: true' marks drafts available on request.
+# 'hidden_keywords' go only into page metadata, never on the page; 'glance' fills the Study at a glance table; 'request: true' marks drafts available on request.
 
 - slug: dynamic-inconsistency-risky-choice
   order: 1
@@ -360,18 +360,18 @@
     oversee the enforcement of fair-lending laws. Banks headquartered in powerful Senators’ states are
     responsible for the reduction in credit access.
   lead: >-
-    Expected political interference with regulation changes how regulated firms behave: when politicians
-    can shield banks from fair-lending enforcement, banks lend less to protected communities.
+    Expected political influence over regulation changes how regulated firms behave: when a state’s senator
+    becomes a powerful committee chair, banks in that state cut lending in the neighborhoods that community
+    lending rules target.
   brief: >-
-    When a state’s senator becomes chair of a Senate committee, credit access to minority neighborhoods
-    in that state falls by 7.5%. The declines are larger in neighborhoods eligible under the Community
-    Reinvestment Act and when the senator’s committee oversees fair-lending enforcement, and they are
-    driven by banks headquartered in the senator’s home state. Expected regulatory relief, not only formal
-    changes to the rules, shapes who gets credit.
+    When a state’s senator becomes chair of a Senate committee, credit access falls in the neighborhoods
+    that community lending rules are meant to serve. The declines are largest in neighborhoods eligible
+    under the Community Reinvestment Act and when the senator’s committee oversees enforcement of lending
+    rules, and they are driven by banks headquartered in the senator’s home state. Expected regulatory
+    relief, not only formal changes to the rules, shapes who gets credit.
   keywords: >-
-    political economy of regulation, bank lending, fair lending, Community Reinvestment Act, political
-    economy, Senate committee chairs, regulatory enforcement, minority neighborhoods, credit access, mortgage
-    lending
+    political economy of regulation, bank lending, Community Reinvestment Act, Senate committee chairs,
+    regulatory enforcement, credit access, mortgage lending
   topics:
   - consumer-protection-regulation
   - consumer-credit-debt
@@ -379,35 +379,37 @@
   - legal-regulatory-institutions
   - local-banking-access-to-finance
   finding: >-
-    Expected political interference weakens regulation: when a state’s senator becomes a powerful committee
-    chair, credit to the state’s minority neighborhoods falls by 7.5%, driven by banks headquartered in
-    the state.
+    Expected political influence weakens regulation: when a state’s senator becomes a powerful committee
+    chair, banks headquartered in the state cut lending in the neighborhoods that community lending rules
+    target.
   glance:
     design:
     - - Question
-      - Does expected political interference with regulation change who gets credit?
+      - Does expected political influence over regulation change who gets credit?
     - - Setting
       - Rotations of U.S. Senate committee chairs
     - - Data
-      - Lending to communities protected by fair-lending regulations
+      - Lending in neighborhoods targeted by community lending regulations
     - - Method
       - New committee chairs as variation in political power and expected regulatory relief
     effects_title: Reported effects
     numeric: false
     effects:
-    - - Credit access in minority neighborhoods
-      - −7.5% in states with new committee chairs
+    - - Credit access in targeted neighborhoods
+      - Falls in states with new committee chairs
     - - Larger declines
       - >-
-        Community Reinvestment Act-eligible neighborhoods; senators on committees overseeing fair-lending
-        enforcement
+        Community Reinvestment Act-eligible neighborhoods; senators on committees overseeing enforcement
+        of lending rules
     - - Source of the decline
       - Banks headquartered in the senator’s state
   contributes:
   - the political economy of regulation
   - regulatory enforcement
-  - fair lending and the Community Reinvestment Act
+  - the Community Reinvestment Act
   - bank lending
+  hidden_keywords: >-
+    fair lending, fair-lending enforcement, minority neighborhoods, protected communities, political interference
 - slug: yolo-mortality-beliefs-household-finance
   order: 6
   selected: true
@@ -1180,59 +1182,55 @@
     supply-side mechanisms, applications arrive at a constant rate within-month, and neither differences
     in credit risk nor applicant preferences explain the month-end decline in racial differences.
   lead: >-
-    Racial disparities in lending emerge in part from how lenders make decisions: when month-end volume
-    quotas push loan officers to approve more loans, the unexplained racial gap in mortgage approvals
-    shrinks by at least half.
+    Lending outcomes depend on how lenders make decisions: when month-end volume quotas push loan officers
+    to approve more loans, unexplained gaps in mortgage approval rates shrink by at least half.
   brief: >-
-    Studying 25 years of mortgage lending, the authors develop a new test for disparate treatment: approval
-    rates rise at the end of each month as loan officers try to hit their quotas, and they estimate these
-    quotas at least halve the unexplained 7-percentage-point gap in approval rates for Black applicants.
-    Loan officers more likely to miss their quotas show larger increases in Black approvals. Because applications
-    arrive at a steady rate through the month and neither credit risk nor applicant preferences explain
-    the pattern, the evidence points to supply-side (lender) mechanisms.
+    Studying 25 years of mortgage lending, the authors develop a new test of whether lender decisions
+    explain gaps in approval rates: approval rates rise at the end of each month as loan officers try
+    to hit their quotas, and these quotas at least halve a 7-percentage-point unexplained gap in approval
+    rates between groups of applicants. Loan officers more likely to miss their quotas close more of the
+    gap. Because applications arrive at a steady rate through the month and neither credit risk nor applicant
+    preferences explain the pattern, the evidence points to lender-side mechanisms.
   keywords: >-
-    racial disparities in lending, lending discrimination, credit access, discrimination, fair lending,
-    mortgage lending, racial disparities, disparate treatment, discrimination testing, loan officer quotas,
-    month-end effects, HMDA
+    credit access, mortgage lending, approval rates, lender decision making, loan officer incentives,
+    loan officer quotas, month-end effects, deadlines, benchmarking tests, HMDA
   topics:
   - mortgage-lending-housing
   - consumer-protection-regulation
   finding: >-
-    Racial disparities in mortgage approvals emerge partly from lender behavior: when month-end quotas
-    push loan officers to approve more loans, the unexplained 7-point Black approval gap shrinks by at
-    least half.
+    Lender incentives shape who gets approved for mortgages: when month-end quotas push loan officers
+    to approve more loans, a 7-point unexplained gap in approval rates shrinks by at least half.
   glance:
     design:
     - - Question
-      - >-
-        How do racial disparities in mortgage lending emerge, and how much of the gap reflects lender
-        behavior?
+      - How do lenders’ incentives and decision making shape who is approved for mortgages?
     - - Setting
       - Loan officers’ monthly volume quotas, which raise approval rates at the end of each month
     - - Data
       - 25 years of U.S. mortgage lending
     - - Method
-      - >-
-        Modified benchmarking tests for disparate treatment that link high-frequency lending decisions
-        to month-end quotas
+      - Modified benchmarking tests that link high-frequency lending decisions to month-end quotas
     effects_title: Reported effects
     numeric: false
     effects:
-    - - Unexplained gap in Black approval rates
+    - - Unexplained gap in approval rates
       - 7 pp
     - - Share of the gap the quota effect closes
       - At least half
     - - Loan officers more likely to miss quotas
-      - Larger increases in Black approvals
+      - Close more of the gap
     - - Alternative explanations
       - >-
         Applications arrive steadily within the month; credit risk and applicant preferences do not explain
         the pattern
   contributes:
-  - racial disparities in lending and how they emerge
-  - discrimination and disparate treatment
-  - fair lending
-  - incentives and decision making in financial institutions
+  - how lending outcomes are determined
+  - lender decision making and loan officer incentives
+  - deadlines and quotas in decision making
+  - mortgage markets and credit access
+  hidden_keywords: >-
+    racial disparities in lending, racial gap in mortgage approvals, lending discrimination, discrimination
+    testing, disparate treatment, fair lending, Black applicants, Equal Credit Opportunity Act
 - slug: fallible-firms-consumer-redress
   order: 17
   bibkey: heimer2025fallible
@@ -1264,8 +1262,8 @@
     complementary nature of regulatory interventions and suggest that financial sophistication and self-advocacy
     are critical determinants of consumer redress.
   lead: >-
-    Access to redress is unequal: who gets money back after a complaint about a financial firm depends
-    more on the consumer than on the firm.
+    Who gets money back after a complaint about a financial firm depends more on the consumer than on
+    the firm.
   brief: >-
     Using confidential Consumer Financial Protection Bureau (CFPB) data on nearly two million complaints
     filed since 2014, the paper finds that successful complaints pay out $1,470 on average and that total
@@ -1274,8 +1272,8 @@
     and firms respond to them more. CFPB monitoring raises restitution but disproportionately benefits
     these higher-socioeconomic-status consumers.
   keywords: >-
-    inequality, consumer complaints, CFPB, financial restitution, consumer redress, financial sophistication,
-    regulatory supervision, consumer protection
+    consumer complaints, CFPB, financial restitution, consumer redress, financial sophistication, regulatory
+    supervision, consumer protection
   topics:
   - consumer-protection-regulation
   - consumer-credit-debt
@@ -1310,9 +1308,10 @@
       - Raise restitution, disproportionately for higher-income, more educated consumers
   contributes:
   - consumer protection and redress
-  - inequality in access to remedies
+  - who benefits from complaint processes
   - financial sophistication
   - regulatory supervision
+  hidden_keywords: inequality in access to redress
 - slug: pushing-boundaries-redistricting-consumer-credit
   order: 18
   bibkey: heimer2017pushing
@@ -1341,25 +1340,28 @@
     consistent with theories suggesting that less-competitive political races reduce politicians’ incentives
     to cater to their constituents’ preferences.
   lead: >-
-    Political competition matters for household finance: gerrymandering reduces people’s access to credit.
+    Political competition matters for household finance: when congressional districts are irregularly
+    redrawn, people lose access to credit.
   brief: >-
     Matching a long-running panel of consumer credit data to changes in congressional district boundaries
     after each census, the paper finds that consumers lose access to credit when their districts are irregularly
-    redrawn to favor a political party. The losses are concentrated in states where elected politicians
-    draw the maps and in districts whose later elections are less competitive, and similar declines follow
-    gerrymandered state senate maps and laws that make voting harder. The results fit theories in which
-    less competitive races weaken politicians’ incentives to serve their constituents.
+    redrawn. The losses are concentrated in states where elected politicians draw the maps and in districts
+    whose later elections are less competitive, and similar declines follow comparable changes to state
+    senate maps and to voting rules. The results fit theories in which less competitive elections weaken
+    politicians’ incentives to serve their constituents.
   keywords: >-
-    gerrymandering, redistricting, consumer credit, credit access, political competition, voting restrictions,
-    political economy
+    redistricting, political competition, consumer credit, credit access, electoral institutions, political
+    economy
   topics:
   - consumer-credit-debt
   - consumer-protection-regulation
-  finding: Consumers lose access to credit when their congressional districts are gerrymandered.
+  finding: >-
+    Consumers lose access to credit when their congressional districts are irregularly redrawn, especially
+    where later elections become less competitive.
   glance:
     design:
     - - Question
-      - Does gerrymandering reduce people’s access to credit?
+      - Does political redistricting affect people’s access to credit?
     - - Setting
       - Changes in congressional district boundaries after each decennial census
     - - Data
@@ -1369,16 +1371,17 @@
     effects_title: Main findings
     numeric: false
     effects:
-    - - Credit access after gerrymandering
+    - - Credit access after irregular redistricting
       - Falls
     - - Larger declines
       - States where elected politicians draw the maps; districts with less competitive elections
     - - Similar declines
-      - Gerrymandered state senate maps; laws that make voting harder
+      - Comparable changes to state senate maps and to voting rules
   contributes:
   - the political economy of finance
   - electoral institutions
   - credit access
+  hidden_keywords: gerrymandering, partisan gerrymandering, voting restrictions
 - slug: five-facts-bequest-motives
   order: 19
   bibkey: heimer2025bequest
@@ -1407,8 +1410,8 @@
     Finally, we examine the implications of these findings for wealth accumulation and portfolio choice
     within a canonical life-cycle model with precautionary savings.
   lead: >-
-    Bequest motives, a key ingredient in models of saving and wealth inequality, follow five robust empirical
-    patterns.
+    Bequest motives, a key ingredient in models of saving and the distribution of wealth, follow five
+    robust empirical patterns.
   brief: >-
     People with heirs care more about bequests; the importance of bequests follows a U-shape over the
     life cycle; it rises sharply among the wealthiest fifth of households; stock owners, especially those
@@ -1417,7 +1420,7 @@
     suggest that bequest motives change over time rather than staying fixed. The paper also works through
     what the facts imply for wealth accumulation and portfolio choice in a life-cycle model.
   keywords: >-
-    saving, bequest motives, inheritances, intergenerational wealth, life-cycle model, wealth inequality,
+    saving, bequest motives, inheritances, intergenerational wealth, life-cycle model, wealth distribution,
     portfolio choice, subjective expectations
   topics:
   - saving-retirement-inheritance
@@ -1449,8 +1452,9 @@
   contributes:
   - bequest motives in life-cycle models
   - late-life saving
-  - wealth inequality
+  - the distribution of wealth
   - subjective expectations
+  hidden_keywords: wealth inequality
 - slug: wealth-drawdown-private-family-foundations
   order: 20
   bibkey: heimer2025foundations
@@ -1490,8 +1494,8 @@
     After the 2017 Tax Cuts and Jobs Act doubled the estate and gift tax exemption, post-death inflows
     fell by 47.2%, suggesting many families use foundations to manage estate taxes.
   keywords: >-
-    wealth decumulation, private family foundations, intergenerational wealth inequality, bequest motives,
-    charitable giving, estate taxation, Tax Cuts and Jobs Act, donor-advised funds
+    wealth decumulation, private family foundations, intergenerational wealth, bequest motives, charitable
+    giving, estate taxation, Tax Cuts and Jobs Act, donor-advised funds
   topics:
   - saving-retirement-inheritance
   finding: >-
@@ -1525,7 +1529,8 @@
   - wealth decumulation and late-life saving
   - bequests and charitable giving
   - estate taxation
-  - wealth inequality at the top
+  - wealth at the top of the distribution
+  hidden_keywords: wealth inequality, intergenerational wealth inequality
 - slug: single-family-reits-local-housing-markets
   order: 21
   bibkey: heimer2024reits
@@ -1774,10 +1779,10 @@
     large, positive income shocks whose probability, size, and timing are all uncertain. Omitting them
     leads to an overestimate of the discount factor (0.947 versus 0.933), a difference that compounds
     substantially over life-cycle horizons. Anticipated inheritances raise the level and dispersion of
-    consumption at all ages, lower saving among younger households, and increase wealth inequality before
-    about age 60. Consistent with the model, households with wealthier parents consume more, all else
-    equal. Households would pay substantial amounts to receive their inheritance today, particularly when
-    their parents are wealthy.
+    consumption at all ages, lower saving among younger households, and increase the dispersion of wealth
+    before about age 60. Consistent with the model, households with wealthier parents consume more, all
+    else equal. Households would pay substantial amounts to receive their inheritance today, particularly
+    when their parents are wealthy.
   lead: >-
     Leaving inheritances out of the life-cycle model makes households look more patient than they are;
     expected inheritances change saving long before the money arrives.
@@ -1787,11 +1792,12 @@
     and the share lost to taxes and fees calibrated from the SCF, PSID, and HRS. Inheritances act as large,
     positive income shocks whose size, probability, and timing are all uncertain. Leaving them out makes
     the model overstate how patient households are. Including them raises consumption and its spread at
-    all ages, mostly through anticipation, and raises wealth inequality among younger households. Households
-    would pay substantial sums to receive their inheritance today, especially when their parents are wealthy.
+    all ages, mostly through anticipation, and widens differences in wealth among younger households.
+    Households would pay substantial sums to receive their inheritance today, especially when their parents
+    are wealthy.
   keywords: >-
     time discounting, income risk, inheritances, bequests, life-cycle model, household saving, consumption,
-    wealth inequality, discount factor, parental wealth, intergenerational transfers
+    wealth distribution, discount factor, parental wealth, intergenerational transfers
   topics:
   - saving-retirement-inheritance
   finding: >-
@@ -1815,7 +1821,7 @@
       - 0.933 with inheritances versus 0.947 without
     - - Consumption of children of the wealthiest 20% of parents (PSID)
       - About 10% higher, after controls
-    - - Wealth inequality
+    - - Dispersion of wealth
       - Higher among households younger than about 60
     - - Willingness to pay to inherit today
       - Positive, and rising with parental wealth
@@ -1823,7 +1829,8 @@
   - life-cycle saving and consumption
   - estimating time discounting
   - income risk
-  - inheritances and wealth inequality
+  - inheritances and the distribution of wealth
+  hidden_keywords: wealth inequality
 - slug: navigating-credit-bureau-data
   order: 25
   bibkey: heimer2024navigating

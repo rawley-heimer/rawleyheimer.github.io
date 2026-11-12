@@ -110,20 +110,20 @@ Page: https://rawleyheimer.com/papers/politicizing-consumer-credit.html
 DOI: https://doi.org/10.1016/j.jfineco.2020.07.017
 Topics: Consumer protection and financial regulation, Consumer credit and debt, Mortgage lending and housing, Legal and regulatory institutions, Local banking and access to finance
 
-In brief: Expected political interference with regulation changes how regulated firms behave: when politicians can shield banks from fair-lending enforcement, banks lend less to protected communities. When a state’s senator becomes chair of a Senate committee, credit access to minority neighborhoods in that state falls by 7.5%. The declines are larger in neighborhoods eligible under the Community Reinvestment Act and when the senator’s committee oversees fair-lending enforcement, and they are driven by banks headquartered in the senator’s home state. Expected regulatory relief, not only formal changes to the rules, shapes who gets credit.
-Contributes to research on: the political economy of regulation, regulatory enforcement, fair lending and the Community Reinvestment Act, and bank lending.
+In brief: Expected political influence over regulation changes how regulated firms behave: when a state’s senator becomes a powerful committee chair, banks in that state cut lending in the neighborhoods that community lending rules target. When a state’s senator becomes chair of a Senate committee, credit access falls in the neighborhoods that community lending rules are meant to serve. The declines are largest in neighborhoods eligible under the Community Reinvestment Act and when the senator’s committee oversees enforcement of lending rules, and they are driven by banks headquartered in the senator’s home state. Expected regulatory relief, not only formal changes to the rules, shapes who gets credit.
+Contributes to research on: the political economy of regulation, regulatory enforcement, the Community Reinvestment Act, and bank lending.
 
 Abstract: Powerful politicians can interfere with the enforcement of regulations. As such, expected political interference can affect constituents’ behavior. Using rotations of Senate committee chairs to identify variation in political power and expected regulatory relief, we study powerful politicians’ effect on consumer lending to communities protected by fair-lending regulations. We find a 7.5% reduction in credit access to minority neighborhoods in states with new committee chairs. Larger reductions occur in Community Reinvestment Act-eligible neighborhoods and when Senators serve on committees that oversee the enforcement of fair-lending laws. Banks headquartered in powerful Senators’ states are responsible for the reduction in credit access.
 
-- Question: Does expected political interference with regulation change who gets credit?
+- Question: Does expected political influence over regulation change who gets credit?
 - Setting: Rotations of U.S. Senate committee chairs
-- Data: Lending to communities protected by fair-lending regulations
+- Data: Lending in neighborhoods targeted by community lending regulations
 - Method: New committee chairs as variation in political power and expected regulatory relief
-- Credit access in minority neighborhoods: −7.5% in states with new committee chairs
-- Larger declines: Community Reinvestment Act-eligible neighborhoods; senators on committees overseeing fair-lending enforcement
+- Credit access in targeted neighborhoods: Falls in states with new committee chairs
+- Larger declines: Community Reinvestment Act-eligible neighborhoods; senators on committees overseeing enforcement of lending rules
 - Source of the decline: Banks headquartered in the senator’s state
 
-Keywords: political economy of regulation, bank lending, fair lending, Community Reinvestment Act, political economy, Senate committee chairs, regulatory enforcement, minority neighborhoods, credit access, mortgage lending
+Keywords: political economy of regulation, bank lending, Community Reinvestment Act, Senate committee chairs, regulatory enforcement, credit access, mortgage lending, fair lending, fair-lending enforcement, minority neighborhoods, protected communities, political interference
 
 BibTeX key: heimer2021politicizing
 
@@ -363,21 +363,21 @@ Status: Working paper (2021)
 Page: https://rawleyheimer.com/papers/temporal-focal-points-mortgage-lending.html
 Topics: Mortgage lending and housing, Consumer protection and financial regulation
 
-In brief: Racial disparities in lending emerge in part from how lenders make decisions: when month-end volume quotas push loan officers to approve more loans, the unexplained racial gap in mortgage approvals shrinks by at least half. Studying 25 years of mortgage lending, the authors develop a new test for disparate treatment: approval rates rise at the end of each month as loan officers try to hit their quotas, and they estimate these quotas at least halve the unexplained 7-percentage-point gap in approval rates for Black applicants. Loan officers more likely to miss their quotas show larger increases in Black approvals. Because applications arrive at a steady rate through the month and neither credit risk nor applicant preferences explain the pattern, the evidence points to supply-side (lender) mechanisms.
-Contributes to research on: racial disparities in lending and how they emerge, discrimination and disparate treatment, fair lending, and incentives and decision making in financial institutions.
+In brief: Lending outcomes depend on how lenders make decisions: when month-end volume quotas push loan officers to approve more loans, unexplained gaps in mortgage approval rates shrink by at least half. Studying 25 years of mortgage lending, the authors develop a new test of whether lender decisions explain gaps in approval rates: approval rates rise at the end of each month as loan officers try to hit their quotas, and these quotas at least halve a 7-percentage-point unexplained gap in approval rates between groups of applicants. Loan officers more likely to miss their quotas close more of the gap. Because applications arrive at a steady rate through the month and neither credit risk nor applicant preferences explain the pattern, the evidence points to lender-side mechanisms.
+Contributes to research on: how lending outcomes are determined, lender decision making and loan officer incentives, deadlines and quotas in decision making, and mortgage markets and credit access.
 
 Abstract: We develop modified benchmarking tests for disparate treatment that we apply to 25 years of mortgage lending. Our tests limit the scope for omitted variables by linking high-frequency mortgage decisions to an economic mechanism — loan officers have volume quotas that cause increased approval rates at month-end. We estimate that these quotas at least halve the unexplained 7 ppt Black approval gap. Loan officers more likely to miss their quotas have larger increases in Black approvals. Suggesting supply-side mechanisms, applications arrive at a constant rate within-month, and neither differences in credit risk nor applicant preferences explain the month-end decline in racial differences.
 
-- Question: How do racial disparities in mortgage lending emerge, and how much of the gap reflects lender behavior?
+- Question: How do lenders’ incentives and decision making shape who is approved for mortgages?
 - Setting: Loan officers’ monthly volume quotas, which raise approval rates at the end of each month
 - Data: 25 years of U.S. mortgage lending
-- Method: Modified benchmarking tests for disparate treatment that link high-frequency lending decisions to month-end quotas
-- Unexplained gap in Black approval rates: 7 pp
+- Method: Modified benchmarking tests that link high-frequency lending decisions to month-end quotas
+- Unexplained gap in approval rates: 7 pp
 - Share of the gap the quota effect closes: At least half
-- Loan officers more likely to miss quotas: Larger increases in Black approvals
+- Loan officers more likely to miss quotas: Close more of the gap
 - Alternative explanations: Applications arrive steadily within the month; credit risk and applicant preferences do not explain the pattern
 
-Keywords: racial disparities in lending, lending discrimination, credit access, discrimination, fair lending, mortgage lending, racial disparities, disparate treatment, discrimination testing, loan officer quotas, month-end effects, HMDA
+Keywords: credit access, mortgage lending, approval rates, lender decision making, loan officer incentives, loan officer quotas, month-end effects, deadlines, benchmarking tests, HMDA, racial disparities in lending, racial gap in mortgage approvals, lending discrimination, discrimination testing, disparate treatment, fair lending, Black applicants, Equal Credit Opportunity Act
 
 BibTeX key: heimer2021temporal
 
@@ -388,8 +388,8 @@ Status: Working paper (2025)
 Page: https://rawleyheimer.com/papers/fallible-firms-consumer-redress.html
 Topics: Consumer protection and financial regulation, Consumer credit and debt, Legal and regulatory institutions
 
-In brief: Access to redress is unequal: who gets money back after a complaint about a financial firm depends more on the consumer than on the firm. Using confidential Consumer Financial Protection Bureau (CFPB) data on nearly two million complaints filed since 2014, the paper finds that successful complaints pay out $1,470 on average and that total restitution has grown substantially over time. Differences across firms explain little; instead, higher-income and more educated consumers are more likely to request refunds, allege fraud, and submit documentation, and firms respond to them more. CFPB monitoring raises restitution but disproportionately benefits these higher-socioeconomic-status consumers.
-Contributes to research on: consumer protection and redress, inequality in access to remedies, financial sophistication, and regulatory supervision.
+In brief: Who gets money back after a complaint about a financial firm depends more on the consumer than on the firm. Using confidential Consumer Financial Protection Bureau (CFPB) data on nearly two million complaints filed since 2014, the paper finds that successful complaints pay out $1,470 on average and that total restitution has grown substantially over time. Differences across firms explain little; instead, higher-income and more educated consumers are more likely to request refunds, allege fraud, and submit documentation, and firms respond to them more. CFPB monitoring raises restitution but disproportionately benefits these higher-socioeconomic-status consumers.
+Contributes to research on: consumer protection and redress, who benefits from complaint processes, financial sophistication, and regulatory supervision.
 
 Abstract: Financial disputes are a widespread but understudied feature of consumer financial markets. Using confidential data from the Consumer Financial Protection Bureau (CFPB), we analyze nearly two million consumer complaints filed since 2014, which have led to an average payout of $1,470 per successful complaint. The volume of complaints and total restitution have increased substantially over time, suggesting significant scope for additional compensation. When understanding who secures restitution — and why — we find little evidence that differences across firms systematically drive restitution outcomes. Instead, product complexity and consumer engagement play key roles: consumers with higher income and education (high-SES) are more likely to explicitly request refunds, claim fraud, and submit supporting documentation, making firms more responsive. Leveraging previously unexamined CFPB monitoring reviews, where the agency systematically screens company responses and issues confidential reports highlighting deficiencies, we show that regulatory scrutiny increases restitution but disproportionately benefits high-SES consumers, reinforcing individual-specific mechanisms. Our results highlight the complementary nature of regulatory interventions and suggest that financial sophistication and self-advocacy are critical determinants of consumer redress.
 
@@ -402,7 +402,7 @@ Abstract: Financial disputes are a widespread but understudied feature of consum
 - Higher-income, more educated consumers: More likely to request refunds, claim fraud, and document complaints
 - CFPB monitoring reviews: Raise restitution, disproportionately for higher-income, more educated consumers
 
-Keywords: inequality, consumer complaints, CFPB, financial restitution, consumer redress, financial sophistication, regulatory supervision, consumer protection
+Keywords: consumer complaints, CFPB, financial restitution, consumer redress, financial sophistication, regulatory supervision, consumer protection, inequality in access to redress
 
 BibTeX key: heimer2025fallible
 
@@ -413,20 +413,20 @@ Status: Working paper (2017)
 Page: https://rawleyheimer.com/papers/pushing-boundaries-redistricting-consumer-credit.html
 Topics: Consumer credit and debt, Consumer protection and financial regulation
 
-In brief: Political competition matters for household finance: gerrymandering reduces people’s access to credit. Matching a long-running panel of consumer credit data to changes in congressional district boundaries after each census, the paper finds that consumers lose access to credit when their districts are irregularly redrawn to favor a political party. The losses are concentrated in states where elected politicians draw the maps and in districts whose later elections are less competitive, and similar declines follow gerrymandered state senate maps and laws that make voting harder. The results fit theories in which less competitive races weaken politicians’ incentives to serve their constituents.
+In brief: Political competition matters for household finance: when congressional districts are irregularly redrawn, people lose access to credit. Matching a long-running panel of consumer credit data to changes in congressional district boundaries after each census, the paper finds that consumers lose access to credit when their districts are irregularly redrawn. The losses are concentrated in states where elected politicians draw the maps and in districts whose later elections are less competitive, and similar declines follow comparable changes to state senate maps and to voting rules. The results fit theories in which less competitive elections weaken politicians’ incentives to serve their constituents.
 Contributes to research on: the political economy of finance, electoral institutions, and credit access.
 
 Abstract: Consumers lose access to credit when their congressional district boundaries are irregularly redrawn to benefit a political party (i.e., are gerrymandered). We identify this effect by matching a longitudinal panel of consumer credit data with changes in congressional district boundaries following decennial censuses. Reductions in credit access are concentrated in states that allow elected politicians to draw political boundaries and in districts where subsequent congressional elections are less competitive. We find similar reductions in credit access when state senate district boundaries are irregularly redrawn and when states make it more difficult for constituents to vote. Overall, our findings are consistent with theories suggesting that less-competitive political races reduce politicians’ incentives to cater to their constituents’ preferences.
 
-- Question: Does gerrymandering reduce people’s access to credit?
+- Question: Does political redistricting affect people’s access to credit?
 - Setting: Changes in congressional district boundaries after each decennial census
 - Data: A longitudinal panel of consumer credit data
 - Method: Consumers whose districts are irregularly redrawn compared with others
-- Credit access after gerrymandering: Falls
+- Credit access after irregular redistricting: Falls
 - Larger declines: States where elected politicians draw the maps; districts with less competitive elections
-- Similar declines: Gerrymandered state senate maps; laws that make voting harder
+- Similar declines: Comparable changes to state senate maps and to voting rules
 
-Keywords: gerrymandering, redistricting, consumer credit, credit access, political competition, voting restrictions, political economy
+Keywords: redistricting, political competition, consumer credit, credit access, electoral institutions, political economy, gerrymandering, partisan gerrymandering, voting restrictions
 
 BibTeX key: heimer2017pushing
 
@@ -437,8 +437,8 @@ Status: Working paper (2025)
 Page: https://rawleyheimer.com/papers/five-facts-bequest-motives.html
 Topics: Saving, retirement, and inheritance, Behavioral finance and beliefs
 
-In brief: Bequest motives, a key ingredient in models of saving and wealth inequality, follow five robust empirical patterns. People with heirs care more about bequests; the importance of bequests follows a U-shape over the life cycle; it rises sharply among the wealthiest fifth of households; stock owners, especially those who have enjoyed high market returns, care more about bequests; and people systematically overestimate how likely and how large their bequests will be. These facts give economic models new benchmarks and suggest that bequest motives change over time rather than staying fixed. The paper also works through what the facts imply for wealth accumulation and portfolio choice in a life-cycle model.
-Contributes to research on: bequest motives in life-cycle models, late-life saving, wealth inequality, and subjective expectations.
+In brief: Bequest motives, a key ingredient in models of saving and the distribution of wealth, follow five robust empirical patterns. People with heirs care more about bequests; the importance of bequests follows a U-shape over the life cycle; it rises sharply among the wealthiest fifth of households; stock owners, especially those who have enjoyed high market returns, care more about bequests; and people systematically overestimate how likely and how large their bequests will be. These facts give economic models new benchmarks and suggest that bequest motives change over time rather than staying fixed. The paper also works through what the facts imply for wealth accumulation and portfolio choice in a life-cycle model.
+Contributes to research on: bequest motives in life-cycle models, late-life saving, the distribution of wealth, and subjective expectations.
 
 Abstract: Rising differences in generational wealth and the economic effects of inheritances make it increasingly important to understand individuals’ bequest motives. We document five novel empirical facts about individuals’ preferences and expectations toward bequests using survey data spanning three decades. (1) Households with heirs exhibit stronger bequest preferences. (2) Bequest motives follow a U-shaped pattern over the life cycle. (3) The perceived importance of bequests rises sharply among the top two deciles of the wealth distribution. (4) Stock owners, particularly those who experience high market returns, report stronger bequest preferences. (5) Individuals systematically overestimate their bequests’ likelihood and size. These stylized facts provide new benchmarks for evaluating economic models and suggest that alternatives to the static treatment of bequest motives may better reflect observed behavior. Finally, we examine the implications of these findings for wealth accumulation and portfolio choice within a canonical life-cycle model with precautionary savings.
 
@@ -451,7 +451,7 @@ Abstract: Rising differences in generational wealth and the economic effects of 
 - Fact 4: Stock owners, especially after high returns, have stronger bequest preferences
 - Fact 5: People overestimate how likely and how large their bequests will be
 
-Keywords: saving, bequest motives, inheritances, intergenerational wealth, life-cycle model, wealth inequality, portfolio choice, subjective expectations
+Keywords: saving, bequest motives, inheritances, intergenerational wealth, life-cycle model, wealth distribution, portfolio choice, subjective expectations, wealth inequality
 
 BibTeX key: heimer2025bequest
 
@@ -463,7 +463,7 @@ Page: https://rawleyheimer.com/papers/wealth-drawdown-private-family-foundations
 Topics: Saving, retirement, and inheritance
 
 In brief: When the eldest member of a very wealthy family dies, the family’s private foundation roughly doubles in size within two years, the opposite of the gradual late-life drawdown that standard life-cycle models predict. Linking IRS filings for the universe of U.S. private foundations to genealogical records, the paper tracks 8,276 family foundations holding an average of $20.65 million in assets. Charitable giving lags far behind the post-death inflows, which come mostly from surviving family trustees and often as noncash assets, and foundations become more likely to fall below the five-percent payout requirement. After the 2017 Tax Cuts and Jobs Act doubled the estate and gift tax exemption, post-death inflows fell by 47.2%, suggesting many families use foundations to manage estate taxes.
-Contributes to research on: wealth decumulation and late-life saving, bequests and charitable giving, estate taxation, and wealth inequality at the top.
+Contributes to research on: wealth decumulation and late-life saving, bequests and charitable giving, estate taxation, and wealth at the top of the distribution.
 
 Abstract: We connect genealogical records to the universe of 501(c)(3) private foundations to provide novel insights into the late-in-life assets holdings and charitable contributions of the wealthiest households in the U.S. This linkage allows us to track life-cycle financial assets and charitable disbursements for 8,276 families, each holding an average of $20.65 million in family foundation assets annually. In contrast to life-cycle models that predict a steady draw-down of assets late in life, we find that the death of the eldest family member leads to a 96.9% increase in foundation assets within two years. Yet few are prepared to distribute their wealth postmortem — charitable disbursements take years to match post-death inflows and funds are more likely to fall below the five-percent rule to qualify for non-profit status. We also find that the doubling of the lifetime estate and gift tax exemption in the 2017 Tax Cuts and Jobs Act caused a 47.2% reduction in postmortem inflows into family foundations, which suggests that many family foundations are used to reduce estate taxes. These findings contribute to our understanding of inter-generational wealth inequality.
 
@@ -476,7 +476,7 @@ Abstract: We connect genealogical records to the universe of 501(c)(3) private f
 - Likelihood of meeting the 5% payout rule: Falls
 - Post-death inflows after the 2017 tax law: −47.2%
 
-Keywords: wealth decumulation, private family foundations, intergenerational wealth inequality, bequest motives, charitable giving, estate taxation, Tax Cuts and Jobs Act, donor-advised funds
+Keywords: wealth decumulation, private family foundations, intergenerational wealth, bequest motives, charitable giving, estate taxation, Tax Cuts and Jobs Act, donor-advised funds, wealth inequality, intergenerational wealth inequality
 
 BibTeX key: heimer2025foundations
 
@@ -562,10 +562,10 @@ Status: Working paper, draft available on request
 Page: https://rawleyheimer.com/papers/waiting-for-wealth-inheritances-household-savings.html
 Topics: Saving, retirement, and inheritance
 
-In brief: Leaving inheritances out of the life-cycle model makes households look more patient than they are; expected inheritances change saving long before the money arrives. The paper adds inheritances to a standard life-cycle model of saving: households have a living parent whose wealth changes over time and who leaves an inheritance at death, with parental mortality, wealth, and the share lost to taxes and fees calibrated from the SCF, PSID, and HRS. Inheritances act as large, positive income shocks whose size, probability, and timing are all uncertain. Leaving them out makes the model overstate how patient households are. Including them raises consumption and its spread at all ages, mostly through anticipation, and raises wealth inequality among younger households. Households would pay substantial sums to receive their inheritance today, especially when their parents are wealthy.
-Contributes to research on: life-cycle saving and consumption, estimating time discounting, income risk, and inheritances and wealth inequality.
+In brief: Leaving inheritances out of the life-cycle model makes households look more patient than they are; expected inheritances change saving long before the money arrives. The paper adds inheritances to a standard life-cycle model of saving: households have a living parent whose wealth changes over time and who leaves an inheritance at death, with parental mortality, wealth, and the share lost to taxes and fees calibrated from the SCF, PSID, and HRS. Inheritances act as large, positive income shocks whose size, probability, and timing are all uncertain. Leaving them out makes the model overstate how patient households are. Including them raises consumption and its spread at all ages, mostly through anticipation, and widens differences in wealth among younger households. Households would pay substantial sums to receive their inheritance today, especially when their parents are wealthy.
+Contributes to research on: life-cycle saving and consumption, estimating time discounting, income risk, and inheritances and the distribution of wealth.
 
-Abstract: Inheritances account for a quarter to a half of U.S. household wealth, yet the canonical life-cycle model of saving omits them. We extend the model so that households have a living parent whose wealth evolves stochastically and who leaves an inheritance at death, and we calibrate parental mortality, parental wealth dynamics, and inheritance slippage using the SCF, PSID, and HRS. Inheritances generate large, positive income shocks whose probability, size, and timing are all uncertain. Omitting them leads to an overestimate of the discount factor (0.947 versus 0.933), a difference that compounds substantially over life-cycle horizons. Anticipated inheritances raise the level and dispersion of consumption at all ages, lower saving among younger households, and increase wealth inequality before about age 60. Consistent with the model, households with wealthier parents consume more, all else equal. Households would pay substantial amounts to receive their inheritance today, particularly when their parents are wealthy.
+Abstract: Inheritances account for a quarter to a half of U.S. household wealth, yet the canonical life-cycle model of saving omits them. We extend the model so that households have a living parent whose wealth evolves stochastically and who leaves an inheritance at death, and we calibrate parental mortality, parental wealth dynamics, and inheritance slippage using the SCF, PSID, and HRS. Inheritances generate large, positive income shocks whose probability, size, and timing are all uncertain. Omitting them leads to an overestimate of the discount factor (0.947 versus 0.933), a difference that compounds substantially over life-cycle horizons. Anticipated inheritances raise the level and dispersion of consumption at all ages, lower saving among younger households, and increase the dispersion of wealth before about age 60. Consistent with the model, households with wealthier parents consume more, all else equal. Households would pay substantial amounts to receive their inheritance today, particularly when their parents are wealthy.
 
 - Question: How do expected and realized inheritances shape household saving and consumption?
 - Setting: A life-cycle model in which households have a living parent whose wealth evolves stochastically
@@ -573,10 +573,10 @@ Abstract: Inheritances account for a quarter to a half of U.S. household wealth,
 - Method: Structural life-cycle model estimated with and without inheritances
 - Estimated discount factor: 0.933 with inheritances versus 0.947 without
 - Consumption of children of the wealthiest 20% of parents (PSID): About 10% higher, after controls
-- Wealth inequality: Higher among households younger than about 60
+- Dispersion of wealth: Higher among households younger than about 60
 - Willingness to pay to inherit today: Positive, and rising with parental wealth
 
-Keywords: time discounting, income risk, inheritances, bequests, life-cycle model, household saving, consumption, wealth inequality, discount factor, parental wealth, intergenerational transfers
+Keywords: time discounting, income risk, inheritances, bequests, life-cycle model, household saving, consumption, wealth distribution, discount factor, parental wealth, intergenerational transfers, wealth inequality
 
 BibTeX key: heimer2026waiting
 
